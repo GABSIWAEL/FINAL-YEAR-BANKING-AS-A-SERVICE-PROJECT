@@ -1,17 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: platforms-depl
+  name: openbanking-depl
 spec:
   replicas: 1
   selector:
-    matchlabels:
-      app: OpenBanking_ACCOUNT_V1
+    matchLabels:
+      app: openbanking
   template:
     metadata:
       labels: 
-        app: OpenBanking_ACCOUNT_V1
+        app: openbanking
     spec:
       containers:
-        - name: OpenBanking_ACCOUNT_V1
+        - name: openbanking-account
           image: waelelgabsi/OpenBanking_ACCOUNT_V1:latest
+        - name: openbanking-atm
+          image: waelelgabsi/OpenBanking_ATM_V1:latest
+        - name: openbanking-branch
+          image: waelelgabsi/OpenBanking_BRANCH_V1:latest
+        - name: openbanking-card
+          image: waelelgabsi/OpenBanking_CARD_V1:latest
