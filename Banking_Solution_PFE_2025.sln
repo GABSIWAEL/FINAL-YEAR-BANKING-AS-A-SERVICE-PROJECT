@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBanking_ATM_V1", "OpenBanking_ATM_V1\OpenBanking_ATM_V1.csproj", "{612D54F9-36BD-4BE3-8880-02C7F6468F47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{612D54F9-36BD-4BE3-8880-02C7F6468F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612D54F9-36BD-4BE3-8880-02C7F6468F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612D54F9-36BD-4BE3-8880-02C7F6468F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612D54F9-36BD-4BE3-8880-02C7F6468F47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11EBDB05-4237-4759-A486-C553D4AE60C1}
+	EndGlobalSection
+EndGlobal
