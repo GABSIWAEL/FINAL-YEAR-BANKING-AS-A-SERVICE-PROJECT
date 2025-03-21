@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenBanking_ATM_V1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7249349748d4c4217ef314fceec3ace8f1316f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fdd2d6cc6827e73c0bcbcaab0e96d876c458a5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenBanking_ATM_V1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenBanking_ATM_V1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
