@@ -3,6 +3,162 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\value.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\value.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\scheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\scheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\owners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\owners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\balance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\balance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\alias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\alias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\account_attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\account_attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\account_routings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\account_routings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\atm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\atm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\views_available.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\views_available.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\location_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\location_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\notes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\supported_currencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\supported_currencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\accessibility_features.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\accessibility_features.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\supported_languages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\supported_languages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\meta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\meta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\openinghours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\openinghours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\licence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\licence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\allows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\allows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\replacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\replacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\networks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\networks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\card_attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\card_attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\pin_reset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\pin_reset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\models\\reason_requested.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\models\\reason_requested.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\data\\prepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\data\\prepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\data\\iaccountrepos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\data\\iaccountrepos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\data\\accountrepos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\data\\accountrepos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_atm_v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D54F9-36BD-4BE3-8880-02C7F6468F47}|OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj|solutionrelative:openbanking_atm_v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_card_v1\\openbanking_card_v1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A32BF0FF-CF68-4B42-B7B5-E8D7C3F59C3F}|OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj|solutionrelative:openbanking_card_v1\\openbanking_card_v1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -18,33 +174,500 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Value.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Value.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Value.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Value.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Value.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:55:49.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tags.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Tags.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Tags.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Tags.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Tags.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:53:47.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Type.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAADgAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:51:43.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Account_attributes.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:50:15.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Scheme.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAADCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:49:00.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Currency.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:45:36.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Balance.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:44:39.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Owners.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:41:10.087Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OpenBanking_CARD_V1",
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T13:11:49.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Account_routings.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:48:42.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Alias.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:35:09.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Views_available.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Views_available.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Views_available.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Views_available.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Models\\Views_available.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:33:20.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Location_categories.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location_categories.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Location_categories.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location_categories.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Location_categories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:24:04.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Notes.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Notes.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Notes.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Notes.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Notes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:23:06.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Atm.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Atm.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Atm.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Atm.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Atm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:30:32.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Supported_currencies.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:22:06.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Accessibility_features.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:21:02.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Services.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Services.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Services.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Services.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:20:00.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Supported_languages.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:19:01.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Card.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Card.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:14:46.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Licence.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Licence.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Licence.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Licence.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Licence.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:17:26.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Location.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:15:51.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Address.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:33:19.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Meta.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Meta.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Meta.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Meta.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\Meta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:34:13.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Allows.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Allows.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Allows.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Allows.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Allows.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:31:22.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Replacement.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Replacement.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Replacement.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Replacement.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Replacement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:38:06.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Networks.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Networks.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Networks.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Networks.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Networks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:04:50.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "OpeningHours.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:33:55.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Card_attributes.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T12:52:49.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Pin_reset.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:32:59.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Reason_requested.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
+              "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
+              "RelativeToolTip": "OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T13:35:48.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Dockerfile",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Dockerfile",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Dockerfile",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-10T12:47:42.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T13:16:45.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IAccountRepos.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\IAccountRepos.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Data\\IAccountRepos.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\IAccountRepos.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Data\\IAccountRepos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T13:54:27.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PrepDb.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\PrepDb.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Data\\PrepDb.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\PrepDb.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Data\\PrepDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T15:19:29.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Program.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Program.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAArwB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T13:23:25.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AccountRepos.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\AccountRepos.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Data\\AccountRepos.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\AccountRepos.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Data\\AccountRepos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T14:29:23.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Program.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Program.cs",
+              "RelativeToolTip": "OpenBanking_ATM_V1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T19:31:27.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dockerfile",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dockerfile",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dockerfile",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-09T19:00:40.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "OpenBanking_CARD_V1.csproj",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
               "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
               "RelativeToolTip": "OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-21T14:45:04.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T14:45:04.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OpenBanking_ATM_V1",
+              "DocumentIndex": 40,
+              "Title": "OpenBanking_ATM_V1.csproj",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",
               "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",
               "RelativeToolTip": "OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-21T14:43:28.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T14:43:28.62Z"
             },
             {
               "$type": "Bookmark",

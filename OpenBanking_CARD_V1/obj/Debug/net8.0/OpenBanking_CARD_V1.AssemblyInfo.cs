@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenBanking_CARD_V1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fdd2d6cc6827e73c0bcbcaab0e96d876c458a5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf72a33ba9a9e2a8cabd16badd1195f479a0492f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenBanking_CARD_V1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenBanking_CARD_V1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
