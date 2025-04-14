@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  account-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_ACCOUNT_V1/Dockerfile
+    container_name: account-service
+    ports:
+      - "8088:8088"
+      - "8089:8089"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  atm-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_ATM_V1/Dockerfile
+    container_name: atm-service
+    ports:
+      - "8082:8082"
+      - "8083:8083"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  branch-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_BRANCH_V1/Dockerfile
+    container_name: branch-service
+    ports:
+      - "8084:8084"
+      - "8085:8085"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  card-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_CARD_V1/Dockerfile
+    container_name: card-service
+    ports:
+      - "8086:8086"
+      - "8087:8087"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

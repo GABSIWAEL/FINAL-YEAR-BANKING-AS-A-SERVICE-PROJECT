@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AqmHD/EIpokP+V0xJ0noZU42IheyGN6rKXyp6d04hIU=",
+  "Source": "OpenBanking_CARD_V1",
+  "BasePath": "_content/OpenBanking_CARD_V1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

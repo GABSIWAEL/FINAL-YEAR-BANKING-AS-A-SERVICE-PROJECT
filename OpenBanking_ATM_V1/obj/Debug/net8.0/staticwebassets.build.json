@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "XAIIYz1dO6e8QntXk/HJLvk6rhMVWLpXPBKZcyRNQDg=",
+  "Source": "OpenBanking_ATM_V1",
+  "BasePath": "_content/OpenBanking_ATM_V1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

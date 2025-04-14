@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OpenBanking_ATM_V1.props" />
+</Project>

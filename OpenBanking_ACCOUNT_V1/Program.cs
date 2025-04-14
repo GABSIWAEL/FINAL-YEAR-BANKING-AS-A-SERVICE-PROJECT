@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using OpenBanking_ACCOUNT_V1.Data;
 using System.Collections.Generic; // Imports generic collections like List, Dictionary, etc.
 using System.Linq;                 // Imports LINQ extension methods for querying collections.
@@ -10,16 +11,21 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IAccountRepos  , AccountRepos>();
-
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8088);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API ACCOUNT V1");
+    c.RoutePrefix = string.Empty; // Swagger will be at root e.g., http://localhost:8088/
+});
 
 app.UseHttpsRedirection();
 
@@ -28,4 +34,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-PrepDb.PrepPopulation(app);
+
