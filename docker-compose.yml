@@ -11,6 +11,9 @@ services:
       - "8089:8089"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - DB_CONNECTION_STRING=Host=account-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=accountdb
+    depends_on:
+      - account-db
 
   atm-service:
     build:
@@ -22,6 +25,9 @@ services:
       - "8083:8083"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - DB_CONNECTION_STRING=mongodb://atm-db:27017/atmdb
+    depends_on:
+      - atm-db
 
   branch-service:
     build:
@@ -33,6 +39,9 @@ services:
       - "8085:8085"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - DB_CONNECTION_STRING=mysql://branch-db:3306/branchdb
+    depends_on:
+      - branch-db
 
   card-service:
     build:
@@ -44,3 +53,42 @@ services:
       - "8087:8087"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - DB_CONNECTION_STRING=Host=card-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=carddb
+    depends_on:
+      - card-db
+
+  # Database Services
+  account-db:
+    image: postgres:13
+    container_name: account-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=accountdb
+    ports:
+      - "5432:5432"
+
+  atm-db:
+    image: mongo:latest
+    container_name: atm-db
+    ports:
+      - "27017:27017"
+
+  branch-db:
+    image: mysql:5.7
+    container_name: branch-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysecretpassword
+      - MYSQL_DATABASE=branchdb
+    ports:
+      - "3306:3306"
+
+  card-db:
+    image: postgres:13
+    container_name: card-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=carddb
+    ports:
+      - "5432:5432"
