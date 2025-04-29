@@ -21,7 +21,7 @@ namespace OpenBanking_ACCOUNT_V1.Models
         public List<Tags> tags { get; set; }
 
 
-
+            
 
 
     }
