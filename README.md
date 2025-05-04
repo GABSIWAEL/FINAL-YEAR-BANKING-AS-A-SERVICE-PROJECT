@@ -137,6 +137,11 @@ This project uses Docker Compose to manage multiple services. Below are the deta
   - `5433:5433` – PostgreSQL exposed on port 5433.
 
 
+## Architecture 
+![image](https://github.com/user-attachments/assets/c76a3abe-93d8-4f19-93f2-017f07e5f66c)
+
+![WhatsApp Image 2025-05-04 à 22 17 39_48c745a0](https://github.com/user-attachments/assets/feb797e0-8e78-450d-88d1-a62458f6f6a7)
+
 
 ## 📡 API Access
 
