@@ -1,39 +1,51 @@
-﻿namespace OpenBanking_ATM_V1.CustomException
+﻿using System.Runtime.Serialization;
+
+namespace OpenBanking_ATM_V1.CustomException
 {
-    public class ObpExceptionATM : Exception
+    public class ObpExceptionATM : Exception, ISerializable
     {
         public string ErrorCode { get; }
+        public int StatusCode { get; } // Add this property to fix the error
 
-        private ObpExceptionATM(string errorCode, string message) : base(message)
+        public ObpExceptionATM(string message, int statusCode, string errorCode = null) : base(message)
         {
+            StatusCode = statusCode;
             ErrorCode = errorCode;
         }
 
         public override string ToString()
         {
-            return $"{ErrorCode}: {Message}";
+            return $"{base.ToString()}, StatusCode: {StatusCode}, ErrorCode: {ErrorCode}";
         }
 
-        // ==== Static Factory Methods for ATM Exceptions ====
-
         public static ObpExceptionATM UserNotLoggedIn()
-            => new ObpExceptionATM("OBP-20001", "User not logged in. Authentication is required!");
+        {
+            return new ObpExceptionATM("User is not logged in.", 401, "UserNotLoggedIn");
+        }
 
         public static ObpExceptionATM BankNotFound()
-            => new ObpExceptionATM("OBP-30001", "Bank not found. Please specify a valid value for BANK_ID.");
+        {
+            return new ObpExceptionATM("Bank not found.", 404, "BankNotFound");
+        }
 
         public static ObpExceptionATM InvalidJsonFormat()
-            => new ObpExceptionATM("OBP-10001", "Incorrect json format.");
+        {
+            return new ObpExceptionATM("Invalid JSON format.", 400, "InvalidJsonFormat");
+        }
 
         public static ObpExceptionATM UnknownError()
-            => new ObpExceptionATM("OBP-50000", "Unknown Error.");
+        {
+            return new ObpExceptionATM("An unknown error occurred.", 500, "UnknownError");
+        }
 
         public static ObpExceptionATM MissingRoles()
-            => new ObpExceptionATM("OBP-20006", "User is missing one or more roles.");
+        {
+            return new ObpExceptionATM("Missing required roles.", 403, "MissingRoles");
+        }
 
         public static ObpExceptionATM ATMNotFound()
-            => new ObpExceptionATM("OBP-30009", "ATM not found. Please specify a valid value for ATM_ID.");
-
-        // You can add more custom ATM exceptions here if needed...
+        {
+            return new ObpExceptionATM("ATM not found.", 404, "ATMNotFound");
+        }
     }
 }

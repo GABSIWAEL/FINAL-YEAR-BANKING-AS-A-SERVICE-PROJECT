@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenBanking_BRANCH_V1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1eda8a0ff2c5b05b248964c24cbe74ed4e7599c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b119f08c372c3bf1fc5ded0c060799a57720951")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenBanking_BRANCH_V1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenBanking_BRANCH_V1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OpenBanking_ATM_V1.Dtos;
 using OpenBanking_ATM_V1.Models;
 using System.Collections.Generic;
 
@@ -10,6 +11,11 @@ namespace OpenBanking_ATM_V1.Data
     {
     }
 
-    public DbSet<Atm> Atm { get; set; }
-}
+        public DbSet<ATMAttributes> ATMAttributes { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Meta> Metas { get; set; }
+        public DbSet <Atm> Atms { get; set; }
+
+    }
 }
