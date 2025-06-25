@@ -6,28 +6,7 @@ services:
       context: .
       dockerfile: OpenBanking_ACCOUNT_V1/Dockerfile
     container_name: account-service
-    ports:
-      - "8088:8088"
-      - "8089:8089"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - DB_CONNECTION_STRING=Host=account-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=accountdb
-    depends_on:
-      - account-db
-
-  atm-service:
-    build:
-      context: .
-      dockerfile: OpenBanking_ATM_V1/Dockerfile
-    container_name: atm-service
-    ports:
-      - "8082:8082"
-      - "8083:8083"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - DB_CONNECTION_STRING=mongodb://atm-db:27017/atmdb
-    depends_on:
-      - atm-db
+    
 
   branch-service:
     build:

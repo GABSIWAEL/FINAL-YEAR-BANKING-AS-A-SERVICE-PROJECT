@@ -1,0 +1,289 @@
+<div class="auth-container">
+  <div class="form-wrapper">
+    <div class="form-container" id="formContainer" #formContainer>
+  <div class="form-side signup-form">
+        <div class="form-header">
+          <h1 class="form-title">
+            <span *ngIf="isEnglish">Create Account</span>
+            <span *ngIf="isFrench">Créer un compte</span>
+            <span *ngIf="isArabe">إنشاء حساب</span>
+            <span *ngIf="isGerman">Konto erstellen</span>
+            <span *ngIf="isSpanish">Crear cuenta</span>
+            <span *ngIf="isRussian">Создать аккаунт</span>
+            <span *ngIf="isChinese">创建账户</span>
+          </h1>
+          <p class="form-subtitle">
+            <span *ngIf="isEnglish">Join us and start your journey</span>
+            <span *ngIf="isFrench">Rejoignez-nous et commencez votre aventure</span>
+            <span *ngIf="isArabe">انضم إلينا وابدأ رحلتك</span>
+            <span *ngIf="isGerman">Treten Sie uns bei und beginnen Sie Ihre Reise</span>
+            <span *ngIf="isSpanish">Únete a nosotros y comienza tu viaje</span>
+            <span *ngIf="isRussian">Присоединяйтесь и начните свой путь</span>
+            <span *ngIf="isChinese">加入我们，开始您的旅程</span>
+          </p>
+        </div>
+
+        <div class="social-login">
+          <a href="#" class="social-btn">
+            <!-- Google Icon --> Google
+          </a>
+          <a href="#" class="social-btn">
+            <!-- Facebook Icon --> Facebook
+          </a>
+        </div>
+
+        <div class="form-divider">
+          <span *ngIf="isEnglish">or sign up with email</span>
+          <span *ngIf="isFrench">ou inscrivez-vous par email</span>
+          <span *ngIf="isArabe">أو سجل باستخدام البريد الإلكتروني</span>
+          <span *ngIf="isGerman">oder registrieren Sie sich mit E-Mail</span>
+          <span *ngIf="isSpanish">o regístrate con correo</span>
+          <span *ngIf="isRussian">или зарегистрируйтесь по email</span>
+          <span *ngIf="isChinese">或使用电子邮件注册</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">
+              <span *ngIf="isEnglish">First Name</span>
+              <span *ngIf="isFrench">Prénom</span>
+              <span *ngIf="isArabe">الاسم الأول</span>
+              <span *ngIf="isGerman">Vorname</span>
+              <span *ngIf="isSpanish">Nombre</span>
+              <span *ngIf="isRussian">Имя</span>
+              <span *ngIf="isChinese">名字</span>
+            </label>
+            <input type="text" class="form-input" placeholder="John" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              <span *ngIf="isEnglish">Last Name</span>
+              <span *ngIf="isFrench">Nom</span>
+              <span *ngIf="isArabe">اللقب</span>
+              <span *ngIf="isGerman">Nachname</span>
+              <span *ngIf="isSpanish">Apellido</span>
+              <span *ngIf="isRussian">Фамилия</span>
+              <span *ngIf="isChinese">姓</span>
+            </label>
+            <input type="text" class="form-input" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <span *ngIf="isEnglish">Email Address</span>
+            <span *ngIf="isFrench">Adresse email</span>
+            <span *ngIf="isArabe">البريد الإلكتروني</span>
+            <span *ngIf="isGerman">E-Mail-Adresse</span>
+            <span *ngIf="isSpanish">Correo electrónico</span>
+            <span *ngIf="isRussian">Электронная почта</span>
+            <span *ngIf="isChinese">电子邮件</span>
+          </label>
+          <input type="email" class="form-input" placeholder="john@example.com" required>
+        </div>
+
+        <div class="form-group password-group">
+          <label class="form-label">
+            <span *ngIf="isEnglish">Password</span>
+            <span *ngIf="isFrench">Mot de passe</span>
+            <span *ngIf="isArabe">كلمة المرور</span>
+            <span *ngIf="isGerman">Passwort</span>
+            <span *ngIf="isSpanish">Contraseña</span>
+            <span *ngIf="isRussian">Пароль</span>
+            <span *ngIf="isChinese">密码</span>
+          </label>
+          <input type="password" class="form-input" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-options">
+          <div class="checkbox-group">
+            <input type="checkbox" class="form-checkbox" id="terms" required>
+            <label for="terms" class="form-label">
+              <span *ngIf="isEnglish">I agree to the terms</span>
+              <span *ngIf="isFrench">J'accepte les conditions</span>
+              <span *ngIf="isArabe">أوافق على الشروط</span>
+              <span *ngIf="isGerman">Ich stimme den Bedingungen zu</span>
+              <span *ngIf="isSpanish">Acepto los términos</span>
+              <span *ngIf="isRussian">Я согласен с условиями</span>
+              <span *ngIf="isChinese">我同意条款</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span *ngIf="isEnglish">Create Account</span>
+          <span *ngIf="isFrench">Créer un compte</span>
+          <span *ngIf="isArabe">إنشاء حساب</span>
+          <span *ngIf="isGerman">Konto erstellen</span>
+          <span *ngIf="isSpanish">Crear cuenta</span>
+          <span *ngIf="isRussian">Создать аккаунт</span>
+          <span *ngIf="isChinese">创建账户</span>
+        </button>
+
+        <p class="terms-text">
+          <span *ngIf="isEnglish">By creating an account, you agree to our</span>
+          <span *ngIf="isFrench">En créant un compte, vous acceptez nos</span>
+          <span *ngIf="isArabe">بإنشاء حساب، فإنك توافق على</span>
+          <span *ngIf="isGerman">Mit der Erstellung eines Kontos stimmen Sie unseren</span>
+          <span *ngIf="isSpanish">Al crear una cuenta, aceptas nuestros</span>
+          <span *ngIf="isRussian">Создавая аккаунт, вы соглашаетесь с</span>
+          <span *ngIf="isChinese">创建账户即表示您同意我们的</span>
+          <a href="#" class="terms-link">Terms of Service</a>
+          <span *ngIf="isEnglish">and</span>
+          <span *ngIf="isFrench">et</span>
+          <span *ngIf="isArabe">و</span>
+          <span *ngIf="isGerman">und</span>
+          <span *ngIf="isSpanish">y</span>
+          <span *ngIf="isRussian">и</span>
+          <span *ngIf="isChinese">和</span>
+          <a href="#" class="terms-link">Privacy Policy</a>
+        </p>
+
+        <div class="form-switch">
+          <p class="switch-text">
+            <span *ngIf="isEnglish">Already have an account?</span>
+            <span *ngIf="isFrench">Vous avez déjà un compte ?</span>
+            <span *ngIf="isArabe">لديك حساب بالفعل؟</span>
+            <span *ngIf="isGerman">Bereits ein Konto?</span>
+            <span *ngIf="isSpanish">¿Ya tienes una cuenta?</span>
+            <span *ngIf="isRussian">Уже есть аккаунт?</span>
+            <span *ngIf="isChinese">已有账户？</span>
+            <span class="switch-link" (click)="flipForm()">
+              <span *ngIf="isEnglish">Sign in</span>
+              <span *ngIf="isFrench">Se connecter</span>
+              <span *ngIf="isArabe">تسجيل الدخول</span>
+              <span *ngIf="isGerman">Einloggen</span>
+              <span *ngIf="isSpanish">Iniciar sesión</span>
+              <span *ngIf="isRussian">Войти</span>
+              <span *ngIf="isChinese">登录</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <!-- Signup Form -->
+      <!-- (Signup form content is already here, unchanged) -->
+
+      <!-- Login Form -->
+      <div class="form-side login-form">
+        <div class="form-header">
+          <h1 class="form-title">
+            <span *ngIf="isEnglish">Welcome Back</span>
+            <span *ngIf="isFrench">Bon retour</span>
+            <span *ngIf="isArabe">مرحبًا بعودتك</span>
+            <span *ngIf="isGerman">Willkommen zurück</span>
+            <span *ngIf="isSpanish">Bienvenido de nuevo</span>
+            <span *ngIf="isRussian">С возвращением</span>
+            <span *ngIf="isChinese">欢迎回来</span>
+          </h1>
+          <p class="form-subtitle">
+            <span *ngIf="isEnglish">Sign in to your account</span>
+            <span *ngIf="isFrench">Connectez-vous à votre compte</span>
+            <span *ngIf="isArabe">سجّل الدخول إلى حسابك</span>
+            <span *ngIf="isGerman">Melden Sie sich bei Ihrem Konto an</span>
+            <span *ngIf="isSpanish">Inicia sesión en tu cuenta</span>
+            <span *ngIf="isRussian">Войдите в свой аккаунт</span>
+            <span *ngIf="isChinese">登录您的账户</span>
+          </p>
+        </div>
+
+        <div class="social-login">
+          <a href="#" class="social-btn">Google</a>
+          <a href="#" class="social-btn">Facebook</a>
+        </div>
+
+        <div class="form-divider">
+          <span *ngIf="isEnglish">or sign in with email</span>
+          <span *ngIf="isFrench">ou connectez-vous par email</span>
+          <span *ngIf="isArabe">أو سجل الدخول باستخدام البريد الإلكتروني</span>
+          <span *ngIf="isGerman">oder melden Sie sich per E-Mail an</span>
+          <span *ngIf="isSpanish">o inicia sesión con tu correo</span>
+          <span *ngIf="isRussian">или войдите по email</span>
+          <span *ngIf="isChinese">或使用电子邮件登录</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <span *ngIf="isEnglish">Email Address</span>
+            <span *ngIf="isFrench">Adresse email</span>
+            <span *ngIf="isArabe">البريد الإلكتروني</span>
+            <span *ngIf="isGerman">E-Mail-Adresse</span>
+            <span *ngIf="isSpanish">Correo electrónico</span>
+            <span *ngIf="isRussian">Электронная почта</span>
+            <span *ngIf="isChinese">电子邮件</span>
+          </label>
+          <input type="email" class="form-input" placeholder="john@example.com" required>
+        </div>
+
+        <div class="form-group password-group">
+          <label class="form-label">
+            <span *ngIf="isEnglish">Password</span>
+            <span *ngIf="isFrench">Mot de passe</span>
+            <span *ngIf="isArabe">كلمة المرور</span>
+            <span *ngIf="isGerman">Passwort</span>
+            <span *ngIf="isSpanish">Contraseña</span>
+            <span *ngIf="isRussian">Пароль</span>
+            <span *ngIf="isChinese">密码</span>
+          </label>
+          <input type="password" class="form-input" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-options">
+          <div class="checkbox-group">
+            <input type="checkbox" class="form-checkbox" id="remember">
+            <label for="remember" class="form-label">
+              <span *ngIf="isEnglish">Remember me</span>
+              <span *ngIf="isFrench">Se souvenir de moi</span>
+              <span *ngIf="isArabe">تذكرني</span>
+              <span *ngIf="isGerman">Angemeldet bleiben</span>
+              <span *ngIf="isSpanish">Recuérdame</span>
+              <span *ngIf="isRussian">Запомнить меня</span>
+              <span *ngIf="isChinese">记住我</span>
+            </label>
+          </div>
+          <a href="#" class="forgot-link">
+            <span *ngIf="isEnglish">Forgot password?</span>
+            <span *ngIf="isFrench">Mot de passe oublié ?</span>
+            <span *ngIf="isArabe">هل نسيت كلمة المرور؟</span>
+            <span *ngIf="isGerman">Passwort vergessen?</span>
+            <span *ngIf="isSpanish">¿Olvidaste tu contraseña?</span>
+            <span *ngIf="isRussian">Забыли пароль?</span>
+            <span *ngIf="isChinese">忘记密码？</span>
+          </a>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span *ngIf="isEnglish">Sign In</span>
+          <span *ngIf="isFrench">Se connecter</span>
+          <span *ngIf="isArabe">تسجيل الدخول</span>
+          <span *ngIf="isGerman">Einloggen</span>
+          <span *ngIf="isSpanish">Iniciar sesión</span>
+          <span *ngIf="isRussian">Войти</span>
+          <span *ngIf="isChinese">登录</span>
+        </button>
+
+        <div class="form-switch">
+          <p class="switch-text">
+            <span *ngIf="isEnglish">Don't have an account?</span>
+            <span *ngIf="isFrench">Vous n'avez pas de compte ?</span>
+            <span *ngIf="isArabe">ليس لديك حساب؟</span>
+            <span *ngIf="isGerman">Noch kein Konto?</span>
+            <span *ngIf="isSpanish">¿No tienes una cuenta?</span>
+            <span *ngIf="isRussian">Нет аккаунта?</span>
+            <span *ngIf="isChinese">还没有账户？</span>
+            <span class="switch-link" (click)="unflipForm()">
+              <span *ngIf="isEnglish">Create one</span>
+              <span *ngIf="isFrench">Créer un</span>
+              <span *ngIf="isArabe">أنشئ حساب</span>
+              <span *ngIf="isGerman">Jetzt registrieren</span>
+              <span *ngIf="isSpanish">Crear uno</span>
+              <span *ngIf="isRussian">Создать</span>
+              <span *ngIf="isChinese">创建一个</span>
+            </span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

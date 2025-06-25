@@ -9,6 +9,7 @@
 - `OpenBanking_ATM_V1` – ATM operations (withdrawals, deposits, geo-location)
 - `OpenBanking_BRANCH_V1` – Branch information and metadata
 - `OpenBanking_CARD_V1` – Card issuance and status tracking
+- `OpenBanking_ANGULAR_V1` – The Frontend microservice
 
 ---
 
@@ -49,8 +50,8 @@ kubectl apply -f deployments.yaml
 > ❌ **Why Not SQLite?**
 > - Not concurrency-safe
 > - No user roles or network access
-> - Poor scalability and no failover support
-> Use **only for local testing**, never in production.
+> - Poor scalability and no failover support  
+> ✅ Use **only for local testing**, never in production.
 
 ---
 
@@ -80,84 +81,97 @@ public static ObpExceptionCARD CardStatusNotReturned() => new ObpExceptionCARD("
 ```
 
 ---
-# Docker Compose Services and Exposed Ports
 
-This project uses Docker Compose to manage multiple services. Below are the details of the services and the ports they expose.
-
-## Services and Exposed Ports:
+## 🐳 Docker Compose Services and Exposed Ports
 
 ### 1. **Account Service**
-- **Container Name:** `account-service`
-- **Ports Exposed:**
-  - `8088:8088` – Exposes the Account Service API on port 8088 (host:container)
-  - `8089:8089` – Exposes an additional port for the Account Service (host:container)
-- **Database:** PostgreSQL (`account-db`), accessible on `5432:5432`.
+- Ports: `8088:8088`, `8089:8089`
+- DB: PostgreSQL (`5432:5432`)
 
 ### 2. **ATM Service**
-- **Container Name:** `atm-service`
-- **Ports Exposed:**
-  - `8082:8082` – Exposes the ATM Service API on port 8082 (host:container)
-  - `8083:8083` – Exposes an additional port for the ATM Service (host:container)
-- **Database:** MongoDB (`atm-db`), accessible on `27017:27017`.
+- Ports: `8082:8082`, `8083:8083`
+- DB: MongoDB (`27017:27017`)
 
 ### 3. **Branch Service**
-- **Container Name:** `branch-service`
-- **Ports Exposed:**
-  - `8084:8084` – Exposes the Branch Service API on port 8084 (host:container)
-  - `8085:8085` – Exposes an additional port for the Branch Service (host:container)
-- **Database:** MySQL (`branch-db`), accessible on `3306:3306`.
+- Ports: `8084:8084`, `8085:8085`
+- DB: MySQL (`3306:3306`)
 
 ### 4. **Card Service**
-- **Container Name:** `card-service`
-- **Ports Exposed:**
-  - `8086:8086` – Exposes the Card Service API on port 8086 (host:container)
-  - `8087:8087` – Exposes an additional port for the Card Service (host:container)
-- **Database:** PostgreSQL (`card-db`), accessible on `5433:5433`.
+- Ports: `8086:8086`, `8087:8087`
+- DB: PostgreSQL (`5433:5433`)
 
-## Database Services:
+---
 
-### 1. **Account DB (PostgreSQL)**
-- **Container Name:** `account-db`
-- **Ports Exposed:**
-  - `5432:5432` – PostgreSQL exposed on port 5432.
+## 🖥️ Frontend Service (STB BANK)
 
-### 2. **ATM DB (MongoDB)**
-- **Container Name:** `atm-db`
-- **Ports Exposed:**
-  - `27017:27017` – MongoDB exposed on port 27017.
+### 🌐 Supported Languages:
+- English 🇬🇧
+- French 🇫🇷
+- Arabic 🇸🇦
+- Spanish 🇪🇸
+- German 🇩🇪
+- Russian 🇷🇺
+- Chinese 🇨🇳
 
-### 3. **Branch DB (MySQL)**
-- **Container Name:** `branch-db`
-- **Ports Exposed:**
-  - `3306:3306` – MySQL exposed on port 3306.
+### 🚪 Authentication:
+- Email-based login and registration
+- Password protection with visibility toggle
+- Social login via Google and Facebook
 
-### 4. **Card DB (PostgreSQL)**
-- **Container Name:** `card-db`
-- **Ports Exposed:**
-  - `5433:5433` – PostgreSQL exposed on port 5433.
+### 🎨 UI/UX:
+- Built using Angular 16+
+- Fully responsive (mobile-first)
+- Key sections: Hero, About, Features, Pricing, Language Switch
+- Real-time form validation
 
+### 🔐 Security:
+- Frontend form validation
+- Token-based session management via backend
 
-## Architecture 
-![image](https://github.com/user-attachments/assets/c76a3abe-93d8-4f19-93f2-017f07e5f66c)
+### 🌍 Internationalization (i18n):
+- Dynamic multi-language switch
+- `assets/i18n/` folder for translations
+- Language dropdown integrated in navbar
 
-![WhatsApp Image 2025-05-04 à 22 17 39_48c745a0](https://github.com/user-attachments/assets/feb797e0-8e78-450d-88d1-a62458f6f6a7)
+### 🧪 Development
+```bash
+npm install
+ng serve
+```
 
+### 🧱 Build & Deploy
+```bash
+ng build --configuration=production
+```
+> Deployed via Dockerized NGINX with SPA routing support
+
+### 📁 Folder Structure
+```
+src/
+├── app/
+│   ├── components/       # All Angular components (login, landing, etc.)
+│   └── services/         # Auth and API services
+├── assets/i18n/          # Language translation files
+├── environments/         # Environment configs
+```
+
+---
 
 ## 📡 API Access
 
-Each service runs on an independent endpoint. Make sure the relevant pod/container is active before sending requests.
+Each service runs on its own endpoint. Ensure each pod/container is healthy before invoking APIs.
 
 ---
 
 ## 🤝 Contribution
 
-Want to help?
-- Open a pull request for fixes or features
-- Submit issues or ideas
-- Enhance documentation
+Contributions are welcome:
+- Submit pull requests
+- Report issues
+- Suggest improvements or new features
 
 ---
 
 ## 📝 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.

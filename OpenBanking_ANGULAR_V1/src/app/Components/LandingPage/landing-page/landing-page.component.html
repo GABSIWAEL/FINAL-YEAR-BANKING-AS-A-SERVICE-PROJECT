@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - iLanding Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+ 
+
+  <!-- =======================================================
+  * Template Name: iLanding
+  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
+  * Updated: Nov 12 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">STB BANK </h1>
+      </a>
+
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li>
+      <a href="#hero" class="active">
+        <span *ngIf="isEnglish">Home</span>
+        <span *ngIf="isFrench">Accueil</span>
+        <span *ngIf="isArabe">الرئيسية</span>
+        <span *ngIf="isGerman">Startseite</span>
+        <span *ngIf="isSpanish">Inicio</span>
+        <span *ngIf="isRussian">Главная</span>
+        <span *ngIf="isChinese">首页</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#about">
+        <span *ngIf="isEnglish">About</span>
+        <span *ngIf="isFrench">À propos</span>
+        <span *ngIf="isArabe">من نحن</span>
+        <span *ngIf="isGerman">Über uns</span>
+        <span *ngIf="isSpanish">Acerca de</span>
+        <span *ngIf="isRussian">О нас</span>
+        <span *ngIf="isChinese">关于我们</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#features">
+        <span *ngIf="isEnglish">Features</span>
+        <span *ngIf="isFrench">Fonctionnalités</span>
+        <span *ngIf="isArabe">الميزات</span>
+        <span *ngIf="isGerman">Funktionen</span>
+        <span *ngIf="isSpanish">Características</span>
+        <span *ngIf="isRussian">Функции</span>
+        <span *ngIf="isChinese">功能</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="#services">
+        <span *ngIf="isEnglish">Services</span>
+        <span *ngIf="isFrench">Services</span>
+        <span *ngIf="isArabe">الخدمات</span>
+        <span *ngIf="isGerman">Dienstleistungen</span>
+        <span *ngIf="isSpanish">Servicios</span>
+        <span *ngIf="isRussian">Услуги</span>
+        <span *ngIf="isChinese">服务</span>
+      </a>
+    </li>
+
+    
+
+    <!-- Language Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span *ngIf="isEnglish">Language</span>
+                 <span *ngIf="isFrench">Langue</span>
+                 <span *ngIf="isArabe">اللغة</span>
+                 <span *ngIf="isGerman">Sprache</span>
+                 <span *ngIf="isSpanish">Idioma</span>
+                 <span *ngIf="isRussian">Язык</span>
+                 <span *ngIf="isChinese">语言</span>
+        <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <ul>
+    <li><a href="#" (click)="setLanguage('en')">English</a></li>
+    <li><a href="#" (click)="setLanguage('fr')">Français</a></li>
+    <li><a href="#" (click)="setLanguage('es')">Español</a></li>
+    <li><a href="#" (click)="setLanguage('de')">Deutsch</a></li>
+    <li><a href="#" (click)="setLanguage('ru')">Русский</a></li>
+    <li><a href="#" (click)="setLanguage('ar')">العربية</a></li>
+    <li><a href="#" (click)="setLanguage('zh')">中文</a></li>
+  </ul>
+</li>
+
+          <li>
+  <a href="#contact">
+    <span *ngIf="isEnglish">Contact</span>
+    <span *ngIf="isFrench">Contact</span>
+    <span *ngIf="isArabe">اتصال</span>
+    <span *ngIf="isGerman">Kontakt</span>
+    <span *ngIf="isSpanish">Contacto</span>
+    <span *ngIf="isRussian">Контакты</span>
+    <span *ngIf="isChinese">联系我们</span>
+  </a>
+</li>
+</ul>
+
+<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+<!-- Get Started Button -->
+<a class="btn-getstarted" href="/authentication">
+  <span *ngIf="isEnglish">Get Started</span>
+  <span *ngIf="isFrench">Commencer</span>
+  <span *ngIf="isArabe">ابدأ الآن</span>
+  <span *ngIf="isGerman">Loslegen</span>
+  <span *ngIf="isSpanish">Comenzar</span>
+  <span *ngIf="isRussian">Начать</span>
+  <span *ngIf="isChinese">开始使用</span>
+</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+  <div class="col-lg-6">
+    <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+      <div class="company-badge mb-4">
+        <i class="bi bi-gear-fill me-2"></i>
+
+        <span *ngIf="isEnglish">Working for your success</span>
+        <span *ngIf="isFrench">Travailler pour votre succès</span>
+        <span *ngIf="isArabe">نعمل من أجل نجاحك</span>
+        <span *ngIf="isGerman">Wir arbeiten für Ihren Erfolg</span>
+        <span *ngIf="isSpanish">Trabajando para su éxito</span>
+        <span *ngIf="isRussian">Работаем на ваш успех</span>
+        <span *ngIf="isChinese">为您的成功而努力</span>
+      </div>
+
+      <h1 class="mb-4">
+        <span *ngIf="isEnglish">Banking</span>
+        <span *ngIf="isFrench">La banque</span>
+        <span *ngIf="isArabe">الخدمات المصرفية</span>
+        <span *ngIf="isGerman">Bankwesen</span>
+        <span *ngIf="isSpanish">Banca</span>
+        <span *ngIf="isRussian">Банковское дело</span>
+        <span *ngIf="isChinese">银行业务</span>
+        <br>
+
+        <span *ngIf="isEnglish">Reimagined</span>
+        <span *ngIf="isFrench">Réimaginée</span>
+        <span *ngIf="isArabe">إعادة تصور</span>
+        <span *ngIf="isGerman">Neu gedacht</span>
+        <span *ngIf="isSpanish">Reimaginada</span>
+        <span *ngIf="isRussian">Переосмыслено</span>
+        <span *ngIf="isChinese">重新构想</span>
+        <br>
+
+        <span class="accent-text" *ngIf="isEnglish">Delivered as a Service.</span>
+        <span class="accent-text" *ngIf="isFrench">Livrée en tant que service.</span>
+        <span class="accent-text" *ngIf="isArabe">مقدمة كخدمة.</span>
+        <span class="accent-text" *ngIf="isGerman">Als Service bereitgestellt.</span>
+        <span class="accent-text" *ngIf="isSpanish">Entregado como un servicio.</span>
+        <span class="accent-text" *ngIf="isRussian">Предоставляется как услуга.</span>
+        <span class="accent-text" *ngIf="isChinese">作为服务提供。</span>
+      </h1>
+
+      <p class="mb-4 mb-md-5">
+        <span *ngIf="isEnglish">
+          Open, secure, and developer-ready. Build next-gen financial solutions with our Banking-as-a-Service platform — powered by Open Banking standards.
+        </span>
+        <span *ngIf="isFrench">
+          Ouvert, sécurisé et prêt pour les développeurs. Construisez des solutions financières de nouvelle génération avec notre plateforme Banking-as-a-Service — propulsée par les standards Open Banking.
+        </span>
+        <span *ngIf="isArabe">
+          منصة مفتوحة وآمنة وجاهزة للمطورين. بناء حلول مالية متقدمة مع منصة الخدمات المصرفية كخدمة المدعومة بمعايير Open Banking.
+        </span>
+        <span *ngIf="isGerman">
+          Offen, sicher und entwicklerfreundlich. Bauen Sie Finanzlösungen der nächsten Generation mit unserer Banking-as-a-Service-Plattform – basierend auf Open Banking-Standards.
+        </span>
+        <span *ngIf="isSpanish">
+          Abierto, seguro y listo para desarrolladores. Construya soluciones financieras de próxima generación con nuestra plataforma Banking-as-a-Service, impulsada por estándares Open Banking.
+        </span>
+        <span *ngIf="isRussian">
+          Открытая, безопасная и готовая для разработчиков платформа. Создавайте решения нового поколения с нашей платформой Banking-as-a-Service на основе стандартов Open Banking.
+        </span>
+        <span *ngIf="isChinese">
+          开放、安全且面向开发者。使用我们的银行即服务平台构建下一代金融解决方案 — 基于开放银行标准。
+        </span>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">
+          <span *ngIf="isEnglish">Get Started</span>
+          <span *ngIf="isFrench">Commencer</span>
+          <span *ngIf="isArabe">ابدأ الآن</span>
+          <span *ngIf="isGerman">Loslegen</span>
+          <span *ngIf="isSpanish">Comenzar</span>
+          <span *ngIf="isRussian">Начать</span>
+          <span *ngIf="isChinese">开始</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
+          <i class="bi bi-play-circle me-1"></i>
+          <span *ngIf="isEnglish">Play Video</span>
+          <span *ngIf="isFrench">Regarder la vidéo</span>
+          <span *ngIf="isArabe">شاهد الفيديو</span>
+          <span *ngIf="isGerman">Video abspielen</span>
+          <span *ngIf="isSpanish">Reproducir video</span>
+          <span *ngIf="isRussian">Смотреть видео</span>
+          <span *ngIf="isChinese">播放视频</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+      <img src="assets/wa/assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
+
+      
+    </div>
+  </div>
+</div>
+
+
+        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+
+  <div class="col-lg-3 col-md-6">
+    <div class="stat-item">
+      <div class="stat-icon">
+        <i class="bi bi-trophy"></i>
+      </div>
+      <div class="stat-content">
+        <h4>
+          <span *ngIf="isEnglish">Fintech</span>
+          <span *ngIf="isFrench">Fintech</span>
+          <span *ngIf="isArabe">التقنية المالية</span>
+          <span *ngIf="isGerman">Fintech</span>
+          <span *ngIf="isSpanish">Fintech</span>
+          <span *ngIf="isRussian">Финтех</span>
+          <span *ngIf="isChinese">金融科技</span>
+        </h4>
+        <p class="mb-0">
+          <span *ngIf="isEnglish">Empowering fintechs with modular banking APIs.</span>
+          <span *ngIf="isFrench">Autonomiser les fintechs avec des API bancaires modulaires.</span>
+          <span *ngIf="isArabe">تمكين الشركات المالية التقنية من خلال واجهات برمجة تطبيقات مصرفية معيارية.</span>
+          <span *ngIf="isGerman">Fintechs mit modularen Banking-APIs stärken.</span>
+          <span *ngIf="isSpanish">Empoderando a las fintech con APIs bancarias modulares.</span>
+          <span *ngIf="isRussian">Поддержка финтех-компаний с помощью модульных банковских API.</span>
+          <span *ngIf="isChinese">通过模块化银行API赋能金融科技公司。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="stat-item">
+      <div class="stat-icon">
+        <i class="bi bi-briefcase"></i>
+      </div>
+      <div class="stat-content">
+        <h4>
+          <span *ngIf="isEnglish">Launch</span>
+          <span *ngIf="isFrench">Lancement</span>
+          <span *ngIf="isArabe">إطلاق</span>
+          <span *ngIf="isGerman">Start</span>
+          <span *ngIf="isSpanish">Lanzamiento</span>
+          <span *ngIf="isRussian">Запуск</span>
+          <span *ngIf="isChinese">启动</span>
+        </h4>
+        <p class="mb-0">
+          <span *ngIf="isEnglish">Accelerate your financial product launch — without building a bank.</span>
+          <span *ngIf="isFrench">Accélérez le lancement de votre produit financier — sans créer de banque.</span>
+          <span *ngIf="isArabe">سرّع إطلاق منتجك المالي — بدون بناء بنك.</span>
+          <span *ngIf="isGerman">Beschleunigen Sie den Start Ihres Finanzprodukts — ohne eine Bank zu bauen.</span>
+          <span *ngIf="isSpanish">Acelere el lanzamiento de su producto financiero — sin construir un banco.</span>
+          <span *ngIf="isRussian">Ускорьте запуск вашего финансового продукта — без создания банка.</span>
+          <span *ngIf="isChinese">加速您的金融产品发布 — 无需建立银行。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="stat-item">
+      <div class="stat-icon">
+        <i class="bi bi-graph-up"></i>
+      </div>
+      <div class="stat-content">
+        <h4>
+          <span *ngIf="isEnglish">Global</span>
+          <span *ngIf="isFrench">Global</span>
+          <span *ngIf="isArabe">عالمي</span>
+          <span *ngIf="isGerman">Global</span>
+          <span *ngIf="isSpanish">Global</span>
+          <span *ngIf="isRussian">Глобальный</span>
+          <span *ngIf="isChinese">全球</span>
+        </h4>
+        <p class="mb-0">
+          <span *ngIf="isEnglish">Your gateway to global financial services infrastructure.</span>
+          <span *ngIf="isFrench">Votre passerelle vers l’infrastructure mondiale des services financiers.</span>
+          <span *ngIf="isArabe">بوابتك إلى بنية تحتية للخدمات المالية العالمية.</span>
+          <span *ngIf="isGerman">Ihr Tor zur globalen Finanzdienstleistungsinfrastruktur.</span>
+          <span *ngIf="isSpanish">Tu puerta de entrada a la infraestructura global de servicios financieros.</span>
+          <span *ngIf="isRussian">Ваш шлюз к глобальной инфраструктуре финансовых услуг.</span>
+          <span *ngIf="isChinese">通往全球金融服务基础设施的门户。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="stat-item">
+      <div class="stat-icon">
+        <i class="bi bi-award"></i>
+      </div>
+      <div class="stat-content">
+        <h4>
+          <span *ngIf="isEnglish">Reliability</span>
+          <span *ngIf="isFrench">Fiabilité</span>
+          <span *ngIf="isArabe">الموثوقية</span>
+          <span *ngIf="isGerman">Zuverlässigkeit</span>
+          <span *ngIf="isSpanish">Confiabilidad</span>
+          <span *ngIf="isRussian">Надежность</span>
+          <span *ngIf="isChinese">可靠性</span>
+        </h4>
+        <p class="mb-0">
+          <span *ngIf="isEnglish">Built on secure, scalable cloud infrastructure for 24/7 uptime.</span>
+          <span *ngIf="isFrench">Construit sur une infrastructure cloud sécurisée et évolutive pour une disponibilité 24h/24.</span>
+          <span *ngIf="isArabe">مبني على بنية سحابية آمنة وقابلة للتوسع لضمان التشغيل 24/7.</span>
+          <span *ngIf="isGerman">Auf sicherer, skalierbarer Cloud-Infrastruktur für 24/7-Betrieb aufgebaut.</span>
+          <span *ngIf="isSpanish">Construido sobre una infraestructura en la nube segura y escalable para un tiempo de actividad 24/7.</span>
+          <span *ngIf="isRussian">Построено на безопасной масштабируемой облачной инфраструктуре для работы 24/7.</span>
+          <span *ngIf="isChinese">基于安全、可扩展的云基础设施，确保全天候运行。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+ <section id="about" class="about section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 align-items-center justify-content-between">
+
+      <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+        <!-- Meta Title -->
+        <span class="about-meta">
+          <span *ngIf="isEnglish">MORE ABOUT US</span>
+          <span *ngIf="isFrench">EN SAVOIR PLUS</span>
+          <span *ngIf="isArabe">المزيد عنا</span>
+          <span *ngIf="isGerman">MEHR ÜBER UNS</span>
+          <span *ngIf="isSpanish">MÁS SOBRE NOSOTROS</span>
+          <span *ngIf="isRussian">ПОДРОБНЕЕ О НАС</span>
+          <span *ngIf="isChinese">更多关于我们</span>
+        </span>
+
+        <!-- Title -->
+        <h2 class="about-title">
+          <span *ngIf="isEnglish">Empowering Fintech Innovation Worldwide</span>
+          <span *ngIf="isFrench">Favoriser l'innovation fintech dans le monde entier</span>
+          <span *ngIf="isArabe">تمكين الابتكار في مجال التكنولوجيا المالية على مستوى العالم</span>
+          <span *ngIf="isGerman">Fintech-Innovationen weltweit fördern</span>
+          <span *ngIf="isSpanish">Impulsando la innovación fintech en todo el mundo</span>
+          <span *ngIf="isRussian">Развитие финтех-инноваций по всему миру</span>
+          <span *ngIf="isChinese">推动全球金融科技创新</span>
+        </h2>
+
+        <!-- Description -->
+        <p class="about-description">
+          <span *ngIf="isEnglish">
+            At  <strong>STB BANK</strong>, we deliver a cutting-edge Banking-as-a-Service platform built on open banking standards...
+          </span>
+          <span *ngIf="isFrench">
+            Chez <strong>STB BANK</strong>, nous proposons une plateforme Banking-as-a-Service de pointe basée sur les normes d’Open Banking...
+          </span>
+          <span *ngIf="isArabe">
+            في <strong>STB BANK</strong>، نقدم منصة متقدمة للخدمات المصرفية كخدمة مبنية على معايير Open Banking...
+          </span>
+          <span *ngIf="isGerman">
+            Bei <strong>STB BANK</strong> bieten wir eine hochmoderne Banking-as-a-Service-Plattform basierend auf Open-Banking-Standards...
+          </span>
+          <span *ngIf="isSpanish">
+            En <strong>STB BANK</strong>, ofrecemos una plataforma Banking-as-a-Service de última generación basada en estándares de banca abierta...
+          </span>
+          <span *ngIf="isRussian">
+            В <strong>STB BANK</strong> мы предлагаем современную платформу Banking-as-a-Service на основе стандартов открытого банкинга...
+          </span>
+          <span *ngIf="isChinese">
+            在 <strong>STB BANK</strong>，我们提供基于开放银行标准的尖端银行即服务平台...
+          </span>
+        </p>
+
+        <!-- Feature Lists -->
+        <div class="row feature-list-wrapper">
+          <div class="col-md-6">
+            <ul class="feature-list">
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Open Banking API-first architecture</span>
+                <span *ngIf="isFrench">Architecture API-first de l'Open Banking</span>
+                <span *ngIf="isArabe">بنية واجهات برمجة التطبيقات مفتوحة المصدر أولاً</span>
+                <span *ngIf="isGerman">Open Banking API-First-Architektur</span>
+                <span *ngIf="isSpanish">Arquitectura API-first de Open Banking</span>
+                <span *ngIf="isRussian">Архитектура Open Banking с приоритетом API</span>
+                <span *ngIf="isChinese">以 API 为先的开放银行架构</span>
+              </li>
+
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Secure and compliant with PSD2 & global regulations</span>
+                <span *ngIf="isFrench">Sécurisé et conforme à la PSD2 et aux réglementations mondiales</span>
+                <span *ngIf="isArabe">آمن ومتوافق مع PSD2 واللوائح العالمية</span>
+                <span *ngIf="isGerman">Sicher und konform mit PSD2 & globalen Vorschriften</span>
+                <span *ngIf="isSpanish">Seguro y conforme con PSD2 y regulaciones globales</span>
+                <span *ngIf="isRussian">Безопасен и соответствует PSD2 и мировым стандартам</span>
+                <span *ngIf="isChinese">安全并符合 PSD2 和全球法规</span>
+              </li>
+
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Real-time access to accounts, payments, and cards</span>
+                <span *ngIf="isFrench">Accès en temps réel aux comptes, paiements et cartes</span>
+                <span *ngIf="isArabe">الوصول الفوري إلى الحسابات والمدفوعات والبطاقات</span>
+                <span *ngIf="isGerman">Echtzeitzugriff auf Konten, Zahlungen und Karten</span>
+                <span *ngIf="isSpanish">Acceso en tiempo real a cuentas, pagos y tarjetas</span>
+                <span *ngIf="isRussian">Доступ в реальном времени к счетам, платежам и картам</span>
+                <span *ngIf="isChinese">实时访问账户、支付和卡片</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="feature-list">
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Scalable microservices deployed via Docker & Kubernetes</span>
+                <span *ngIf="isFrench">Microservices évolutifs déployés via Docker et Kubernetes</span>
+                <span *ngIf="isArabe">خدمات مصغرة قابلة للتوسع باستخدام Docker و Kubernetes</span>
+                <span *ngIf="isGerman">Skalierbare Microservices mit Docker & Kubernetes</span>
+                <span *ngIf="isSpanish">Microservicios escalables con Docker y Kubernetes</span>
+                <span *ngIf="isRussian">Масштабируемые микросервисы через Docker и Kubernetes</span>
+                <span *ngIf="isChinese">通过 Docker 和 Kubernetes 部署的可扩展微服务</span>
+              </li>
+
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Modular design tailored for fintech and enterprise needs</span>
+                <span *ngIf="isFrench">Conception modulaire adaptée aux besoins fintech et entreprise</span>
+                <span *ngIf="isArabe">تصميم معياري يلبي احتياجات الشركات والتقنية المالية</span>
+                <span *ngIf="isGerman">Modulares Design für Fintech- und Unternehmensanforderungen</span>
+                <span *ngIf="isSpanish">Diseño modular adaptado a fintechs y empresas</span>
+                <span *ngIf="isRussian">Модульная архитектура под нужды финтеха и бизнеса</span>
+                <span *ngIf="isChinese">适用于金融科技和企业需求的模块化设计</span>
+              </li>
+
+              <li><i class="bi bi-check-circle-fill"></i>
+                <span *ngIf="isEnglish">Global reach with multi-currency & multi-region support</span>
+                <span *ngIf="isFrench">Portée mondiale avec prise en charge multi-devises et multi-régions</span>
+                <span *ngIf="isArabe">الوصول العالمي مع دعم العملات والمناطق المتعددة</span>
+                <span *ngIf="isGerman">Globale Reichweite mit Multiwährungs- & Regionen-Support</span>
+                <span *ngIf="isSpanish">Alcance global con soporte multimoneda y multirregión</span>
+                <span *ngIf="isRussian">Глобальный охват с поддержкой мультивалютности и регионов</span>
+                <span *ngIf="isChinese">支持多币种和多地区的全球覆盖</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Profile & Contact -->
+        <div class="info-wrapper">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="profile d-flex align-items-center gap-3">
+                <img src="assets/wa/assets/img/avatar-1.webp" alt="CEO Profile" class="profile-image">
+                <div>
+                  <h4 class="profile-name">Mario Smith</h4>
+                  <p class="profile-position">CEO &amp; Founder</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="contact-info d-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill"></i>
+                <div>
+                  <p class="contact-label">
+                    <span *ngIf="isEnglish">Call us anytime</span>
+                    <span *ngIf="isFrench">Appelez-nous à tout moment</span>
+                    <span *ngIf="isArabe">اتصل بنا في أي وقت</span>
+                    <span *ngIf="isGerman">Rufen Sie uns jederzeit an</span>
+                    <span *ngIf="isSpanish">Llámanos en cualquier momento</span>
+                    <span *ngIf="isRussian">Звоните в любое время</span>
+                    <span *ngIf="isChinese">随时致电我们</span>
+                  </p>
+                  <p class="contact-number">+123 456-789</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="image-wrapper">
+          <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+            <img src="assets/wa/assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
+            <img src="assets/wa/assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+          </div>
+          <div class="experience-badge floating">
+            <h3>15+ <span>
+              <span *ngIf="isEnglish">Years</span>
+              <span *ngIf="isFrench">Ans</span>
+              <span *ngIf="isArabe">سنة</span>
+              <span *ngIf="isGerman">Jahre</span>
+              <span *ngIf="isSpanish">Años</span>
+              <span *ngIf="isRussian">Лет</span>
+              <span *ngIf="isChinese">年</span>
+            </span></h3>
+            <p>
+              <span *ngIf="isEnglish">Of experience in financial technology & banking services</span>
+              <span *ngIf="isFrench">D’expérience en technologie financière et services bancaires</span>
+              <span *ngIf="isArabe">من الخبرة في التكنولوجيا المالية والخدمات المصرفية</span>
+              <span *ngIf="isGerman">Erfahrung in Finanztechnologie und Bankdienstleistungen</span>
+              <span *ngIf="isSpanish">De experiencia en tecnología financiera y servicios bancarios</span>
+              <span *ngIf="isRussian">Опыт в финансовых технологиях и банковских услугах</span>
+              <span *ngIf="isChinese">在金融科技和银行服务方面的经验</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+><!-- /About Section -->
+
+
+    <!-- Features Section -->
+   <section id="features" class="features section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>
+      <span *ngIf="isEnglish">Features</span>
+      <span *ngIf="isFrench">Fonctionnalités</span>
+      <span *ngIf="isArabe">الميزات</span>
+      <span *ngIf="isGerman">Funktionen</span>
+      <span *ngIf="isSpanish">Características</span>
+      <span *ngIf="isRussian">Функции</span>
+      <span *ngIf="isChinese">功能</span>
+    </h2>
+    <p>
+      <span *ngIf="isEnglish">Explore the powerful capabilities of our Banking-as-a-Service platform — designed to simplify, scale, and secure modern financial solutions.</span>
+      <span *ngIf="isFrench">Découvrez les puissantes capacités de notre plateforme Banking-as-a-Service — conçue pour simplifier, évoluer et sécuriser les solutions financières modernes.</span>
+      <span *ngIf="isArabe">استكشف القدرات القوية لمنصتنا المصرفية كخدمة — المصممة لتبسيط وتوسيع وتأمين الحلول المالية الحديثة.</span>
+      <span *ngIf="isGerman">Entdecken Sie die leistungsstarken Funktionen unserer Banking-as-a-Service-Plattform — entwickelt zur Vereinfachung, Skalierung und Sicherung moderner Finanzlösungen.</span>
+      <span *ngIf="isSpanish">Explora las potentes capacidades de nuestra plataforma de Banca como Servicio — diseñada para simplificar, escalar y proteger soluciones financieras modernas.</span>
+      <span *ngIf="isRussian">Изучите мощные возможности нашей платформы Banking-as-a-Service — созданной для упрощения, масштабирования и защиты современных финансовых решений.</span>
+      <span *ngIf="isChinese">探索我们银行即服务平台的强大功能 — 旨在简化、扩展和保障现代金融解决方案。</span>
+    </p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+        <li class="nav-item">
+          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+            <h4>
+              <span *ngIf="isEnglish">API-First</span>
+              <span *ngIf="isFrench">API-First</span>
+              <span *ngIf="isArabe">واجهة برمجة التطبيقات أولاً</span>
+              <span *ngIf="isGerman">API-First</span>
+              <span *ngIf="isSpanish">API-First</span>
+              <span *ngIf="isRussian">API-First</span>
+              <span *ngIf="isChinese">API 优先</span>
+            </h4>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+            <h4>
+              <span *ngIf="isEnglish">Secure & Compliant</span>
+              <span *ngIf="isFrench">Sécurisé & Conforme</span>
+              <span *ngIf="isArabe">آمن ومتوافق</span>
+              <span *ngIf="isGerman">Sicher & Konform</span>
+              <span *ngIf="isSpanish">Seguro y conforme</span>
+              <span *ngIf="isRussian">Безопасность и соответствие</span>
+              <span *ngIf="isChinese">安全与合规</span>
+            </h4>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+            <h4>
+              <span *ngIf="isEnglish">Modular & Scalable</span>
+              <span *ngIf="isFrench">Modulaire & Évolutif</span>
+              <span *ngIf="isArabe">مرن وقابل للتوسع</span>
+              <span *ngIf="isGerman">Modular & Skalierbar</span>
+              <span *ngIf="isSpanish">Modular y escalable</span>
+              <span *ngIf="isRussian">Модульность и масштабируемость</span>
+              <span *ngIf="isChinese">模块化与可扩展</span>
+            </h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+      <!-- Tab 1 -->
+      <div class="tab-pane fade active show" id="features-tab-1">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <h3>{{ isEnglish ? 'Developer-Centric, API-Driven Banking' : isFrench ? 'Banque axée sur les développeurs et pilotée par API' : isArabe ? 'خدمة مصرفية موجهة للمطورين قائمة على واجهات API' : isGerman ? 'Entwicklerzentriertes, API-gesteuertes Banking' : isSpanish ? 'Banca centrada en el desarrollador impulsada por API' : isRussian ? 'Ориентированное на разработчиков, управляемое API-банкинг' : '以开发者为中心、API 驱动的银行服务' }}</h3>
+            <p class="fst-italic">
+              {{ isEnglish ? 'Our platform is built API-first to give developers complete control and flexibility when building next-generation financial services.' :
+              isFrench ? 'Notre plateforme est construite API-first pour offrir aux développeurs un contrôle et une flexibilité complets.' :
+              isArabe ? 'منصتنا مبنية على مبدأ API أولاً لتمنح المطورين التحكم الكامل والمرونة.' :
+              isGerman ? 'Unsere Plattform ist API-first aufgebaut, um Entwicklern volle Kontrolle und Flexibilität zu bieten.' :
+              isSpanish ? 'Nuestra plataforma está construida con API-first para dar a los desarrolladores control total y flexibilidad.' :
+              isRussian ? 'Наша платформа построена с приоритетом API, чтобы предоставить разработчикам полный контроль и гибкость.' :
+              '我们的平台采用 API 优先构建，赋予开发者完全的控制与灵活性。' }}
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'RESTful APIs for accounts, payments, transactions, and cards.' : isFrench ? 'APIs RESTful pour les comptes, paiements, transactions et cartes.' : isArabe ? 'واجهات RESTful للحسابات والمدفوعات والمعاملات والبطاقات.' : isGerman ? 'RESTful-APIs für Konten, Zahlungen, Transaktionen und Karten.' : isSpanish ? 'APIs RESTful para cuentas, pagos, transacciones y tarjetas.' : isRussian ? 'RESTful API для счетов, платежей, транзакций и карт.' : 'RESTful 接口支持账户、支付、交易和卡片功能。' }}</li>
+              <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Real-time data access for improved customer experience and transparency.' : isFrench ? 'Accès en temps réel aux données pour une meilleure expérience client et transparence.' : isArabe ? 'وصول فوري للبيانات لتحسين تجربة العملاء والشفافية.' : isGerman ? 'Echtzeitdatenzugriff für bessere Kundenerfahrung und Transparenz.' : isSpanish ? 'Acceso a datos en tiempo real para mejorar la experiencia y transparencia.' : isRussian ? 'Доступ к данным в реальном времени для повышения клиентского опыта и прозрачности.' : '实时数据访问提升客户体验与透明度。' }}</li>
+              <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Comprehensive developer documentation, SDKs, and sandbox environments.' : isFrench ? 'Documentation complète pour développeurs, SDKs et environnements de test.' : isArabe ? 'توثيق شامل للمطورين، SDKs وبيئة تجريبية.' : isGerman ? 'Umfassende Entwicklerdokumentation, SDKs und Sandbox-Umgebungen.' : isSpanish ? 'Documentación completa, SDKs y entornos sandbox.' : isRussian ? 'Полная документация, SDK и песочницы для разработчиков.' : '全面的开发文档、SDK 和沙盒环境。' }}</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="assets/wa/assets/img/features-illustration-1.webp" alt="API First Feature" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 -->
+      <!-- Existing content kept unchanged -->
+
+<!-- Tab 2 -->
+<div class="tab-pane fade" id="features-tab-2">
+  <div class="row">
+    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+      <h3>{{ isEnglish ? 'Robust Security and Regulatory Compliance' : isFrench ? 'Sécurité renforcée et conformité réglementaire' : isArabe ? 'أمان قوي والتزام تنظيمي' : isGerman ? 'Robuste Sicherheit und regulatorische Konformität' : isSpanish ? 'Seguridad sólida y cumplimiento normativo' : isRussian ? 'Надежная безопасность и соблюдение нормативных требований' : '强大的安全性与合规性' }}</h3>
+      <p class="fst-italic">
+        {{ isEnglish ? 'Security and compliance are at the core of our platform — ensuring every transaction meets the highest industry standards.' :
+        isFrench ? 'La sécurité et la conformité sont au cœur de notre plateforme — chaque transaction respecte les normes les plus strictes.' :
+        isArabe ? 'الأمان والامتثال في صميم منصتنا — لضمان أن كل معاملة تفي بأعلى المعايير.' :
+        isGerman ? 'Sicherheit und Compliance stehen im Mittelpunkt unserer Plattform — jede Transaktion erfüllt höchste Standards.' :
+        isSpanish ? 'La seguridad y el cumplimiento son el núcleo de nuestra plataforma: cada transacción cumple con los más altos estándares.' :
+        isRussian ? 'Безопасность и соответствие — основа нашей платформы, каждая транзакция соответствует высочайшим стандартам.' :
+        '安全与合规是我们平台的核心，每笔交易均符合最高行业标准。' }}
+      </p>
+      <ul>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'End-to-end encryption and tokenized data handling.' : isFrench ? 'Chiffrement de bout en bout et gestion des données tokenisées.' : isArabe ? 'تشفير شامل ومعالجة بيانات برمزية.' : isGerman ? 'Ende-zu-Ende-Verschlüsselung und tokenisierte Datenverarbeitung.' : isSpanish ? 'Cifrado de extremo a extremo y manejo de datos tokenizados.' : isRussian ? 'Сквозное шифрование и обработка токенизированных данных.' : '端到端加密与令牌化数据处理。' }}</li>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Compliance with PSD2, Open Banking UK, and GDPR frameworks.' : isFrench ? 'Conformité avec PSD2, Open Banking UK et le RGPD.' : isArabe ? 'الامتثال لـ PSD2 و Open Banking UK و GDPR.' : isGerman ? 'Einhaltung von PSD2, Open Banking UK und DSGVO.' : isSpanish ? 'Cumplimiento de PSD2, Open Banking UK y GDPR.' : isRussian ? 'Соответствие PSD2, Open Banking UK и GDPR.' : '符合 PSD2、英国开放银行与 GDPR 标准。' }}</li>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Integrated KYC/AML services for customer verification and fraud prevention.' : isFrench ? 'Services KYC/AML intégrés pour la vérification client et la prévention de la fraude.' : isArabe ? 'خدمات KYC/AML مدمجة للتحقق من العملاء ومنع الاحتيال.' : isGerman ? 'Integrierte KYC/AML-Dienste zur Kundenverifizierung und Betrugsprävention.' : isSpanish ? 'Servicios integrados de KYC/AML para verificación y prevención de fraude.' : isRussian ? 'Интегрированные KYC/AML-сервисы для проверки клиентов и предотвращения мошенничества.' : '集成 KYC/AML 服务以验证客户并防止欺诈。' }}</li>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Regular audits, penetration testing, and access control protocols.' : isFrench ? 'Audits réguliers, tests d’intrusion et protocoles de contrôle d’accès.' : isArabe ? 'عمليات تدقيق منتظمة واختبارات اختراق وبروتوكولات للتحكم في الوصول.' : isGerman ? 'Regelmäßige Audits, Penetrationstests und Zugriffskontrollprotokolle.' : isSpanish ? 'Auditorías regulares, pruebas de penetración y protocolos de control de acceso.' : isRussian ? 'Регулярные аудиты, тесты на проникновение и протоколы контроля доступа.' : '定期审计、渗透测试与访问控制协议。' }}</li>
+      </ul>
+    </div>
+    <div class="col-lg-6 order-1 order-lg-2 text-center">
+      <img src="assets/wa/assets/img/features-illustration-2.webp" alt="Security Feature" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<!-- Tab 3 -->
+<div class="tab-pane fade" id="features-tab-3">
+  <div class="row">
+    <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+      <h3>{{ isEnglish ? 'Modular Architecture for Global Scale' : isFrench ? 'Architecture modulaire pour l’échelle mondiale' : isArabe ? 'هيكلية مرنة للنطاق العالمي' : isGerman ? 'Modulare Architektur für globale Skalierung' : isSpanish ? 'Arquitectura modular para escala global' : isRussian ? 'Модульная архитектура для глобального масштаба' : '面向全球扩展的模块化架构' }}</h3>
+      <ul>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Built using Docker & Kubernetes for seamless scalability.' : isFrench ? 'Conçu avec Docker & Kubernetes pour une évolutivité transparente.' : isArabe ? 'مبني باستخدام Docker و Kubernetes لتوسيع سلس.' : isGerman ? 'Erstellt mit Docker & Kubernetes für nahtlose Skalierbarkeit.' : isSpanish ? 'Construido con Docker y Kubernetes para escalabilidad sin problemas.' : isRussian ? 'Создан с использованием Docker и Kubernetes для бесшовной масштабируемости.' : '使用 Docker 和 Kubernetes 构建，实现无缝扩展。' }}</li>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Microservices-based architecture enables high availability and fast deployments.' : isFrench ? 'Architecture basée sur des microservices pour haute disponibilité et déploiements rapides.' : isArabe ? 'هيكلية تعتمد على الخدمات المصغرة لضمان التوفر العالي والنشر السريع.' : isGerman ? 'Microservices-Architektur ermöglicht hohe Verfügbarkeit und schnelle Bereitstellungen.' : isSpanish ? 'Arquitectura basada en microservicios para alta disponibilidad y despliegues rápidos.' : isRussian ? 'Архитектура на базе микросервисов обеспечивает высокую доступность и быструю развертку.' : '基于微服务的架构实现高可用性与快速部署。' }}</li>
+        <li><i class="bi bi-check2-all"></i> {{ isEnglish ? 'Multi-region, multi-currency support for international expansion.' : isFrench ? 'Support multi-région et multi-devises pour l’expansion internationale.' : isArabe ? 'دعم متعدد المناطق والعملات للتوسع الدولي.' : isGerman ? 'Unterstützung für mehrere Regionen und Währungen für internationale Expansion.' : isSpanish ? 'Soporte multi-región y multimoneda para expansión internacional.' : isRussian ? 'Поддержка нескольких регионов и валют для международной экспансии.' : '支持多区域与多币种，助力国际扩张。' }}</li>
+      </ul>
+    <p class="fst-italic">
+  {{
+    isEnglish ? "Whether you're launching locally or scaling globally, our system grows with your business — without compromising on speed or security." :
+    isFrench ? "Que vous lanciez localement ou à l’échelle mondiale, notre système évolue avec votre entreprise — sans compromis sur la vitesse ou la sécurité." :
+    isArabe ? "سواء كنت تطلق محلياً أو تتوسع عالمياً، نظامنا ينمو مع نشاطك — دون التضحية بالسرعة أو الأمان." :
+    isGerman ? "Ob lokal gestartet oder global skaliert – unser System wächst mit Ihrem Geschäft, ohne Kompromisse bei Geschwindigkeit oder Sicherheit." :
+    isSpanish ? "Ya sea que lances localmente o escales globalmente, nuestro sistema crece con tu negocio — sin comprometer velocidad o seguridad." :
+    isRussian ? "Независимо от того, запускаете ли вы локально или масштабируетесь глобально, наша система растет вместе с вашим бизнесом — без ущерба для скорости и безопасности." :
+    "无论是本地启动还是全球扩展，我们的系统都能与您的业务同步成长，不牺牲速度与安全性。"
+  }}
+</p>
+
+    </div>
+    <div class="col-lg-6 order-1 order-lg-2 text-center">
+      <img src="assets/wa/assets/img/features-illustration-3.webp" alt="Scalable Architecture" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section><!-- /Features Section -->
+
+
+    <!-- Features Cards Section -->
+    <!-- Features Cards Section -->
+<section id="features-cards" class="features-cards section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Feature Card 1 -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="feature-box orange">
+          <i class="bi bi-gear-fill"></i>
+          <h4>{{ isEnglish ? 'API-First Architecture' : isFrench ? 'Architecture API-First' : isArabe ? 'بنية تعتمد على الواجهات البرمجية' : isGerman ? 'API-First-Architektur' : isSpanish ? 'Arquitectura centrada en API' : isRussian ? 'Архитектура API-First' : '以 API 优先的架构' }}</h4>
+          <p>{{ isEnglish ? 'Integrate powerful banking functions like accounts, payments, and cards through secure, RESTful APIs.' : isFrench ? 'Intégrez des fonctions bancaires puissantes comme les comptes, les paiements et les cartes via des API REST sécurisées.' : isArabe ? 'دمج وظائف مصرفية قوية مثل الحسابات والمدفوعات والبطاقات من خلال واجهات برمجة تطبيقات آمنة.' : isGerman ? 'Integrieren Sie leistungsstarke Bankfunktionen wie Konten, Zahlungen und Karten über sichere RESTful-APIs.' : isSpanish ? 'Integra funciones bancarias potentes como cuentas, pagos y tarjetas mediante API REST seguras.' : isRussian ? 'Интегрируйте мощные банковские функции, такие как счета, платежи и карты, через безопасные RESTful API.' : '通过安全的 RESTful API 集成强大的银行功能，如账户、支付和卡片。' }}</p>
+        </div>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="feature-box blue">
+          <i class="bi bi-shield-lock-fill"></i>
+          <h4>{{ isEnglish ? 'Compliance Ready' : isFrench ? 'Conforme aux réglementations' : isArabe ? 'جاهز للامتثال' : isGerman ? 'Regelkonform' : isSpanish ? 'Cumple con normativas' : isRussian ? 'Готов к соблюдению требований' : '符合监管要求' }}</h4>
+          <p>{{ isEnglish ? 'Stay ahead of regulations with PSD2, Open Banking, and GDPR-compliant infrastructure, including KYC/AML tools.' : isFrench ? 'Anticipez les réglementations avec une infrastructure conforme à PSD2, Open Banking et RGPD, incluant les outils KYC/AML.' : isArabe ? 'ابق متقدماً على اللوائح مع بنية تحتية متوافقة مع PSD2 وOpen Banking وGDPR، بما في ذلك أدوات KYC/AML.' : isGerman ? 'Erfüllen Sie Vorschriften mit einer Infrastruktur, die PSD2, Open Banking und DSGVO entspricht, einschließlich KYC/AML-Tools.' : isSpanish ? 'Anticípese a las regulaciones con infraestructura compatible con PSD2, Open Banking y GDPR, incluyendo herramientas KYC/AML.' : isRussian ? 'Соответствуйте требованиям PSD2, Open Banking и GDPR с соответствующей инфраструктурой и инструментами KYC/AML.' : '符合 PSD2、开放银行和 GDPR 的基础设施，包括 KYC/AML 工具。' }}</p>
+        </div>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="feature-box green">
+          <i class="bi bi-credit-card-2-front-fill"></i>
+          <h4>{{ isEnglish ? 'Card Issuance' : isFrench ? 'Émission de cartes' : isArabe ? 'إصدار البطاقات' : isGerman ? 'Kartenausgabe' : isSpanish ? 'Emisión de tarjetas' : isRussian ? 'Выпуск карт' : '卡片发行' }}</h4>
+          <p>{{ isEnglish ? 'Issue and manage virtual and physical debit cards with full control over limits, branding, and fraud protection.' : isFrench ? 'Émettez et gérez des cartes de débit virtuelles et physiques avec un contrôle total des limites, de l’image de marque et de la protection contre la fraude.' : isArabe ? 'أصدر وادِر البطاقات الافتراضية والمادية بمرونة في الحدود والعلامة التجارية والحماية من الاحتيال.' : isGerman ? 'Geben Sie virtuelle und physische Debitkarten aus und verwalten Sie sie mit voller Kontrolle über Limits, Branding und Betrugsschutz.' : isSpanish ? 'Emita y gestione tarjetas de débito virtuales y físicas con control total sobre límites, marca y protección contra fraudes.' : isRussian ? 'Выпускайте и управляйте виртуальными и физическими дебетовыми картами с полным контролем лимитов, брендинга и защиты от мошенничества.' : '发行并管理虚拟和实体借记卡，全面控制限额、品牌与防欺诈。' }}</p>
+        </div>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="feature-box red">
+          <i class="bi bi-globe2"></i>
+          <h4>{{ isEnglish ? 'Global Banking' : isFrench ? 'Banque mondiale' : isArabe ? 'الخدمات المصرفية العالمية' : isGerman ? 'Globales Banking' : isSpanish ? 'Banca global' : isRussian ? 'Глобальный банкинг' : '全球银行服务' }}</h4>
+          <p>{{ isEnglish ? 'Launch globally with multi-currency support, cross-border payments, and region-specific configurations.' : isFrench ? 'Lancez-vous à l’international avec support multi-devises, paiements transfrontaliers et configurations régionales.' : isArabe ? 'أطلق عالمياً بدعم متعدد العملات ومدفوعات عابرة للحدود وتكوينات خاصة بكل منطقة.' : isGerman ? 'Starten Sie weltweit mit Unterstützung für mehrere Währungen, grenzüberschreitende Zahlungen und regionale Konfigurationen.' : isSpanish ? 'Lance a nivel global con soporte multimoneda, pagos transfronterizos y configuraciones específicas por región.' : isRussian ? 'Запускайтесь на глобальном уровне с поддержкой мультивалютности, трансграничными платежами и региональными настройками.' : '全球启动，支持多币种、跨境支付和区域配置。' }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Features Cards Section -->
+
+
+    <!-- Features 2 Section -->
+   <section id="features-2" class="features-2 section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-center">
+
+      <!-- Left Column -->
+      <div class="col-lg-4">
+
+        <!-- Feature 1 -->
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+  <div class="d-flex align-items-center justify-content-end gap-4">
+    <div class="feature-content">
+      <h3>{{ 
+        isEnglish ? 'Open Banking Ready' :
+        isFrench ? "Prêt pour l'Open Banking" :
+        isArabe ? 'جاهز للبنوك المفتوحة' :
+        isGerman ? 'Open Banking bereit' :
+        isSpanish ? 'Preparado para Open Banking' :
+        isRussian ? 'Готовность к Open Banking' :
+        '支持开放银行' 
+      }}</h3>
+      <p>{{ 
+        isEnglish ? 'Compliant with global Open Banking standards like PSD2 and UK OB — enabling secure third-party access to banking data.' :
+        isFrench ? "Conforme aux normes mondiales d'Open Banking comme PSD2 et UK OB — permettant un accès sécurisé aux données bancaires par des tiers." :
+        isArabe ? 'متوافق مع معايير البنوك المفتوحة العالمية مثل PSD2 وUK OB — يتيح وصولاً آمناً لبيانات البنك من قبل أطراف ثالثة.' :
+        isGerman ? 'Entspricht globalen Open-Banking-Standards wie PSD2 und UK OB – ermöglicht sicheren Drittzugriff auf Bankdaten.' :
+        isSpanish ? 'Cumple con estándares globales de Open Banking como PSD2 y UK OB — permitiendo acceso seguro a datos bancarios por terceros.' :
+        isRussian ? 'Соответствует мировым стандартам Open Banking, таким как PSD2 и UK OB — обеспечивает безопасный доступ третьих лиц к банковским данным.' :
+        '符合全球开放银行标准，如 PSD2 和英国 OB — 支持第三方安全访问银行数据。'
+      }}</p>
+    </div>
+    <div class="feature-icon flex-shrink-0">
+      <i class="bi bi-unlock-fill"></i>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Feature 2 -->
+        <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>{{ isEnglish ? 'Instant KYC & AML' : isFrench ? 'KYC & AML instantanés' : isArabe ? 'اعرف عميلك ومكافحة غسل الأموال الفورية' : isGerman ? 'Sofortiges KYC & AML' : isSpanish ? 'KYC y AML instantáneos' : isRussian ? 'Мгновенная проверка KYC и AML' : '即时 KYC 与反洗钱' }}</h3>
+              <p>{{ isEnglish ? 'Verify identities, monitor suspicious behavior, and remain fully compliant — all with built-in KYC/AML modules.' : isFrench ? 'Vérifiez les identités, surveillez les comportements suspects et restez conforme grâce aux modules KYC/AML intégrés.' : isArabe ? 'تحقق من الهويات، راقب السلوكيات المشبوهة وابقَ متوافقًا تمامًا — كل ذلك باستخدام وحدات KYC/AML المدمجة.' : isGerman ? 'Überprüfen Sie Identitäten, überwachen Sie verdächtiges Verhalten und bleiben Sie vollständig konform – alles mit integrierten KYC/AML-Modulen.' : isSpanish ? 'Verifique identidades, monitoree comportamientos sospechosos y manténgase completamente conforme — todo con módulos KYC/AML integrados.' : isRussian ? 'Проверяйте личности, отслеживайте подозрительное поведение и соблюдайте требования — с помощью встроенных модулей KYC/AML.' : '验证身份、监控可疑行为，并通过内置 KYC/AML 模块保持合规。' }}</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-person-check-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            <div class="feature-content">
+              <h3>{{ isEnglish ? 'Multi-Currency Support' : isFrench ? 'Support multi-devises' : isArabe ? 'دعم العملات المتعددة' : isGerman ? 'Mehrwährungsunterstützung' : isSpanish ? 'Soporte multimoneda' : isRussian ? 'Поддержка нескольких валют' : '多币种支持' }}</h3>
+              <p>{{ isEnglish ? 'Support global transactions in multiple currencies, with dynamic FX rates and real-time conversion tracking.' : isFrench ? 'Gérez des transactions mondiales en plusieurs devises avec des taux de change dynamiques et un suivi en temps réel.' : isArabe ? 'دعم المعاملات العالمية بعملات متعددة، مع أسعار صرف ديناميكية وتتبع فوري.' : isGerman ? 'Unterstützung globaler Transaktionen in mehreren Währungen mit dynamischen Wechselkursen und Echtzeit-Tracking.' : isSpanish ? 'Soporte para transacciones globales en múltiples monedas, con tasas de cambio dinámicas y seguimiento en tiempo real.' : isRussian ? 'Поддержка глобальных транзакций в различных валютах с динамическими курсами и отслеживанием в реальном времени.' : '支持多币种全球交易，动态汇率与实时转换追踪。' }}</p>
+            </div>
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-currency-exchange"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="phone-mockup text-center">
+          <img *ngIf="isEnglish" src="assets/wa/assets/img/hh.png" alt="Phone English" class="img-fluid">
+          <img *ngIf="isFrench" src="assets/wa/assets/img/fr.png" alt="Phone French" class="img-fluid">
+          <img *ngIf="isArabe" src="assets/wa/assets/img/ar.png" alt="Phone Arabic" class="img-fluid">
+          <img *ngIf="isGerman" src="assets/wa/assets/img/ge.png" alt="Phone German" class="img-fluid">
+          <img *ngIf="isSpanish" src="assets/wa/assets/img/esp.png" alt="Phone Spanish" class="img-fluid">
+          <img *ngIf="isRussian" src="assets/wa/assets/img/ru.png" alt="Phone Russian" class="img-fluid">
+          <img *ngIf="isChinese" src="assets/wa/assets/img/ch.png" alt="Phone Chinese" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-4">
+
+        <!-- Feature 4 -->
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-credit-card-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h3>{{ isEnglish ? 'Card Issuing' : isFrench ? 'Émission de cartes' : isArabe ? 'إصدار البطاقات' : isGerman ? 'Kartenausgabe' : isSpanish ? 'Emisión de tarjetas' : isRussian ? 'Выпуск карт' : '卡片发行' }}</h3>
+              <p>{{ isEnglish ? 'Issue branded debit or virtual cards instantly with full spending controls and real-time tracking.' : isFrench ? 'Émettez instantanément des cartes de débit ou virtuelles avec des contrôles de dépenses complets et un suivi en temps réel.' : isArabe ? 'أصدر بطاقات خصم أو افتراضية مخصصة على الفور بتحكم كامل وتتبع لحظي.' : isGerman ? 'Stellen Sie sofort Marken-Debit- oder virtuelle Karten mit vollständiger Ausgabenkontrolle und Echtzeit-Tracking aus.' : isSpanish ? 'Emita tarjetas de débito o virtuales de marca al instante con control total de gastos y seguimiento en tiempo real.' : isRussian ? 'Мгновенный выпуск брендированных дебетовых или виртуальных карт с полным контролем расходов и отслеживанием в реальном времени.' : '即时发行品牌借记卡或虚拟卡，具备完整消费控制与实时追踪。' }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <div class="feature-content">
+              <h3>{{ isEnglish ? 'Real-Time Analytics' : isFrench ? 'Analytique en temps réel' : isArabe ? 'تحليلات فورية' : isGerman ? 'Echtzeitanalysen' : isSpanish ? 'Analítica en tiempo real' : isRussian ? 'Аналитика в реальном времени' : '实时分析' }}</h3>
+              <p>{{ isEnglish ? 'Get insights into transactions, user behavior, and performance with built-in dashboards and APIs.' : isFrench ? 'Obtenez des insights sur les transactions, le comportement utilisateur et la performance grâce aux tableaux de bord et APIs intégrés.' : isArabe ? 'احصل على رؤى حول المعاملات وسلوك المستخدم والأداء من خلال لوحات القيادة وواجهات البرمجة.' : isGerman ? 'Gewinnen Sie Einblicke in Transaktionen, Nutzerverhalten und Leistung mit integrierten Dashboards und APIs.' : isSpanish ? 'Obtenga información sobre transacciones, comportamiento del usuario y rendimiento con paneles y APIs integrados.' : isRussian ? 'Получите информацию о транзакциях, поведении пользователей и производительности с помощью встроенных панелей и API.' : '通过内置仪表板和 API 获取交易、用户行为和性能洞察。' }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+          <div class="d-flex align-items-center gap-4">
+            <div class="feature-icon flex-shrink-0">
+              <i class="bi bi-cloud-check-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h3>{{ isEnglish ? 'Cloud Native Infrastructure' : isFrench ? 'Infrastructure cloud native' : isArabe ? 'بنية تحتية أصلية للسحابة' : isGerman ? 'Cloud-native Infrastruktur' : isSpanish ? 'Infraestructura nativa en la nube' : isRussian ? 'Облачная нативная инфраструктура' : '云原生基础设施' }}</h3>
+              <p>{{ isEnglish ? 'Built with containers and microservices — deploy fast, scale instantly, and stay always-on worldwide.' : isFrench ? 'Construit avec des conteneurs et des microservices — déploiement rapide, montée en charge instantanée et disponibilité mondiale continue.' : isArabe ? 'تم بناؤه باستخدام الحاويات والخدمات المصغرة — نشر سريع، توسع فوري، وتشغيل دائم في جميع أنحاء العالم.' : isGerman ? 'Gebaut mit Containern und Microservices – schnelle Bereitstellung, sofortige Skalierung und weltweite Verfügbarkeit.' : isSpanish ? 'Construido con contenedores y microservicios: implementación rápida, escalado instantáneo y disponibilidad global.' : isRussian ? 'Создан с использованием контейнеров и микросервисов — быстрая развертка, мгновенное масштабирование и постоянная доступность.' : '使用容器和微服务构建，实现快速部署、即时扩展与全球可用性。' }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- /Features 2 Section -->
+
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row content justify-content-center align-items-center position-relative">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 mb-4">Maecenas tempus tellus eget condimentum</h2>
+            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            <a href="#" class="btn btn-cta">Call To Action</a>
+          </div>
+
+          <!-- Abstract Background Elements -->
+          <div class="shape shape-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <div class="shape shape-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <!-- Dot Pattern Groups -->
+          <div class="dots dots-1">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+            </svg>
+          </div>
+
+          <div class="dots dots-2">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+            </svg>
+          </div>
+
+          <div class="shape shape-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/wa/assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <img src="assets/wa/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <img src="assets/wa/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <img src="assets/wa/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-item">
+              <img src="assets/wa/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-activity"></i>
+              </div>
+              <div>
+                <h3>Nesciunt Mete</h3>
+                <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <div>
+                <h3>Eosle Commodi</h3>
+                <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-easel"></i>
+              </div>
+              <div>
+                <h3>Ledo Markt</h3>
+                <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-clipboard-data"></i>
+              </div>
+              <div>
+                <h3>Asperiores Commodit</h3>
+                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Card -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Pricing Section -->
+ 
+
+    <!-- Faq Section -->
+   <section class="faq-9 faq section light-background" id="faq">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <h2 class="faq-title">
+          {{
+            isEnglish ? 'Have a question about Open Banking & Banking-as-a-Service? Check out the FAQ' :
+            isFrench ? 'Une question sur Open Banking et Banking-as-a-Service ? Consultez la FAQ' :
+            isArabe ? 'هل لديك سؤال حول الخدمات المصرفية المفتوحة والبنك كخدمة؟ تحقق من الأسئلة المتكررة' :
+            isGerman ? 'Fragen zu Open Banking und Banking-as-a-Service? Sehen Sie sich die FAQ an' :
+            isSpanish ? '¿Tiene una pregunta sobre Open Banking y Banking-as-a-Service? Consulte las preguntas frecuentes' :
+            isRussian ? 'Есть вопросы по Open Banking и Banking-as-a-Service? Ознакомьтесь с часто задаваемыми вопросами' :
+            '关于开放银行和银行即服务有疑问？查看常见问题解答'
+          }}
+        </h2>
+        <p class="faq-description">
+          {{
+            isEnglish ? 'Learn how Banking-as-a-Service (BaaS) enables fintech companies to access banking infrastructure via APIs in an Open Banking ecosystem.' :
+            isFrench ? 'Découvrez comment Banking-as-a-Service (BaaS) permet aux fintechs d\'accéder à l\'infrastructure bancaire via des API dans un écosystème Open Banking.' :
+            isArabe ? 'تعرف على كيفية تمكين البنك كخدمة (BaaS) لشركات التكنولوجيا المالية من الوصول إلى البنية التحتية المصرفية عبر واجهات برمجة التطبيقات في نظام الخدمات المصرفية المفتوحة.' :
+            isGerman ? 'Erfahren Sie, wie Banking-as-a-Service (BaaS) Fintech-Unternehmen den Zugriff auf Bankinfrastrukturen über APIs in einem Open-Banking-Ökosystem ermöglicht.' :
+            isSpanish ? 'Aprenda cómo Banking-as-a-Service (BaaS) permite a las fintech acceder a la infraestructura bancaria mediante APIs en un ecosistema de Open Banking.' :
+            isRussian ? 'Узнайте, как Banking-as-a-Service (BaaS) позволяет финтех-компаниям получать доступ к банковской инфраструктуре через API в экосистеме Open Banking.' :
+            '了解银行即服务（BaaS）如何使金融科技公司通过API在开放银行生态系统中访问银行基础设施。'
+          }}
+        </p>
+        <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+          <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3>
+              {{
+                isEnglish ? 'What is Banking-as-a-Service (BaaS)?' :
+                isFrench ? 'Qu’est-ce que Banking-as-a-Service (BaaS) ?' :
+                isArabe ? 'ما هو البنك كخدمة (BaaS)؟' :
+                isGerman ? 'Was ist Banking-as-a-Service (BaaS)?' :
+                isSpanish ? '¿Qué es Banking-as-a-Service (BaaS)?' :
+                isRussian ? 'Что такое Banking-as-a-Service (BaaS)?' :
+                '什么是银行即服务（BaaS）？'
+              }}
+            </h3>
+            <div class="faq-content">
+              <p>
+                {{
+                  isEnglish ? 'Banking-as-a-Service allows fintech companies to offer banking products by integrating with licensed banks through APIs.' :
+                  isFrench ? 'Banking-as-a-Service permet aux fintechs d\'offrir des produits bancaires en s\'intégrant avec des banques agréées via des API.' :
+                  isArabe ? 'يتيح البنك كخدمة لشركات التكنولوجيا المالية تقديم منتجات مصرفية من خلال التكامل مع البنوك المرخصة عبر واجهات برمجة التطبيقات.' :
+                  isGerman ? 'Banking-as-a-Service ermöglicht Fintech-Unternehmen, Bankprodukte durch Integration mit lizenzierten Banken über APIs anzubieten.' :
+                  isSpanish ? 'Banking-as-a-Service permite a las fintech ofrecer productos bancarios integrándose con bancos autorizados a través de APIs.' :
+                  isRussian ? 'Banking-as-a-Service позволяет финтех-компаниям предлагать банковские продукты, интегрируясь с лицензированными банками через API.' :
+                  '银行即服务允许金融科技公司通过API与持牌银行集成，提供银行产品。'
+                }}
+              </p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>
+              {{
+                isEnglish ? 'How does Open Banking work with BaaS?' :
+                isFrench ? 'Comment Open Banking fonctionne-t-il avec BaaS ?' :
+                isArabe ? 'كيف يعمل Open Banking مع BaaS؟' :
+                isGerman ? 'Wie funktioniert Open Banking mit BaaS?' :
+                isSpanish ? '¿Cómo funciona Open Banking con BaaS?' :
+                isRussian ? 'Как работает Open Banking с BaaS?' :
+                '开放银行如何与银行即服务协作？'
+              }}
+            </h3>
+            <div class="faq-content">
+              <p>
+                {{
+                  isEnglish ? 'Open Banking provides standardized APIs for secure data sharing, while BaaS platforms use these APIs to deliver banking services.' :
+                  isFrench ? 'Open Banking fournit des API standardisées pour le partage sécurisé des données, tandis que les plateformes BaaS utilisent ces API pour offrir des services bancaires.' :
+                  isArabe ? 'يوفر Open Banking واجهات برمجة تطبيقات موحدة لمشاركة البيانات الآمنة، بينما تستخدم منصات BaaS هذه الواجهات لتقديم الخدمات المصرفية.' :
+                  isGerman ? 'Open Banking bietet standardisierte APIs für sicheren Datenaustausch, während BaaS-Plattformen diese APIs zur Bereitstellung von Bankdienstleistungen nutzen.' :
+                  isSpanish ? 'Open Banking proporciona APIs estandarizadas para compartir datos de forma segura, mientras que las plataformas BaaS usan estas APIs para ofrecer servicios bancarios.' :
+                  isRussian ? 'Open Banking предоставляет стандартизированные API для безопасного обмена данными, в то время как платформы BaaS используют эти API для предоставления банковских услуг.' :
+                  '开放银行提供标准化的API以实现安全的数据共享，而银行即服务平台使用这些API来提供银行服务。'
+                }}
+              </p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>
+              {{
+                isEnglish ? 'Who can benefit from Banking-as-a-Service?' :
+                isFrench ? 'Qui peut bénéficier de Banking-as-a-Service ?' :
+                isArabe ? 'من يمكنه الاستفادة من البنك كخدمة؟' :
+                isGerman ? 'Wer kann von Banking-as-a-Service profitieren?' :
+                isSpanish ? '¿Quién puede beneficiarse de Banking-as-a-Service?' :
+                isRussian ? 'Кто может получить выгоду от Banking-as-a-Service?' :
+                '谁能从银行即服务中受益？'
+              }}
+            </h3>
+            <div class="faq-content">
+              <p>
+                {{
+                  isEnglish ? 'Fintech startups, established companies, and non-bank businesses can leverage BaaS to quickly offer financial products without becoming banks themselves.' :
+                  isFrench ? 'Les startups fintech, les entreprises établies et les sociétés non bancaires peuvent exploiter BaaS pour offrir rapidement des produits financiers sans devenir elles-mêmes des banques.' :
+                  isArabe ? 'يمكن للشركات الناشئة في التكنولوجيا المالية والشركات القائمة والشركات غير المصرفية الاستفادة من BaaS لتقديم منتجات مالية بسرعة دون أن تصبح بنوكًا.' :
+                  isGerman ? 'Fintech-Startups, etablierte Unternehmen und Nicht-Banken können BaaS nutzen, um schnell Finanzprodukte anzubieten, ohne selbst Banken zu werden.' :
+                  isSpanish ? 'Las startups fintech, las empresas establecidas y los negocios no bancarios pueden aprovechar BaaS para ofrecer productos financieros rápidamente sin convertirse en bancos.' :
+                  isRussian ? 'Финтех-стартапы, устоявшиеся компании и небанковские предприятия могут использовать BaaS для быстрого предложения финансовых продуктов без необходимости становиться банками.' :
+                  '金融科技初创企业、成熟公司和非银行业务可以利用银行即服务快速提供金融产品，而无需成为银行。'
+                }}
+              </p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>
+              {{
+                isEnglish ? 'Is Banking-as-a-Service secure?' :
+                isFrench ? 'Banking-as-a-Service est-il sécurisé ?' :
+                isArabe ? 'هل البنك كخدمة آمن؟' :
+                isGerman ? 'Ist Banking-as-a-Service sicher?' :
+                isSpanish ? '¿Es seguro Banking-as-a-Service?' :
+                isRussian ? 'Безопасен ли Banking-as-a-Service?' :
+                '银行即服务安全吗？'
+              }}
+            </h3>
+            <div class="faq-content">
+              <p>
+                {{
+                  isEnglish ? 'Yes, BaaS providers comply with banking regulations and implement strict security measures to protect customer data and transactions.' :
+                  isFrench ? 'Oui, les fournisseurs BaaS respectent les réglementations bancaires et mettent en œuvre des mesures de sécurité strictes pour protéger les données et les transactions des clients.' :
+                  isArabe ? 'نعم، يلتزم مزودو BaaS بلوائح البنوك وينفذون إجراءات أمان صارمة لحماية بيانات العملاء والمعاملات.' :
+                  isGerman ? 'Ja, BaaS-Anbieter erfüllen die Bankvorschriften und implementieren strenge Sicherheitsmaßnahmen zum Schutz von Kundendaten und Transaktionen.' :
+                  isSpanish ? 'Sí, los proveedores de BaaS cumplen con las regulaciones bancarias e implementan medidas de seguridad estrictas para proteger los datos y transacciones de los clientes.' :
+                  isRussian ? 'Да, провайдеры BaaS соблюдают банковские нормы и применяют строгие меры безопасности для защиты данных и транзакций клиентов.' :
+                  '是的，BaaS 提供商遵守银行法规，并实施严格的安全措施以保护客户数据和交易。'
+                }}
+              </p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <!-- You can add more FAQ items similarly -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Faq Section -->
+
+    <!-- Call To Action 2 Section -->
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>A108 Adam Street</p>
+                  <p>New York, NY 535022</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+              <form action="assets/wa/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">iLanding</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Hic solutasetp</h4>
+          <ul>
+            <li><a href="#">Molestiae accusamus iure</a></li>
+            <li><a href="#">Excepturi dignissimos</a></li>
+            <li><a href="#">Suscipit distinctio</a></li>
+            <li><a href="#">Dilecta</a></li>
+            <li><a href="#">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nobis illum</h4>
+          <ul>
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodelas</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">iLanding</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+
+</body>
+
+</html>
