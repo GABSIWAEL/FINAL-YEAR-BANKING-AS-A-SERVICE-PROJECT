@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Components/LandingPage/landing-page/landing-page.component';
 import { AuthClientComponent } from './Components/authentication/auth-client/auth-client.component';
+import { ClientComponent } from './Components/dashboards/client/client.component';
 //import { LandingPageComponent } from './components/LandingPage/landing-page/landing-page.component';
 
 
@@ -12,7 +13,9 @@ import { AuthClientComponent } from './Components/authentication/auth-client/aut
   declarations: [
     AppComponent,
     LandingPageComponent,
-    AuthClientComponent
+    AuthClientComponent,
+    ClientComponent
+    
 
   ],
   imports: [

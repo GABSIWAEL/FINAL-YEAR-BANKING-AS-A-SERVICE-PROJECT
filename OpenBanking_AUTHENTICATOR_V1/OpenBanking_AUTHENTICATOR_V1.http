@@ -1,0 +1,6 @@
+@OpenBanking_AUTHENTICATOR_V1_HostAddress = http://localhost:5010
+
+GET {{OpenBanking_AUTHENTICATOR_V1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
