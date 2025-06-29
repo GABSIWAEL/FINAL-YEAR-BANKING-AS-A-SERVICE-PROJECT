@@ -1,12 +1,54 @@
-version: '3.8'
-
 services:
+
+  account-db:
+    image: postgres:15-alpine
+    container_name: account-db
+    environment:
+      POSTGRES_DB: accountdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - account-db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+  account.dashboard:
+    image : mcr.microsoft.com/dotnet/aspire-dashboard:latest
+    container_name : dashboard_ACCOUNT
+    ports:
+    - 18888:18888
+    - 18889:18889
+    networks:
+      - app-network
   account-service:
     build:
       context: .
       dockerfile: OpenBanking_ACCOUNT_V1/Dockerfile
     container_name: account-service
-    
+    ports:
+      - "8088:8088"
+      - "8089:8089"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=account-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=accountdb
+    depends_on:
+      - account-db
+    networks:
+      - app-network
+
+  branch-db:
+    image: mysql:5.7
+    container_name: branch-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysecretpassword
+      MYSQL_DATABASE: branchdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - branch-db-data:/var/lib/mysql
+    networks:
+      - app-network
 
   branch-service:
     build:
@@ -18,9 +60,25 @@ services:
       - "8085:8085"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - DB_CONNECTION_STRING=mysql://branch-db:3306/branchdb
+      - ConnectionStrings__DefaultConnection=mysql://branch-db:3306/branchdb
     depends_on:
       - branch-db
+    networks:
+      - app-network
+
+  card-db:
+    image: postgres:13
+    container_name: card-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: carddb
+    ports:
+      - "5433:5432"  # host:container
+    volumes:
+      - card-db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
 
   card-service:
     build:
@@ -32,42 +90,84 @@ services:
       - "8087:8087"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - DB_CONNECTION_STRING=Host=card-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=carddb
+      - ConnectionStrings__DefaultConnection=Host=card-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=carddb
     depends_on:
       - card-db
-
-  # Database Services
-  account-db:
-    image: postgres:13
-    container_name: account-db
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mysecretpassword
-      - POSTGRES_DB=accountdb
-    ports:
-      - "5434:5434"
+    networks:
+      - app-network
 
   atm-db:
     image: mongo:latest
     container_name: atm-db
     ports:
       - "27017:27017"
+    networks:
+      - app-network
 
-  branch-db:
+  mysqlAuth-db:
     image: mysql:5.7
-    container_name: branch-db
+    container_name: authdb
     environment:
-      - MYSQL_ROOT_PASSWORD=mysecretpassword
-      - MYSQL_DATABASE=branchdb
+      MYSQL_ROOT_PASSWORD: mysecretpassword
+      MYSQL_DATABASE: authdb
     ports:
-      - "3306:3306"
+      - "3307:3306"
+    volumes:
+      - authdb-data:/var/lib/mysql
+    networks:
+      - app-network
 
-  card-db:
-    image: postgres:13
-    container_name: card-db
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mysecretpassword
-      - POSTGRES_DB=carddb
+  authenticator-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_AUTHENTICATOR_V1/Dockerfile
+    container_name: authenticator-service
     ports:
-      - "5433:5433"
+      - "8090:8090"
+      - "8091:8091"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=mysql://authdb:3306/authdb
+    depends_on:
+      - mysqlAuth-db
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: OpenBanking_ANGULAR_V1/Dockerfile
+    restart: always
+    volumes:
+      - ./uploads:/shared/OpenBankProject/uploads/
+    networks:
+      - app-network
+
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: kalo
+      RABBITMQ_DEFAULT_PASS: kalo
+    volumes:
+      - rabbitmq-lib:/var/lib/rabbitmq/
+      - rabbitmq-log:/var/log/rabbitmq
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+  
+volumes:
+  account-db-data:
+  branch-db-data:
+  card-db-data:
+  authdb-data:
+  rabbitmq-lib:
+  rabbitmq-log:
+  

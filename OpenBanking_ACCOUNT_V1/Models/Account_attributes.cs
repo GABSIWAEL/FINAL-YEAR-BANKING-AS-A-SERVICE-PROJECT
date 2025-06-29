@@ -1,8 +1,10 @@
-﻿namespace OpenBanking_ACCOUNT_V1.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace OpenBanking_ACCOUNT_V1.Models
 {
     public class Account_attributes
     {
         public string product_code { get; set; }
+        [Key]
         public string account_attribute_id { get; set; }
         public string name { get; set; }
         public Type type { get; set; }

@@ -6,7 +6,7 @@ namespace OpenBanking_ACCOUNT_V1.Models
     public class Account
 
     {
-        
+        [Key]
         public string id { get; set; } 
         public string label { get; set; }
         public int number { get; set; }

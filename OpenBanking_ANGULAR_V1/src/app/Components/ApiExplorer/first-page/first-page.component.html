@@ -1,0 +1,121 @@
+<!-- Splash Screen -->
+<div class="splash-screen" *ngIf="showSplash">
+  <div class="splash-content">
+    <img src="assets/logo.png" alt="Logo" class="splash-logo" />
+    <h1>API Explorer</h1>
+    <p>Loading your documentation experience...</p>
+  </div>
+</div>
+<!-- Page Header -->
+<header class="page-header">
+  <div class="header-left">
+    <h1 class="header-title">API Explorer</h1>
+  </div>
+  <div class="header-right">
+    <button class="header-btn demo-btn">Demo</button>
+<button class="header-btn api-btn" routerLink="/authentication">Use Our API</button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div *ngIf="!showSplash" class="page">
+ <aside class="menu">
+  <ul class="menu-list">
+
+    <!-- Account -->
+    <li>
+      <span class="menu-title" (click)="toggleSection('account')">
+        Account
+        <span class="arrow" [class.rotate]="expandedSections.account">▼</span>
+      </span>
+      <ul class="submenu" *ngIf="expandedSections.account">
+        <li>AccountAttributeDefinition</li>
+        <li>AccountBalances</li>
+        <li>AccountBalancesByBANK_ID</li>
+        <li>AccountBalancesbyBANK_IDandACCOUNT_IDthroughtheVIEW_ID</li>
+        <li>AccountbyAccountRouting</li>
+        <li>AccountbyId</li>
+        <li>AccountbyIdFull</li>
+        <li>Accounts_at_all_BanksPrivate</li>
+        <li>Accounts_at_BankUseId</li>
+        <li>Accounts_by_Account_Routing_Regex</li>
+        <li>AccountsAtBank</li>
+        <li>AccountsAtBankMinimal</li>
+        <li>AccountsHeld</li>
+        <li>AccountsMinimalforaCustomer</li>
+        <li>AccoutnAccessByUserId</li>
+        <li>Agents_at_Bank</li>
+        <li>CheckbookOrders</li>
+        <li>FastFirehoseAccountsAtBank</li>
+        <li>FirehoseAccountsAtBank</li>
+        <li>GetAgent</li>
+      </ul>
+    </li>
+
+    <!-- ATM -->
+    <li>
+      <span class="menu-title" (click)="toggleSection('atm')">
+        ATM
+        <span class="arrow" [class.rotate]="expandedSections.atm">▼</span>
+      </span>
+      <ul class="submenu" *ngIf="expandedSections.atm">
+        <li>ATMAttributeByATM_ATTRIBUTE_ID</li>
+        <li>ATMAttributes</li>
+        <li>BankATM</li>
+        <li>BankATMS</li>
+        <li>HeadBankATMS</li>
+      </ul>
+    </li>
+
+    <!-- Branch -->
+    <li>
+      <span class="menu-title" (click)="toggleSection('branch')">
+        Branch
+        <span class="arrow" [class.rotate]="expandedSections.branch">▼</span>
+      </span>
+      <ul class="submenu" *ngIf="expandedSections.branch">
+        <li>branch</li>
+        <li>BranchesForaBank</li>
+      </ul>
+    </li>
+
+    <!-- Card -->
+   
+    <li>
+  <span class="menu-title" (click)="toggleSection('card')">
+    Card
+    <span class="arrow" [class.rotate]="expandedSections.card">▼</span>
+  </span>
+  <ul class="submenu" *ngIf="expandedSections.card">
+    <li (click)="selectApiItem('CardAttributeDefinition')">CardAttributeDefinition</li>
+    <li (click)="selectApiItem('CardById')">CardById</li>
+    <li (click)="selectApiItem('CardsForTheCurrentUser')">CardsForTheCurrentUser</li>
+    <li (click)="selectApiItem('CardsForTheSpecifiedBank')">CardsForTheSpecifiedBank</li>
+    <li (click)="selectApiItem('StatusOfCreditCardOrder')">StatusOfCreditCardOrder</li>
+  </ul>
+</li>
+
+
+  </ul>
+</aside>
+
+
+
+
+  <section class="description" *ngIf="selectedApiItem">
+  <h2>{{ selectedApiItem }}</h2>
+  <p>{{ apiData[selectedApiItem]?.description }}</p>
+</section>
+
+<section class="api-block" *ngIf="selectedApiItem">
+  <h3>Request</h3>
+<pre [textContent]="apiData[selectedApiItem]?.request"></pre>
+
+  <h3>Response</h3>
+<pre [textContent]="apiData[selectedApiItem]?.response"></pre>
+</section>
+
+<section class="description" *ngIf="!selectedApiItem">
+  <p>Please select an API from the menu to see details.</p>
+</section>
+</div>

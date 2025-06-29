@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Components/LandingPage/landing-page/landing-page.component';
 import { AuthClientComponent } from './Components/authentication/auth-client/auth-client.component';
 import { ClientComponent } from './Components/dashboards/client/client.component';
+import { FirstPageComponent } from './Components/ApiExplorer/first-page/first-page.component';
+import { DescReqResComponent } from './Components/ApiExplorer/desc-req-res/desc-req-res.component';
 //import { LandingPageComponent } from './components/LandingPage/landing-page/landing-page.component';
 
 
@@ -14,8 +16,10 @@ import { ClientComponent } from './Components/dashboards/client/client.component
     AppComponent,
     LandingPageComponent,
     AuthClientComponent,
-    ClientComponent
-    
+    ClientComponent,
+    FirstPageComponent,
+    DescReqResComponent
+
 
   ],
   imports: [

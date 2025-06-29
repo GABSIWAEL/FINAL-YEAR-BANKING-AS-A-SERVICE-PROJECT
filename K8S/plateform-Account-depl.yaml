@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Openbanking-depl-Account
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: OpenBanking-Account
+  template:
+    metadata:
+      labels: 
+        app: OpenBanking-Account
+    spec:
+      containers:
+        - name: openbanking-account
+          image: waelelgabsi/OpenBanking_ACCOUNT_V1:latest
+        
+#        - name: openbanking-accountdb
+#          image: waelelgabsi/mysql:5.7:latest

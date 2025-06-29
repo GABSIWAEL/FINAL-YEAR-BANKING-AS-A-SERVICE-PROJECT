@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Openbanking-depl-Authenticator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: OpenBanking-Authenticator
+  template:
+    metadata:
+      labels: 
+        app: OpenBanking-Authenticator
+    spec:
+      containers:
+        - name: openbanking-authenticator
+          image: waelelgabsi/OpenBanking_AUTHENTICATOR_V1:latest
+
+#        - name: openbanking-authdb
+ #         image: waelelgabsi/mysql:5.7:latest       

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Openbanking-depl-Angular
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: OpenBanking-angular
+  template:
+    metadata:
+      labels: 
+        app: OpenBanking-angular
+    spec:
+      containers:
+        - name: openbanking-angular
+          image: waelelgabsi/OpenBanking_ANGULAR_V1:latest
+        

@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+namespace OpenBanking_ACCOUNT_V1.CustomExceptions
+{
+
 
 public class ObpException : Exception
 {
@@ -57,4 +60,5 @@ public class ObpException : Exception
         => new ObpException("OBP-50211", "Connector did not return the set of check book.");
 
 
+}
 }
