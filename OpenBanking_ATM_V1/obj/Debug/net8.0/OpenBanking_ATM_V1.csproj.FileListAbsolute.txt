@@ -78,7 +78,6 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.OpenBanking_ATM_V1.props
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.OpenBanking_ATM_V1.props
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\OpenBank.3CE59BD7.Up2Date
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\OpenBanking_ATM_V1.dll
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\refint\OpenBanking_ATM_V1.dll
@@ -272,3 +271,4 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

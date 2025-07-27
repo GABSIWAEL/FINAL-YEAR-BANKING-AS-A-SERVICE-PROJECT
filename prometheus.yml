@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'account-service'
+    static_configs:
+      - targets: ['account-service:8088']  # 👈 Exposes /metrics
+
+  - job_name: 'card-service'
+    static_configs:
+      - targets: ['card-service:8086']
+
+  - job_name: 'branch-service'
+    static_configs:
+      - targets: ['branch-service:8084']
+
+  - job_name: 'authenticator-service'
+    static_configs:
+      - targets: ['authenticator-service:8090']

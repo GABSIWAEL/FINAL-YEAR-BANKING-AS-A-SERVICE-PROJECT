@@ -21,6 +21,38 @@ services:
     - 18889:18889
     networks:
       - app-network
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.monitoring.collection.enabled=true
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks:
+      - app-network
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.13.0
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - xpack.security.enabled=false
+      - xpack.monitoring.enabled=true
+      - xpack.monitoring.ui.container.elasticsearch.enabled=true
+      - xpack.fleet.enabled=false         
+      - xpack.fleet.agents.enabled=false  
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - app-network
+
   account-service:
     build:
       context: .
@@ -74,7 +106,7 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: carddb
     ports:
-      - "5433:5432"  # host:container
+      - "5433:5432"  
     volumes:
       - card-db-data:/var/lib/postgresql/data
     networks:
@@ -116,6 +148,7 @@ services:
       - authdb-data:/var/lib/mysql
     networks:
       - app-network
+    
 
   authenticator-service:
     build:
@@ -127,21 +160,53 @@ services:
       - "8091:8091"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=mysql://authdb:3306/authdb
+      - ConnectionStrings__DefaultConnection=server=mysqlAuth-db;port=3306;database=authdb;user=root;password=mysecretpassword;SslMode=none;
     depends_on:
       - mysqlAuth-db
+    user: root
+    volumes:
+      - data-protection-keys:/root/.aspnet/DataProtection-Keys
     networks:
       - app-network
+    
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    networks:
+      - app-network
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - app-network
+    depends_on:
+      - prometheus
+
 
   frontend:
     build:
-      context: .
-      dockerfile: OpenBanking_ANGULAR_V1/Dockerfile
-    restart: always
+      context: ./OpenBanking_ANGULAR_V1
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./uploads:/shared/OpenBankProject/uploads/
+      - ./uploads:/shared/openBanking/uploads
+      - ./ssl:/etc/nginx/certs
     networks:
       - app-network
+    restart: always
+
+    
+
 
   rabbitmq:
     image: rabbitmq:latest
@@ -170,4 +235,7 @@ volumes:
   authdb-data:
   rabbitmq-lib:
   rabbitmq-log:
+  esdata:
+  grafana-data:
+  data-protection-keys:
   

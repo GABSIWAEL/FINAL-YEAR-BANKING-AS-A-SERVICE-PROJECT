@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5010"
+      "applicationUrl": "http://localhost:8090"
     },
     "https": {
       "commandName": "Project",
@@ -18,7 +18,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7132;http://localhost:5010"
+      "applicationUrl": "https://localhost:7132;http://localhost:8090"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -31,10 +31,10 @@
     "Container (Dockerfile)": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "launchUrl": "http://localhost:8090/swagger",
       "environmentVariables": {
-        "ASPNETCORE_HTTPS_PORTS": "8081",
-        "ASPNETCORE_HTTP_PORTS": "8080"
+        "ASPNETCORE_HTTPS_PORTS": "8090",
+        "ASPNETCORE_HTTP_PORTS": "http://+:8088"
       },
       "publishAllPorts": true,
       "useSSL": true

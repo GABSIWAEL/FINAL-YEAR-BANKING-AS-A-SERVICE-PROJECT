@@ -31,11 +31,9 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("account_routingsScheme")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("balancecurrency")
-                        .HasColumnType("integer");
+                    b.Property<string>("account_type")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("label")
                         .IsRequired()
@@ -48,16 +46,7 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("views_availableid")
-                        .HasColumnType("text");
-
                     b.HasKey("id");
-
-                    b.HasIndex("account_routingsScheme");
-
-                    b.HasIndex("balancecurrency");
-
-                    b.HasIndex("views_availableid");
 
                     b.ToTable("Accounts");
                 });
@@ -68,6 +57,7 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Accountid")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("name")
@@ -98,6 +88,16 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
 
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Account_routings", b =>
                 {
+                    b.Property<int>("RoutingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("RoutingId"));
+
+                    b.Property<string>("Accountid")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("Scheme")
                         .HasColumnType("integer");
 
@@ -105,20 +105,70 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Scheme");
+                    b.HasKey("RoutingId");
+
+                    b.HasIndex("Accountid");
 
                     b.ToTable("AccountRoutings");
                 });
 
-            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Balance", b =>
+            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Agent", b =>
                 {
+                    b.Property<string>("agent_id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Bank_id")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("bank_id");
+
+                    b.Property<string>("agent_number")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("currency")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("is_confirmed_agent")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("is_pending_agent")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("legal_name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("mobile_phone_number")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("agent_id");
+
+                    b.ToTable("Agent");
+                });
+
+            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Balance", b =>
+                {
+                    b.Property<int>("BalanceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BalanceId"));
+
+                    b.Property<string>("Accountid")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<float>("amount")
                         .HasColumnType("real");
 
-                    b.HasKey("currency");
+                    b.Property<int>("currency")
+                        .HasColumnType("integer");
+
+                    b.HasKey("BalanceId");
+
+                    b.HasIndex("Accountid");
 
                     b.ToTable("Balance");
                 });
@@ -129,6 +179,7 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Accountid")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("dispay_name")
@@ -176,6 +227,9 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Views_available", b =>
                 {
                     b.Property<string>("id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Accountid")
                         .HasColumnType("text");
 
                     b.Property<bool>("CanAddComment")
@@ -305,46 +359,53 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("Accountid");
+
                     b.ToTable("ViewsAvailable");
-                });
-
-            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Account", b =>
-                {
-                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account_routings", "account_routings")
-                        .WithMany()
-                        .HasForeignKey("account_routingsScheme")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Balance", "balance")
-                        .WithMany()
-                        .HasForeignKey("balancecurrency")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Views_available", "views_available")
-                        .WithMany()
-                        .HasForeignKey("views_availableid");
-
-                    b.Navigation("account_routings");
-
-                    b.Navigation("balance");
-
-                    b.Navigation("views_available");
                 });
 
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Account_attributes", b =>
                 {
-                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", null)
+                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", "Account")
                         .WithMany("account_Attributes")
-                        .HasForeignKey("Accountid");
+                        .HasForeignKey("Accountid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Account_routings", b =>
+                {
+                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", "Account")
+                        .WithMany("account_routings")
+                        .HasForeignKey("Accountid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Balance", b =>
+                {
+                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", "Account")
+                        .WithMany("balances")
+                        .HasForeignKey("Accountid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Owners", b =>
                 {
-                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", null)
+                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", "Account")
                         .WithMany("owners")
-                        .HasForeignKey("Accountid");
+                        .HasForeignKey("Accountid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Tags", b =>
@@ -362,13 +423,26 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Views_available", b =>
+                {
+                    b.HasOne("OpenBanking_ACCOUNT_V1.Models.Account", null)
+                        .WithMany("views_available")
+                        .HasForeignKey("Accountid");
+                });
+
             modelBuilder.Entity("OpenBanking_ACCOUNT_V1.Models.Account", b =>
                 {
                     b.Navigation("account_Attributes");
 
+                    b.Navigation("account_routings");
+
+                    b.Navigation("balances");
+
                     b.Navigation("owners");
 
                     b.Navigation("tags");
+
+                    b.Navigation("views_available");
                 });
 #pragma warning restore 612, 618
         }

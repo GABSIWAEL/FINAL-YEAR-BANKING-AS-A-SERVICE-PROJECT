@@ -1,0 +1,23 @@
+syntax = "proto3";
+option csharp_namespace = "AccountService";
+
+service AccountService {
+  rpc GetAccountById(AccountRequest) returns (AccountReply);
+}
+
+message AccountRequest {
+  string bank_id = 1;
+  string account_id = 2;
+}
+
+message AccountReply {
+  string id = 1;
+  string label = 2;
+  repeated ViewAvailable views_available = 3;
+}
+
+message ViewAvailable {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}

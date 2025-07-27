@@ -79,7 +79,22 @@
       </ul>
     </li>
 
-    <!-- Card -->
+    <!--{# <section class="description" *ngIf="selectedApiItem">
+  <h2>{{ selectedApiItem }}</h2>
+  <p>{{ apiData[selectedApiItem]?.description }}</p>
+</section>
+
+<section class="api-block" *ngIf="selectedApiItem">
+  <h3>Request</h3>
+<pre [textContent]="apiData[selectedApiItem]?.request"></pre>
+
+  <h3>Response</h3>
+<pre [textContent]="apiData[selectedApiItem]?.response"></pre>
+</section>
+
+<section class="description" *ngIf="!selectedApiItem">
+  <p>Please select an API from the menu to see details.</p>
+</section> #}-->
    
     <li>
   <span class="menu-title" (click)="toggleSection('card')">
@@ -100,22 +115,7 @@
 </aside>
 
 
-
-
-  <section class="description" *ngIf="selectedApiItem">
-  <h2>{{ selectedApiItem }}</h2>
-  <p>{{ apiData[selectedApiItem]?.description }}</p>
-</section>
-
-<section class="api-block" *ngIf="selectedApiItem">
-  <h3>Request</h3>
-<pre [textContent]="apiData[selectedApiItem]?.request"></pre>
-
-  <h3>Response</h3>
-<pre [textContent]="apiData[selectedApiItem]?.response"></pre>
-</section>
-
-<section class="description" *ngIf="!selectedApiItem">
-  <p>Please select an API from the menu to see details.</p>
-</section>
 </div>
+
+  
+

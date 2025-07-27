@@ -88,4 +88,8 @@ export class AuthClientComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnDestroy(): void {}
+
+  loginWithGoogle() {
+  window.location.href = 'http://localhost:8090/auth/login';
+}
 }

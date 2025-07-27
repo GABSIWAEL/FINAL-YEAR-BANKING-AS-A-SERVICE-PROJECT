@@ -7,19 +7,14 @@ namespace OpenBanking_ACCOUNT_V1.CustomExceptions
 public class ObpException : Exception
 {
     public string ErrorCode { get; }
-
     private ObpException(string errorCode, string message) : base(message)
     {
         ErrorCode = errorCode;
     }
-
     public override string ToString()
     {
         return $"{ErrorCode}: {Message}";
     }
-
-    // ==== Static Factory Methods for Each OBP Exception ====
-
     public static ObpException UserNotLoggedIn()
         => new ObpException("OBP-20001", "User not logged in. Authentication is required!");
 
@@ -58,7 +53,5 @@ public class ObpException : Exception
 
     public static ObpException CheckBookNotReturned()
         => new ObpException("OBP-50211", "Connector did not return the set of check book.");
-
-
 }
 }

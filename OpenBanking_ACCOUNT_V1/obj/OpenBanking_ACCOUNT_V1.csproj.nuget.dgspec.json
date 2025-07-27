@@ -54,6 +54,28 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.31.1, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.72.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -84,6 +106,10 @@
               "target": "Package",
               "version": "[1.12.0, )"
             },
+            "OpenTelemetry.Exporter.Prometheus.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0-beta.1, )"
+            },
             "OpenTelemetry.Extensions.Hosting": {
               "target": "Package",
               "version": "[1.12.0, )"
@@ -100,9 +126,45 @@
               "target": "Package",
               "version": "[1.12.0, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Formatting.Compact": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog.Formatting.Elasticsearch": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog.Sinks.ElasticSearch": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[9.0.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

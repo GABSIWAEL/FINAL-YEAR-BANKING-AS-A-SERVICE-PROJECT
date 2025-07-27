@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Hla4vQejVD+Q8v6iq22OKaaffe8nH+3XZ1PhQfafGtA=",
+  "Source": "OpenBanking_AUTHENTICATOR_V1",
+  "BasePath": "_content/OpenBanking_AUTHENTICATOR_V1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

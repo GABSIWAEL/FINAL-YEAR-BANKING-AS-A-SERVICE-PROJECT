@@ -19,12 +19,75 @@ namespace OpenBanking_ACCOUNT_V1.Repository
         {
             return await _context.Accounts
                 .Include(a => a.owners)
-                .Include(a => a.balance)
+                .Include(a => a.balances)
                 .Include(a => a.views_available)
                 .Include(a => a.account_routings)
                 .Include(a => a.account_Attributes)
                 .Include(a => a.tags)
                 .FirstOrDefaultAsync(a => a.id == accountId && a.Bank_id == bankId);
         }
-    }
+
+        //***** *********************************************************************************************
+        public async Task<List<Account>> GetAccountsInBank(string bankId)
+        {
+          return await _context.Accounts
+            .Include(a => a.views_available)
+            .Where(a => a.Bank_id == bankId)
+            .ToListAsync();
+        }
+
+     public async Task<List<Account>> GetAccountBalancesByBankId(string bankId)
+        {
+          return await _context.Accounts
+            .Include(a => a.balances)
+            .Include(a => a.account_routings)
+            .Where(a => a.Bank_id == bankId)
+            .ToListAsync();
+        }
+
+
+    public async Task<Agent> GetAgentByBankIdAndAgentIdAsync(string bankId, string agent_id)
+{
+    bankId = bankId.ToLower();
+    agent_id = agent_id.ToLower();
+    return await _context.agents
+                         .FirstOrDefaultAsync(a => a.Bank_id.ToLower() == bankId && a.agent_id.ToLower() == agent_id);
 }
+
+
+
+    public async Task<List<Account>> GetAccountsHeld(string bankId)
+        {
+          return await _context.Accounts
+            .Include(a => a.account_routings)
+            .Where(a => a.Bank_id == bankId)
+            .ToListAsync();
+         }
+
+    public async Task<List<Agent>> GetAgentsAtBank(string bankId)
+        {
+          return await _context.agents
+            .Where(a => a.Bank_id == bankId)
+            .ToListAsync();
+         }
+public async Task<Agent> GetAgent(string bankId, string agent_id)
+{
+    return await _context.agents
+        .FirstOrDefaultAsync(a => a.Bank_id == bankId && a.agent_id == agent_id);
+}
+
+
+  public async Task<List<Account>> GetFastFirehoseAccountsAtBank(string bankId)
+{
+    return await _context.Accounts
+        .Include(a => a.owners)
+        .Include(a => a.balances)
+        .Include(a => a.account_routings)
+        .Include(a => a.account_Attributes)
+        .Where(a => a.Bank_id == bankId)
+        .ToListAsync();
+}
+
+
+//
+}}

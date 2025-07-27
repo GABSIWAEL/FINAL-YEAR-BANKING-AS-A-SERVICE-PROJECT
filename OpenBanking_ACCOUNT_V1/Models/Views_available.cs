@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
-
+using System.ComponentModel.DataAnnotations;
 namespace OpenBanking_ACCOUNT_V1.Models
 {
     public class Views_available
-    {
-        public string id { get; set; }
+    {   [Key]
+        public  string id { get; set; }
         public string short_name { get; set; }
         public string description { get; set; }
         public bool  is_public { get; set; } 

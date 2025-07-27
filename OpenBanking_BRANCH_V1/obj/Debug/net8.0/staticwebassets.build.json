@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "DOh1M/jEzhN6uLYW2xo0btrvkx31dHjjI3J26D4DNfU=",
+  "Source": "OpenBanking_BRANCH_V1",
+  "BasePath": "_content/OpenBanking_BRANCH_V1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
