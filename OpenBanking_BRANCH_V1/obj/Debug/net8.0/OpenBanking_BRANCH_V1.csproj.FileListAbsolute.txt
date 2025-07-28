@@ -89,4 +89,3 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_BRANCH_V1\obj\Deb
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_BRANCH_V1\obj\Debug\net8.0\OpenBanking_BRANCH_V1.pdb
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_BRANCH_V1\obj\Debug\net8.0\OpenBanking_BRANCH_V1.genruntimeconfig.cache
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_BRANCH_V1\obj\Debug\net8.0\ref\OpenBanking_BRANCH_V1.dll
-C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_BRANCH_V1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

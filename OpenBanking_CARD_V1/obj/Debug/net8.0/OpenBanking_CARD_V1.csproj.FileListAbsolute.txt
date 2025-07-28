@@ -84,7 +84,6 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.OpenBanking_CARD_V1.props
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.OpenBanking_CARD_V1.props
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\OpenBank.A518C339.Up2Date
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\OpenBanking_CARD_V1.dll
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\refint\OpenBanking_CARD_V1.dll

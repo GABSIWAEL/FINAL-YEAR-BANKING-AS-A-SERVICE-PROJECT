@@ -25,22 +25,21 @@ builder.Services.AddDataProtection()
     .SetApplicationName("OpenBankingAuthenticator");
 
 // 👉 Session
-builder.Services.AddDistributedMemoryCache();
+/* builder.Services.AddDistributedMemoryCache();
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+    options.MinimumSameSitePolicy = SameSiteMode.Lax; // 🔄 from None → Lax
+    options.HttpOnly = HttpOnlyPolicy.Always;
+    options.Secure = CookieSecurePolicy.None;
+});
+
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
-    options.Cookie.SameSite = SameSiteMode.None;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // Docker = HTTP
-});
-
-// 👉 Cookies (pour OAuth)
-builder.Services.Configure<CookiePolicyOptions>(options =>
-{
-    options.MinimumSameSitePolicy = SameSiteMode.None;
-    options.HttpOnly = HttpOnlyPolicy.Always;
-    options.Secure = CookieSecurePolicy.None;
-});
+    options.Cookie.SameSite = SameSiteMode.Lax; // 🔄 from None → Lax
+    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+}); */
 
 // 👉 Authentification avec Google
 builder.Services.AddAuthentication(options =>
@@ -48,7 +47,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 })
-.AddCookie(options =>
+/* .AddCookie(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.SameSite = SameSiteMode.None;
@@ -59,7 +58,7 @@ builder.Services.AddAuthentication(options =>
     options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
     options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
     options.CallbackPath = "/auth/google/callback";
-});
+}); */
 
 // 👉 Controllers + JSON cycle ignore
 builder.Services.AddControllers()

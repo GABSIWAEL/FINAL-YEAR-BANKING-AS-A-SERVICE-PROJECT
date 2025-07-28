@@ -191,19 +191,20 @@ services:
       - prometheus
 
 
+
   frontend:
     build:
       context: ./OpenBanking_ANGULAR_V1
       dockerfile: Dockerfile
     ports:
-      - "80:80"
-      - "443:443"
+      - "8083:80"   # Expose HTTP only
     volumes:
       - ./uploads:/shared/openBanking/uploads
-      - ./ssl:/etc/nginx/certs
     networks:
       - app-network
     restart: always
+
+
 
     
 

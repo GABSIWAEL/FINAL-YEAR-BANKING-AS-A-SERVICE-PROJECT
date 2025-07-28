@@ -5,7 +5,7 @@
         public String name { get; set; }
         public String card_id { get; set; }
         public String attribute_type { get; set; }
-         [JsonProperty("bank_id")]
+        //[JsonProperty("bank_id")]
         public string BankId { get; set; }
      
 
