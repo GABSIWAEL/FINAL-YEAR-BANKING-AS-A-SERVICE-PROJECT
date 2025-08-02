@@ -4,18 +4,21 @@ using OpenBanking_ACCOUNT_V1.Data;
 using OpenBanking_ACCOUNT_V1.Models;
 using System.Threading.Tasks;
 using OpenBanking_ACCOUNT_V1.Dtos;
+using AutoMapper;
 
 
 namespace OpenBanking_ACCOUNT_V1.Repository
 {
     public class AccountRepository : IAccountRepository
     {
-        private readonly AppDbContext _context;
+         private readonly AppDbContext _context;
+    private readonly IMapper _mapper; // ✅ Add this field
 
-        public AccountRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+    public AccountRepository(AppDbContext context, IMapper mapper) // ✅ Add IMapper here
+    {
+        _context = context;
+        _mapper = mapper;
+    }
 
         public async Task<Account> GetAccountWithDetailsAsync(string bankId, string accountId)
         {
@@ -104,7 +107,7 @@ namespace OpenBanking_ACCOUNT_V1.Repository
                 })
                 .ToListAsync();
         }
-        public async Task<Account> CreateAccountAsync(string bankId, CreateAccountDto createAccountDto)
+public async Task<Account> CreateAccountAsync(string bankId, CreateAccountDto createAccountDto)
 {
     var account = new Account
     {
@@ -114,8 +117,8 @@ namespace OpenBanking_ACCOUNT_V1.Repository
         label = createAccountDto.label,
         product_code = createAccountDto.product_code,
         branch_id = createAccountDto.branch_id,
-        balances = createAccountDto.balances,
-        account_routings = createAccountDto.account_routings
+        balances = _mapper.Map<List<Balance>>(createAccountDto.balances),
+        account_routings = _mapper.Map<List<Account_routings>>(createAccountDto.account_routings)
     };
 
     _context.Accounts.Add(account);
@@ -123,6 +126,7 @@ namespace OpenBanking_ACCOUNT_V1.Repository
 
     return account;
 }
+
 
 public async Task<Account> GetFullAccountByIdAsync(string bankId, string accountId)
 {

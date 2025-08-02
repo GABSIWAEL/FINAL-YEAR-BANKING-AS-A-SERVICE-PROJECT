@@ -9,24 +9,39 @@ namespace OpenBanking_ACCOUNT_V1.Helpers
     {
         public AutoMapperProfile()
         {
+            //--------------------------------ACCOUNTS MAPPING DETAILS --------------------------------------
             CreateMap<Account, AccountbyIdFull>();
             CreateMap<Account, AccountBalancesByBANK_ID>();
             CreateMap<Account, AccountsAtBank>();
-            CreateMap<Owners, Owners>();
-            CreateMap<Models.Balance, Models.Balance>();
-            CreateMap<Views_available, Views_available>();
             CreateMap<Account_routings, Account_routings>();
             CreateMap<Account_attributes, Account_attributes>();
+            CreateMap<Account, Accounts_at_all_BanksPrivate>();
+            CreateMap<Account, AccountsHeld>();
+            CreateMap<Account, CreateAccountDto>();
+            CreateMap<Account, FastFirehoseAccountsAtBank>();
+            CreateMap<Account, CreateAccountResponseDto>();
+            CreateMap<Account_routings, accountroutingDto>();
+
+            //-----------------------------------BALANCES MAPPING DETAILS -----------------------------------
+            
+            CreateMap<Models.Balance, Models.Balance>();
+            CreateMap<Models.Balance, Dtos.balanceDto>();
+
+            CreateMap<Dtos.balanceDto, Models.Balance>();
+            CreateMap<Dtos.accountroutingDto, Models.Account_routings>();
+
+
+
+            CreateMap<Views_available, Views_available>();
+            
             CreateMap<Tags, Tags>();
             CreateMap<Views_available, ViewAvailableDto>();
             CreateMap<Agent, Agent>();
-            CreateMap<Account, Accounts_at_all_BanksPrivate>();
-            CreateMap<Account, AccountsHeld>();
+          
             CreateMap<Agent, Agents_at_Bank>();
-            CreateMap<Account, FastFirehoseAccountsAtBank>();
+         
             CreateMap<Agent, Agent>();
-            CreateMap<Account, CreateAccountDto>();
-            CreateMap<Account, CreateAccountResponseDto>();
+            CreateMap<Owners, Owners>();
 
             // ✅ gRPC mapping for Cards
             CreateMap<Account, AccountService.GrpcAccountModelForCardOfCurrentUser>()

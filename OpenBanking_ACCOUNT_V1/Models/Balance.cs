@@ -9,6 +9,6 @@ namespace OpenBanking_ACCOUNT_V1.Models
         public float amount { get; set; }
 
         public string Accountid { get; set; }
-    public Account Account { get; set; }
+        public Account Account { get; set; }
     }
 }
