@@ -492,6 +492,54 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
                     });
                 }
         }
+        [HttpPost("banks/{bankId}/accounts")]
+        [SwaggerOperation(Summary = "Create a new account for a bank")]
+        [ProducesResponseType(typeof(CreateAccountResponseDto), 201)]
+        [ProducesResponseType(typeof(string), 400)]
+        public async Task<IActionResult> CreateAccount(string bankId, [FromBody] CreateAccountDto createAccountDto)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(bankId))
+                    throw ObpException.BankNotFound();
+
+                if (createAccountDto == null || string.IsNullOrWhiteSpace(createAccountDto.user_id))
+                    throw ObpException.UserNotFound();
+
+                var account = await _accountRepository.CreateAccountAsync(bankId, createAccountDto);
+
+                var responseDto = _mapper.Map<CreateAccountResponseDto>(account);
+
+                return CreatedAtAction(nameof(GetAccountById), new { bankId = bankId, accountId = account.id }, responseDto);
+            }
+            catch (ObpException ex)
+            {
+                _logger.LogWarning(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while creating account");
+                return StatusCode(500, ObpException.UnknownError().ToString());
+            }
+        }
+[HttpGet("banks/{bankId}/accounts/{accountId}")]
+[SwaggerOperation(Summary = "Get full account details by ID")]
+[ProducesResponseType(typeof(CreateAccountResponseDto), 200)]
+[ProducesResponseType(typeof(string), 404)]
+public async Task<IActionResult> GetAccountById(string bankId, string accountId)
+{
+    var account = await _accountRepository.GetFullAccountByIdAsync(bankId, accountId);
+
+    if (account == null)
+        return NotFound(ObpException.AccountNotFound().ToString());
+
+    var responseDto = _mapper.Map<CreateAccountResponseDto>(account);
+    return Ok(responseDto);
+}
+
+
+
 
 
 

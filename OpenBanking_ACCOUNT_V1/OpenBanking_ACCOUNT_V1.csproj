@@ -8,6 +8,13 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="SyncDataService\NewFolder\**" />
+    <Content Remove="SyncDataService\NewFolder\**" />
+    <EmbeddedResource Remove="SyncDataService\NewFolder\**" />
+    <None Remove="SyncDataService\NewFolder\**" />
+  </ItemGroup>
+
 <ItemGroup>
   <PackageReference Include="AutoMapper" Version="14.0.0" />
   <PackageReference Include="Google.Protobuf" Version="3.31.1" />
@@ -48,5 +55,9 @@
 <ItemGroup>
   <Protobuf Include="Protos/Accounts.proto" GrpcServices="Server" />
 </ItemGroup>
-
+<ItemGroup>
+  <None Update="Protos/Accounts.proto">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
 </Project>

@@ -205,6 +205,23 @@ services:
     restart: always
 
 
+  notification-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_NOTIFICATION_V1/Dockerfile
+    container_name: notification-service
+    ports:
+      - "9094:9094"
+      - "9095:9095"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RabbitMQ__HostName=rabbitmq
+      - RabbitMQ__UserName=kalo
+      - RabbitMQ__Password=kalo
+    depends_on:
+      - rabbitmq
+    networks:
+      - app-network
 
     
 

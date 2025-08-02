@@ -1,8 +1,22 @@
-﻿namespace OpenBanking_CARD_V1.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace OpenBanking_CARD_V1.Models
 {
     public class Pin_reset
     {
-        public DateTime requested_date { get; set; }
-        public Reason_requested reason_requested { get; set; }
+        [Key]
+        public string Id { get; set; }
+
+        public DateTime RequestedDate { get; set; }
+
+        public string Reason_requested { get; set; }
+
+        [Required]
+        public string CardId { get; set; }
+
+        [ForeignKey("CardId")]
+        public Card Card { get; set; }
     }
 }

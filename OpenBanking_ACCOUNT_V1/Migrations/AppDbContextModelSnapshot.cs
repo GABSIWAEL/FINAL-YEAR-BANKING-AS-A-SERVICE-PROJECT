@@ -35,6 +35,10 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("branch_id")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("label")
                         .IsRequired()
                         .HasColumnType("text");
@@ -43,6 +47,10 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("product_code")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("user_id")
                         .IsRequired()
                         .HasColumnType("text");
 

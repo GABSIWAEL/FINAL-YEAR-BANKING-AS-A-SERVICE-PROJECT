@@ -8,9 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace AccountService {
-  public static partial class AccountService
+  public static partial class GrpcAccount
   {
-    static readonly string __ServiceName = "AccountService";
+    static readonly string __ServiceName = "account.GrpcAccount";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,17 +46,17 @@ namespace AccountService {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AccountService.AccountRequest> __Marshaller_AccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AccountService.AccountRequest.Parser));
+    static readonly grpc::Marshaller<global::AccountService.GetAccountsByIdsRequest> __Marshaller_account_GetAccountsByIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AccountService.GetAccountsByIdsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AccountService.AccountReply> __Marshaller_AccountReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AccountService.AccountReply.Parser));
+    static readonly grpc::Marshaller<global::AccountService.GetAccountsByIdsResponse> __Marshaller_account_GetAccountsByIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AccountService.GetAccountsByIdsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AccountService.AccountRequest, global::AccountService.AccountReply> __Method_GetAccountById = new grpc::Method<global::AccountService.AccountRequest, global::AccountService.AccountReply>(
+    static readonly grpc::Method<global::AccountService.GetAccountsByIdsRequest, global::AccountService.GetAccountsByIdsResponse> __Method_GetAccountsByIds = new grpc::Method<global::AccountService.GetAccountsByIdsRequest, global::AccountService.GetAccountsByIdsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetAccountById",
-        __Marshaller_AccountRequest,
-        __Marshaller_AccountReply);
+        "GetAccountsByIds",
+        __Marshaller_account_GetAccountsByIdsRequest,
+        __Marshaller_account_GetAccountsByIdsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -64,12 +64,18 @@ namespace AccountService {
       get { return global::AccountService.AccountsReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of AccountService</summary>
-    [grpc::BindServiceMethod(typeof(AccountService), "BindService")]
-    public abstract partial class AccountServiceBase
+    /// <summary>Base class for server-side implementations of GrpcAccount</summary>
+    [grpc::BindServiceMethod(typeof(GrpcAccount), "BindService")]
+    public abstract partial class GrpcAccountBase
     {
+      /// <summary>
+      /// Fetch multiple accounts by their IDs
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AccountService.AccountReply> GetAccountById(global::AccountService.AccountRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AccountService.GetAccountsByIdsResponse> GetAccountsByIds(global::AccountService.GetAccountsByIdsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -79,10 +85,10 @@ namespace AccountService {
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(AccountServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(GrpcAccountBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetAccountById, serviceImpl.GetAccountById).Build();
+          .AddMethod(__Method_GetAccountsByIds, serviceImpl.GetAccountsByIds).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -90,9 +96,9 @@ namespace AccountService {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, AccountServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, GrpcAccountBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetAccountById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AccountService.AccountRequest, global::AccountService.AccountReply>(serviceImpl.GetAccountById));
+      serviceBinder.AddMethod(__Method_GetAccountsByIds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AccountService.GetAccountsByIdsRequest, global::AccountService.GetAccountsByIdsResponse>(serviceImpl.GetAccountsByIds));
     }
 
   }

@@ -10,9 +10,8 @@ namespace OpenBanking_ACCOUNT_V1.Models
         public Type type { get; set; }
         public string value { get; set; }
         public string product_instance_code { get; set; }
-
-         public string Accountid { get; set; }
-    public Account Account { get; set; }
+        public string Accountid { get; set; }
+        public Account Account { get; set; }
 
     }
 }

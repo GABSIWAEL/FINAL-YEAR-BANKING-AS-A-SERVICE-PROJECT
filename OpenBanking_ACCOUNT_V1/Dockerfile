@@ -27,4 +27,6 @@ RUN dotnet publish "./OpenBanking_ACCOUNT_V1.csproj" -c $BUILD_CONFIGURATION -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY OpenBanking_ACCOUNT_V1/Protos ./Protos   
+
 ENTRYPOINT ["dotnet", "OpenBanking_ACCOUNT_V1.dll"]
