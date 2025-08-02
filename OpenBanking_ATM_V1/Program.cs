@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OpenBanking_ATM_V1.Data;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,5 +33,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseRouting();
+app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
+});
 app.Run();

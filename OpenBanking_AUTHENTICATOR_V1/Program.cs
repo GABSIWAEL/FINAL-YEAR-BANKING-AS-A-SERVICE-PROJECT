@@ -8,6 +8,7 @@ using OpenBanking_AUTHENTICATOR_V1.Data;
 using OpenBanking_AUTHENTICATOR_V1.Repositories;
 using System.Text.Json.Serialization;
 using System.IO;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -100,4 +101,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseRouting();
+app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
+});
 app.Run();

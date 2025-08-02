@@ -8,6 +8,8 @@ using System;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Annotations;
 using AutoMapper;
+using OpenBanking_ACCOUNT_V1.Shared.Services; // ✅ required
+using OpenBanking_ACCOUNT_V1.Shared.Events; 
 
 namespace OpenBanking_ACCOUNT_V1.Controllers
 {
@@ -19,17 +21,22 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<AccountsController> _logger;
+     // ✅ inject it here
+
 
         public AccountsController(
             IAccountRepository accountRepository,
             IUnitOfWork unitOfWork,
             IMapper mapper,
-            ILogger<AccountsController> logger)
+            ILogger<AccountsController> logger , RabbitMqPublisher publisher // ✅ inject it here
+            )
         {
             _accountRepository = accountRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
+            _publisher = publisher; // ✅ assign it
+
         }
 
         [HttpGet("banks/{bankId}/accounts/{accountId}/{viewId}/account")]
@@ -492,6 +499,7 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
                     });
                 }
         }
+
         [HttpPost("banks/{bankId}/accounts")]
         [SwaggerOperation(Summary = "Create a new account for a bank")]
         [ProducesResponseType(typeof(CreateAccountResponseDto), 201)]
@@ -509,6 +517,13 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
                 var account = await _accountRepository.CreateAccountAsync(bankId, createAccountDto);
 
                 var responseDto = _mapper.Map<CreateAccountResponseDto>(account);
+                _publisher.PublishAccountCreated(new AccountCreatedEvent
+                {
+                    AccountId = account.id,
+                    UserId = account.user_id,
+                    Label = account.label
+                });
+
 
                 return CreatedAtAction(nameof(GetAccountById), new { bankId = bankId, accountId = account.id }, responseDto);
             }
@@ -523,20 +538,20 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
                 return StatusCode(500, ObpException.UnknownError().ToString());
             }
         }
-[HttpGet("banks/{bankId}/accounts/{accountId}")]
-[SwaggerOperation(Summary = "Get full account details by ID")]
-[ProducesResponseType(typeof(CreateAccountResponseDto), 200)]
-[ProducesResponseType(typeof(string), 404)]
-public async Task<IActionResult> GetAccountById(string bankId, string accountId)
-{
-    var account = await _accountRepository.GetFullAccountByIdAsync(bankId, accountId);
+        [HttpGet("banks/{bankId}/accounts/{accountId}")]
+        [SwaggerOperation(Summary = "Get full account details by ID")]
+        [ProducesResponseType(typeof(CreateAccountResponseDto), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        public async Task<IActionResult> GetAccountById(string bankId, string accountId)
+        {
+            var account = await _accountRepository.GetFullAccountByIdAsync(bankId, accountId);
 
-    if (account == null)
-        return NotFound(ObpException.AccountNotFound().ToString());
+            if (account == null)
+                return NotFound(ObpException.AccountNotFound().ToString());
 
-    var responseDto = _mapper.Map<CreateAccountResponseDto>(account);
-    return Ok(responseDto);
-}
+            var responseDto = _mapper.Map<CreateAccountResponseDto>(account);
+            return Ok(responseDto);
+        }
 
 
 

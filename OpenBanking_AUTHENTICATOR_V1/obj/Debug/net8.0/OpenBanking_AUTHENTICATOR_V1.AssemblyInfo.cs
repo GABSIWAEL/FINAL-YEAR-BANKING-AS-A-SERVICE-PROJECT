@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenBanking_AUTHENTICATOR_V1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e05af617e9fee28ce8f1c8f2ae3fcf50b2dd0c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df4120b209641e5da384aff5261f93c69f855022")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenBanking_AUTHENTICATOR_V1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenBanking_AUTHENTICATOR_V1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

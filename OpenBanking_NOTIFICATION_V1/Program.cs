@@ -1,3 +1,5 @@
+using Prometheus;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,12 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseRouting();
+app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
+});
 
 app.Run();

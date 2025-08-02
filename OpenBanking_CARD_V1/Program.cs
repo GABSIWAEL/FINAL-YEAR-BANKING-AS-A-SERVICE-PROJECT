@@ -4,7 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Grpc.AspNetCore.Server;
 using AccountService;
 using OpenBanking_CARD_V1.Repository;
-using OpenBanking_CARD_V1.SyncDataService.Grpc; // ✅ Needed for AccountGrpcService
+using OpenBanking_CARD_V1.SyncDataService.Grpc;
+using Prometheus; // ✅ Needed for AccountGrpcService
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,4 +60,11 @@ app.UseSwaggerUI(c =>
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+app.UseRouting();
+app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
+});
 app.Run();

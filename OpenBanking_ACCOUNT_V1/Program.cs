@@ -15,6 +15,8 @@ using System.Reflection;
 using System.Text.Json.Serialization;
 using OpenBanking_ACCOUNT_V1.SyncDataService.Grpc;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using OpenBanking_ACCOUNT_V1.Shared.Services;
+using Prometheus;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +32,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // ✅ gRPC
 builder.Services.AddGrpc();
+builder.Services.AddSingleton<RabbitMqPublisher>();
+
 
 // ✅ JSON config
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -132,6 +136,14 @@ app.MapGet("/Protos/Accounts.proto", async context =>
 
 // ✅ Prometheus metrics endpoint
 app.UseOpenTelemetryPrometheusScrapingEndpoint();
+// ✅ Prometheus HTTP Metrics (from prometheus-net)
+app.UseRouting();
+app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
+});
 
 // ✅ Run app
 app.Run();
