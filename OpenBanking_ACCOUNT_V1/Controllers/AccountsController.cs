@@ -21,7 +21,9 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<AccountsController> _logger;
-     // ✅ inject it here
+        private readonly RabbitMqPublisher _publisher;
+
+        // ✅ inject it here
 
 
         public AccountsController(

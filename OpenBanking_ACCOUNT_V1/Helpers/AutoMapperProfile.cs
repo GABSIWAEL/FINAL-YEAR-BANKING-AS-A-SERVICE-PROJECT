@@ -15,6 +15,7 @@ namespace OpenBanking_ACCOUNT_V1.Helpers
             CreateMap<Account, AccountsAtBank>();
             CreateMap<Account_routings, Account_routings>();
             CreateMap<Account_attributes, Account_attributes>();
+             CreateMap<Account_attributes, accountattributesres>();
             CreateMap<Account, Accounts_at_all_BanksPrivate>();
             CreateMap<Account, AccountsHeld>();
             CreateMap<Account, CreateAccountDto>();

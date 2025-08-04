@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OpenBanking_ACCOUNT_V1.props" />
+</Project>

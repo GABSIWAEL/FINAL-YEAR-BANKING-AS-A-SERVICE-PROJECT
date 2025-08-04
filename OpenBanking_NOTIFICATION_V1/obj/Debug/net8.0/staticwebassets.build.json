@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aXD9wxlumOjyrQDP41RnMUD7lcplpwKU2wgBw9jV5yY=",
+  "Source": "OpenBanking_NOTIFICATION_V1",
+  "BasePath": "_content/OpenBanking_NOTIFICATION_V1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

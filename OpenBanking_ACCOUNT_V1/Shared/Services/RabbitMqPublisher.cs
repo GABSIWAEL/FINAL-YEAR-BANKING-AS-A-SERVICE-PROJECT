@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
+
 using OpenBanking_ACCOUNT_V1.Shared.Events;
 using Microsoft.Extensions.Configuration;
  

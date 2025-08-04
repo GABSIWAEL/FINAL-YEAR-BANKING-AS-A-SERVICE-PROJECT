@@ -1,8 +1,12 @@
+using OpenBanking_NOTIFICATION_V1.Shared.Services;
 using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHostedService<AccountCreatedConsumer>();
+builder.Services.AddSingleton<EmailSenderService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
