@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: authdb-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysqlAuth-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysqlAuth-db
+  template:
+    metadata:
+      labels:
+        app: mysqlAuth-db
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "mysecretpassword"
+            - name: MYSQL_DATABASE
+              value: "authdb"
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: authdb-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysqlAuth-db
+spec:
+  selector:
+    app: mysqlAuth-db
+  ports:
+    - port: 3306

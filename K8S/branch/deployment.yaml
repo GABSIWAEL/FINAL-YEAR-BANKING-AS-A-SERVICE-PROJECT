@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: branch-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: branch
+  template:
+    metadata:
+      labels:
+        app: branch
+    spec:
+      containers:
+        - name: branch
+          image: branch-service:latest
+          ports:
+            - containerPort: 8084
+            - containerPort: 8085
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+            - name: ConnectionStrings__DefaultConnection
+              value: "mysql://branch-db:3306/branchdb"

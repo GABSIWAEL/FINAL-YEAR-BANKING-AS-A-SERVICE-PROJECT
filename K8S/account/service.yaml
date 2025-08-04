@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: account-service
+spec:
+  selector:
+    app: account
+  ports:
+    - name: http
+      port: 8088
+      targetPort: 8088
+    - name: grpc
+      port: 8089
+      targetPort: 8089
+  type: ClusterIP

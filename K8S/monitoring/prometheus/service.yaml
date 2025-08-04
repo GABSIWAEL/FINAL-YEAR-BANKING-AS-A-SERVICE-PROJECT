@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: atm-service
+  name: prometheus
 spec:
   selector:
-    app: atm
+    app: prometheus
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 9090
+      targetPort: 9090
   type: ClusterIP

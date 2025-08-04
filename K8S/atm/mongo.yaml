@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atm-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atm-db
+  template:
+    metadata:
+      labels:
+        app: atm-db
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: atm-db
+spec:
+  selector:
+    app: atm-db
+  ports:
+    - port: 27017

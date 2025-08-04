@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atm-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atm
+  template:
+    metadata:
+      labels:
+        app: atm
+    spec:
+      containers:
+        - name: atm
+          image: atm-service:latest
+          ports:
+            - containerPort: 8080

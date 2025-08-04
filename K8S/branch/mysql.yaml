@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: branch-db-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: branch-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: branch-db
+  template:
+    metadata:
+      labels:
+        app: branch-db
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "mysecretpassword"
+            - name: MYSQL_DATABASE
+              value: "branchdb"
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: branch-db-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: branch-db
+spec:
+  selector:
+    app: branch-db
+  ports:
+    - port: 3306

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authenticator-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authenticator
+  template:
+    metadata:
+      labels:
+        app: authenticator
+    spec:
+      containers:
+        - name: authenticator
+          image: authenticator-service:latest
+          ports:
+            - containerPort: 8090
+            - containerPort: 8091
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+            - name: ConnectionStrings__DefaultConnection
+              value: "server=mysqlAuth-db;port=3306;database=authdb;user=root;password=mysecretpassword;SslMode=none;"
+          volumeMounts:
+            - name: data-protection
+              mountPath: /root/.aspnet/DataProtection-Keys
+      volumes:
+        - name: data-protection
+          emptyDir: {}

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular
+  template:
+    metadata:
+      labels:
+        app: angular
+    spec:
+      containers:
+        - name: angular
+          image: angular-frontend:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: uploads
+              mountPath: /shared/openBanking/uploads
+      volumes:
+        - name: uploads
+          emptyDir: {}

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: card-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: card
+  template:
+    metadata:
+      labels:
+        app: card
+    spec:
+      containers:
+        - name: card
+          image: card-service:latest
+          ports:
+            - containerPort: 8086
+            - containerPort: 8087
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+            - name: ConnectionStrings__DefaultConnection
+              value: "Host=card-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=carddb"
