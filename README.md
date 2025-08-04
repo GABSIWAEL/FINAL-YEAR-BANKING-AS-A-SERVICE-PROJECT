@@ -1,177 +1,209 @@
-
 # 💳 Banking Solution
 
-## 🧭 Overview
-**Banking Solution** is a microservices-based financial system engineered to manage and streamline core banking operations. The platform is modular, scalable, and designed to be deployed in cloud-native environments using **Docker** and **Kubernetes**.
+## 🧽 Overview
 
-### ✅ Core Microservices:
-- `OpenBanking_ACCOUNT_V1` – Customer account management (balances, transactions)
-- `OpenBanking_ATM_V1` – ATM operations (withdrawals, deposits, geo-location)
-- `OpenBanking_BRANCH_V1` – Branch information and metadata
-- `OpenBanking_CARD_V1` – Card issuance and status tracking
-- `OpenBanking_ANGULAR_V1` – The Frontend microservice
+**Banking Solution** is a cloud-native microservices-based financial system that simulates core banking operations such as account handling, ATM interactions, card services, and branch management. The platform is modular, observable, and scalable — deployed via **Docker** and **Kubernetes**.
 
 ---
 
-## ⚙️ Project Setup
+## 🧱 Architecture Highlights
+
+### ✅ Core Microservices:
+
+* `OpenBanking_ACCOUNT_V1` – Customer account management (balances, transactions)
+* `OpenBanking_ATM_V1` – ATM operations (withdrawals, deposits, geo-location)
+* `OpenBanking_BRANCH_V1` – Branch and employee metadata
+* `OpenBanking_CARD_V1` – Card issuance and status tracking
+* `OpenBanking_AUTHENTICATOR_V1` – User authentication and identity management
+* `OpenBanking_NOTIFICATION_V1` – RabbitMQ-powered event-based notifications
+* `OpenBanking_ANGULAR_V1` – Fully responsive frontend
+
+### 📆 Supporting Infrastructure:
+
+* RabbitMQ (messaging)
+* PostgreSQL, MySQL, MongoDB (data storage)
+* Prometheus & Grafana (monitoring)
+* Elasticsearch & Kibana (log aggregation)
+
+---
+
+## ⚙️ Setup Instructions
 
 ### 🔧 Prerequisites
-- Docker
-- Kubernetes
-- kubectl
 
-### 📥 Clone the Repository
+* Docker Desktop (with Kubernetes enabled)
+* kubectl CLI
+* Node.js (for Angular dev)
+* Angular CLI (for frontend work)
+
+### 📅 Clone the Repository
+
 ```bash
 git clone https://github.com/GABSIWAEL/Banking_Solution.git
 cd Banking_Solution
 ```
 
-### 🐳 Run with Docker Compose
+---
+
+### 🐳 Option A: Run with Docker Compose (for local dev)
+
 ```bash
 docker-compose up -d --build
 ```
 
-### 🚀 Deploy to Kubernetes
+### ☘️ Option B: Deploy via Kubernetes (recommended)
+
 ```bash
-kubectl apply -f deployments.yaml
+kubectl apply -f k8s/
 ```
+
+📁 Folder structure:
+
+```
+k8s/
+├── account/
+├── atm/
+├── branch/
+├── card/
+├── authenticator/
+├── angular/
+└── rabbitmq/
+```
+
+Each folder contains:
+
+* `deployment.yaml`
+* `service.yaml`
+* (Optional) `postgres.yaml`, `mysql.yaml`, or `mongo.yaml`
 
 ---
 
-## 🗄 Microservice-to-Database Mapping
+## 📄 Microservice-to-Database Mapping
 
-| Microservice | Description                          | Recommended Database | Reason |
-|--------------|--------------------------------------|----------------------|--------|
-| `ATM`        | ATM info, geo-location, status logs  | MongoDB              | Schema flexibility for logs/geo data |
-| `CARD`       | Card creation, linkage, status       | PostgreSQL           | Secure storage, strong relational support |
-| `BRANCH`     | Branch metadata, employee info       | MySQL / MariaDB      | Optimized for structured lightweight data |
-| `ACCOUNT`    | Accounts, balances, transactions     | PostgreSQL           | ACID compliance, consistent indexing |
+| Microservice    | Description                         | Database   |
+| --------------- | ----------------------------------- | ---------- |
+| `ATM`           | ATM info, geo-location, status logs | MongoDB    |
+| `CARD`          | Card creation, linkage, status      | PostgreSQL |
+| `BRANCH`        | Branch metadata, employee info      | MySQL      |
+| `ACCOUNT`       | Accounts, balances, transactions    | PostgreSQL |
+| `AUTHENTICATOR` | Auth and user sessions              | MySQL      |
 
-> ❌ **Why Not SQLite?**
-> - Not concurrency-safe
-> - No user roles or network access
-> - Poor scalability and no failover support  
-> ✅ Use **only for local testing**, never in production.
+> 📝 Each DB is containerized and configured via its own manifest.
 
 ---
 
-## 🚨 Exception Definitions
+## 💣 Docker Ports Summary
 
-### ACCOUNT Exceptions
-```csharp
-public static ObpException UserNotLoggedIn() => new ObpException("OBP-20001", "User not logged in. Authentication is required!");
-public static ObpException UserNotFound() => new ObpException("OBP-20057", "User not found by userId.");
-public static ObpException AccountNotFound() => new ObpException("OBP-30018", "Bank Account not found.");
-public static ObpException CustomerNotFound() => new ObpException("OBP-30002", "Customer not found.");
-```
-
-### ATM Exceptions
-```csharp
-public static ObpExceptionATM ATMNotFound() => new ObpExceptionATM("OBP-30009", "ATM not found.");
-```
-
-### BRANCH Exceptions
-```csharp
-public static ObpExceptionBRANCH BranchNotFound() => new ObpExceptionBRANCH("OBP-300010", "Branch not found.");
-```
-
-### CARD Exceptions
-```csharp
-public static ObpExceptionCARD CardStatusNotReturned() => new ObpExceptionCARD("OBP-50212", "Connector did not return card statuses.");
-```
+| Component          | Internal Port | Exposed Port |
+| ------------------ | ------------- | ------------ |
+| Account Service    | 8088, 8089    | 8088, 8089   |
+| ATM Service        | 8082, 8083    | 8082, 8083   |
+| Branch Service     | 8084, 8085    | 8084, 8085   |
+| Card Service       | 8086, 8087    | 8086, 8087   |
+| Authenticator      | 8090, 8091    | 8090, 8091   |
+| RabbitMQ Dashboard | 15672         | 15672        |
+| MongoDB            | 27017         | 27017        |
+| PostgreSQL         | 5432, 5433    | 5432, 5433   |
+| MySQL              | 3306, 3307    | 3306, 3307   |
+| Angular Frontend   | 80            | 8083         |
+| Prometheus         | 9090          | 9090         |
+| Grafana            | 3000          | 3000         |
+| Kibana             | 5601          | 5601         |
+| Elasticsearch      | 9200          | 9200         |
 
 ---
 
-## 🐳 Docker Compose Services and Exposed Ports
+## 📂 Observability Stack
 
-### 1. **Account Service**
-- Ports: `8088:8088`, `8089:8089`
-- DB: PostgreSQL (`5432:5432`)
-
-### 2. **ATM Service**
-- Ports: `8082:8082`, `8083:8083`
-- DB: MongoDB (`27017:27017`)
-
-### 3. **Branch Service**
-- Ports: `8084:8084`, `8085:8085`
-- DB: MySQL (`3306:3306`)
-
-### 4. **Card Service**
-- Ports: `8086:8086`, `8087:8087`
-- DB: PostgreSQL (`5433:5433`)
+* 📊 **Prometheus**: Time-series monitoring
+* 📊 **Grafana**: Dashboards and alerts
+* 📄 **Elasticsearch**: Central log indexing
+* 🔍 **Kibana**: Log visualization
+* 📨 **RabbitMQ**: Internal service messaging
 
 ---
 
-## 🖥️ Frontend Service (STB BANK)
+## 🖥️ Frontend (STB BANK)
 
 ### 🌐 Supported Languages:
-- English 🇬🇧
-- French 🇫🇷
-- Arabic 🇸🇦
-- Spanish 🇪🇸
-- German 🇩🇪
-- Russian 🇷🇺
-- Chinese 🇨🇳
 
-### 🚪 Authentication:
-- Email-based login and registration
-- Password protection with visibility toggle
-- Social login via Google and Facebook
+English 🇬🇧 | French 🇫🇷 | Arabic 🇸🇦 | Spanish 🇪🇸 | German 🇩🇪 | Russian 🇷🇺 | Chinese 🇨🇳
+
+### 🛡️ Authentication:
+
+* Email/password login & registration
+* Google & Facebook login (social auth)
+* Backend token-based session management
 
 ### 🎨 UI/UX:
-- Built using Angular 16+
-- Fully responsive (mobile-first)
-- Key sections: Hero, About, Features, Pricing, Language Switch
-- Real-time form validation
 
-### 🔐 Security:
-- Frontend form validation
-- Token-based session management via backend
+* Built with Angular 16+
+* Responsive & mobile-first
+* Language switcher with `assets/i18n/`
 
-### 🌍 Internationalization (i18n):
-- Dynamic multi-language switch
-- `assets/i18n/` folder for translations
-- Language dropdown integrated in navbar
+### 🔧 Development
 
-### 🧪 Development
 ```bash
+cd OpenBanking_ANGULAR_V1
 npm install
 ng serve
 ```
 
-### 🧱 Build & Deploy
+### 📦 Build & Deploy
+
 ```bash
 ng build --configuration=production
 ```
-> Deployed via Dockerized NGINX with SPA routing support
 
-### 📁 Folder Structure
-```
-src/
-├── app/
-│   ├── components/       # All Angular components (login, landing, etc.)
-│   └── services/         # Auth and API services
-├── assets/i18n/          # Language translation files
-├── environments/         # Environment configs
+> Dockerized and served via NGINX SPA image.
+
+---
+
+## 📱 API Usage
+
+Each microservice exposes REST endpoints. Use Postman, Swagger, or your frontend to consume them after deployment. Ensure Kubernetes pods are running:
+
+```bash
+kubectl get pods
 ```
 
 ---
 
-## 📡 API Access
+## 🥺 Sample Exception Handling (C#)
 
-Each service runs on its own endpoint. Ensure each pod/container is healthy before invoking APIs.
+### ACCOUNT
+
+```csharp
+public static ObpException AccountNotFound() =>
+  new ObpException("OBP-30018", "Bank Account not found.");
+```
+
+### ATM
+
+```csharp
+public static ObpExceptionATM ATMNotFound() =>
+  new ObpExceptionATM("OBP-30009", "ATM not found.");
+```
+
+### CARD
+
+```csharp
+public static ObpExceptionCARD CardStatusNotReturned() =>
+  new ObpExceptionCARD("OBP-50212", "Connector did not return card statuses.");
+```
 
 ---
 
 ## 🤝 Contribution
 
-Contributions are welcome:
-- Submit pull requests
-- Report issues
-- Suggest improvements or new features
+All contributions welcome:
+
+* Pull requests
+* Bug reports
+* Architecture suggestions
 
 ---
 
-## 📝 License
+## 📌 License
 
-This project is licensed under the **MIT License**.
+MIT License. See [`LICENSE`](./LICENSE) file.
