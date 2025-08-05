@@ -540,8 +540,9 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
                 return StatusCode(500, ObpException.UnknownError().ToString());
             }
         }
+
         [HttpGet("banks/{bankId}/accounts/{accountId}")]
-        [SwaggerOperation(Summary = "Get full account details by ID")]
+        [SwaggerOperation(Summary = "Get full account details by ID" ,Description = "Returns detailed information for a specific account  using bankId and accountId .")]
         [ProducesResponseType(typeof(CreateAccountResponseDto), 200)]
         [ProducesResponseType(typeof(string), 404)]
         public async Task<IActionResult> GetAccountById(string bankId, string accountId)
@@ -556,11 +557,27 @@ namespace OpenBanking_ACCOUNT_V1.Controllers
         }
 
 
+       [HttpPost("banks/{bankId}/accounts/{accountId}/products/{productCode}/attribute")]
+[SwaggerOperation(Summary = "Create a New Account Attributes", Description = "Create a new account attributes based on the three elements: bankId, accountId, and productCode")]
+public async Task<IActionResult> CreateAccountAttribute(
+    string bankId,
+    string accountId,
+    string productCode,
+    [FromBody] CreateAccountAttributeBodyDto dto)
+{
+    var attribute = await _accountRepository.CreateAccountAttribute(bankId, accountId, productCode, dto);
+    var result = _mapper.Map<CreateAccountAttributeResponseDto>(attribute);
 
+    _publisher.PublishAccountCreated(new AccountAttributeCreatedEvent
+    {
+        account_attribute_id = attribute.account_attribute_id,
+        name = attribute.name,
+        value = attribute.value,
+        product_instance_code = attribute.product_instance_code
+    });
 
-
-
-
+    return Ok(result);
+}
 
 
 

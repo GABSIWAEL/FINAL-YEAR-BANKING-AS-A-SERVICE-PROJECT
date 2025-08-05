@@ -12,16 +12,16 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysqlAuth-db
+  name: mysqlauth-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mysqlAuth-db
+      app: mysqlauth-db
   template:
     metadata:
       labels:
-        app: mysqlAuth-db
+        app: mysqlauth-db
     spec:
       containers:
         - name: mysql
@@ -44,9 +44,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysqlAuth-db
+  name: mysqlauth-db
 spec:
   selector:
-    app: mysqlAuth-db
+    app: mysqlauth-db
   ports:
     - port: 3306

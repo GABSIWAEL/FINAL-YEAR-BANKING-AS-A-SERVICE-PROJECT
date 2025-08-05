@@ -6,7 +6,9 @@ spec:
   selector:
     app: card
   ports:
-    - port: 8086
+    - name: http-8086
+      port: 8086
       targetPort: 8086
-    - port: 8087
+    - name: http-8087
+      port: 8087
       targetPort: 8087

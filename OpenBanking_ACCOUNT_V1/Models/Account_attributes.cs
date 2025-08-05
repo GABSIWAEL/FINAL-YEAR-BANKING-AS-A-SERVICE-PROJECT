@@ -7,7 +7,7 @@ namespace OpenBanking_ACCOUNT_V1.Models
         [Key]
         public string account_attribute_id { get; set; }
         public string name { get; set; }
-        public Type type { get; set; }
+        public AttributeType type { get; set; }
         public string value { get; set; }
         public string product_instance_code { get; set; }
         public string Accountid { get; set; }

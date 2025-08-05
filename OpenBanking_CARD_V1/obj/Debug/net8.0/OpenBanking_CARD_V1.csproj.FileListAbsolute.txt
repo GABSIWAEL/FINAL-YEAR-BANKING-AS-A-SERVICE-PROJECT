@@ -181,3 +181,5 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\OpenBanking_CARD_V1.pdb
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\OpenBanking_CARD_V1.genruntimeconfig.cache
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\obj\Debug\net8.0\ref\OpenBanking_CARD_V1.dll
+C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_CARD_V1\bin\Debug\net8.0\Prometheus.AspNetCore.dll

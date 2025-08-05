@@ -6,7 +6,9 @@ spec:
   selector:
     app: branch
   ports:
-    - port: 8084
+    - name: http-8084
+      port: 8084
       targetPort: 8084
-    - port: 8085
+    - name: http-8085
+      port: 8085
       targetPort: 8085

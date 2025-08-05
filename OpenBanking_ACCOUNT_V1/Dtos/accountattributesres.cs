@@ -1,3 +1,8 @@
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using OpenBanking_ACCOUNT_V1.Models;
+using System.ComponentModel.DataAnnotations;
+using AttributeType = OpenBanking_ACCOUNT_V1.Models.AttributeType;
 namespace OpenBanking_ACCOUNT_V1.Dtos
 {
     public class accountattributesres
@@ -6,7 +11,7 @@ namespace OpenBanking_ACCOUNT_V1.Dtos
      
         public string account_attribute_id { get; set; }
         public string name { get; set; }
-        public Type type { get; set; }
+        public AttributeType type { get; set; }
         public string value { get; set; }
         public string product_instance_code { get; set; }
     }

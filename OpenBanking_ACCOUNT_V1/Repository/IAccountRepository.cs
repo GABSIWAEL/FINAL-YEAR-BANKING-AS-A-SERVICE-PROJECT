@@ -16,7 +16,7 @@ namespace OpenBanking_ACCOUNT_V1.Repository
         //----------create account -------------------------------------------------------------
         Task<Account> CreateAccountAsync(string bankId, CreateAccountDto createAccountDto);
         Task<Account> GetFullAccountByIdAsync(string bankId, string accountId);
-
+        Task<Account_attributes> CreateAccountAttribute( string bankId, string accountId , string product_code , CreateAccountAttributeBodyDto createAccountAttributeBodyDto);
         //--------------------------------------------------------------------------------------
         Task<Agent> GetAgent(string bankId, string agent_id);
         Task<IEnumerable<GrpcAccountModelForCardOfCurrentUser>> GetAccountsByIdsAsync(IEnumerable<string> accountIds);

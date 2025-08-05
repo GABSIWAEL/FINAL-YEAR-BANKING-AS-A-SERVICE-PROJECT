@@ -138,5 +138,29 @@ public async Task<Account> GetFullAccountByIdAsync(string bankId, string account
 }
 
 
+
+public async Task<Account_attributes> CreateAccountAttribute(
+    string bankId,
+    string accountId,
+    string productCode,
+    CreateAccountAttributeBodyDto dto)
+{
+    var newAttribute = new Account_attributes
+    {
+        account_attribute_id = Guid.NewGuid().ToString(),
+        name = dto.name,
+        type = dto.type,
+        value = dto.value,
+        product_instance_code = dto.product_instance_code,
+        product_code = productCode,
+        Accountid = accountId
+    };
+
+    _context.AccountAttributes.Add(newAttribute);
+    await _context.SaveChangesAsync();
+    return newAttribute;
+}
+
+
     }
 }

@@ -28,10 +28,21 @@ namespace OpenBanking_ACCOUNT_V1.Shared.Services
             _channel = connection.CreateModel();
             _channel.ExchangeDeclare(_config["RabbitMQ:Exchange"], ExchangeType.Direct, durable: true);
         }
-
+        // THIS METHOD IS CALLED WHEN A NEW ACCOUNT IS CREATED 
         public void PublishAccountCreated(AccountCreatedEvent accountEvent)
         {
             var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(accountEvent));
+            _channel.BasicPublish(
+                exchange: _config["RabbitMQ:Exchange"],
+                routingKey: _config["RabbitMQ:RoutingKey"],
+                basicProperties: null,
+                body: body
+            );
+        }
+        // THIS METHOD IS CREATED WHEN A NEW ACCOUNT ATTRIBUTES IS CREATED 
+        public void PublishAccountCreated(AccountAttributeCreatedEvent accountattributeEvent)
+        {
+            var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(accountattributeEvent));
             _channel.BasicPublish(
                 exchange: _config["RabbitMQ:Exchange"],
                 routingKey: _config["RabbitMQ:RoutingKey"],
