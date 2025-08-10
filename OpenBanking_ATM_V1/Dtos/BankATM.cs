@@ -44,7 +44,7 @@ namespace OpenBanking_ATM_V1.Dtos
         public float balance_inquiry_fee { get; set; }
         public Type atm_type { get; set; }
         public int phone { get; set; }
-        public List<ATMAttributes> attributes { get; set; }
+        public List<AtmAttributes> attributes { get; set; }
 
 
     }

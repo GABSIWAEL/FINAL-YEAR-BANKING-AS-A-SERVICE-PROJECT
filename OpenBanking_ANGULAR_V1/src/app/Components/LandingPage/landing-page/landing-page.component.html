@@ -114,7 +114,8 @@
 </nav>
 
 <!-- Get Started Button -->
-<a class="btn-getstarted" href="/authentication">
+<a class="btn-getstarted" [routerLink]="['/authentication']">
+
   <span *ngIf="isEnglish">Get Started</span>
   <span *ngIf="isFrench">Commencer</span>
   <span *ngIf="isArabe">ابدأ الآن</span>

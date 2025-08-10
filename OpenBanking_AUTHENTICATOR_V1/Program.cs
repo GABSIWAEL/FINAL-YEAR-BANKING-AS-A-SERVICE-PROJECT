@@ -1,67 +1,90 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OpenBanking_AUTHENTICATOR_V1.Data;
 using OpenBanking_AUTHENTICATOR_V1.Repositories;
+using Prometheus;
+using System.Text;
 using System.Text.Json.Serialization;
 using System.IO;
-using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 👉 Connexion DB
+// 👉 DATABASE
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-// 👉 Repositories
+// 👉 REPOSITORY
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-// 👉 DataProtection (clé persistée dans volume Docker monté)
+// 👉 DATA PROTECTION
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo("/root/.aspnet/DataProtection-Keys"))
     .SetApplicationName("OpenBankingAuthenticator");
 
-// 👉 Session
+// 👉 SESSION CACHE (memory for now)
 builder.Services.AddDistributedMemoryCache();
+
+// 👉 SESSION CONFIGURATION
 builder.Services.AddSession(options =>
 {
+    options.Cookie.Name = ".OpenBanking.Auth";
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
-    options.Cookie.SameSite = SameSiteMode.Lax; // <- CHANGE THIS
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+    options.Cookie.SameSite = SameSiteMode.Lax;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 });
 
+// 👉 AUTHENTICATION
 builder.Services.AddAuthentication(options =>
 {
+    // Default authentication scheme
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 })
 .AddCookie(options =>
 {
+    options.Cookie.Name = ".AspNetCore.Cookies";
     options.Cookie.HttpOnly = true;
-    options.Cookie.SameSite = SameSiteMode.Lax; // <- CHANGE THIS
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+    options.Cookie.SameSite = SameSiteMode.None;  // Must be None for OAuth
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Ensure HTTPS in production
 })
 .AddGoogle(options =>
 {
     options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
     options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-    options.CallbackPath = "/auth/google/callback";
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = true;
+    options.SaveToken = true;
+
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+    };
 });
 
-// 👉 Controllers + JSON cycle ignore
+// 👉 CONTROLLERS & JSON OPTIONS
 builder.Services.AddControllers()
-    .AddJsonOptions(o =>
+    .AddJsonOptions(options =>
     {
-        o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-        o.JsonSerializerOptions.WriteIndented = true;
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.WriteIndented = true;
     });
 
-// 👉 Swagger
+// 👉 SWAGGER DOCS
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -69,19 +92,39 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "OpenBanking_AUTHENTICATOR_V1",
         Version = "v1",
-        Description = "API for managing authentications via Google OAuth"
+        Description = "Google OAuth Authentication API"
     });
 });
 
-// 👉 Kestrel listen pour Docker (HTTP uniquement)
+// 👉 KESTREL DOCKER PORT
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(8090); // Pas besoin de HTTPS dans Docker
+    options.ListenAnyIP(8090); // Matches docker-compose exposed port
 });
 
-var app = builder.Build();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", policy =>
+    {
+        policy.WithOrigins("http://localhost:8083") // Your Angular app URL
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();  // Allow cookies to be sent with requests
+    });
+});
 
-// ✅ Middleware order important
+// 👉 BUILD APP
+var app = builder.Build();
+app.UseCors("AllowSpecificOrigin");  // Apply the CORS policy
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
+
+// ✅ MIDDLEWARE ORDER MATTERS
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -89,23 +132,20 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-// ❌ Ne pas rediriger vers HTTPS en Docker local
-// if (!app.Environment.IsDevelopment())
-// {
-//     app.UseHttpsRedirection();
-// }
+// IMPORTANT: Must come BEFORE session + auth
+app.UseCookiePolicy(new CookiePolicyOptions
+{
+    MinimumSameSitePolicy = SameSiteMode.None,
+    Secure = CookieSecurePolicy.None // Must match cookie settings for HTTP local dev
+});
 
-app.UseCookiePolicy();
-app.UseSession();
+app.UseRouting();
+app.UseSession();        // Required before authentication
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseHttpMetrics();    // Prometheus metrics
 app.MapControllers();
-app.UseRouting();
-app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
+app.MapMetrics();        // Exposes /metrics
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
-});
 app.Run();

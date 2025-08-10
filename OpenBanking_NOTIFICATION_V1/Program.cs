@@ -5,6 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHostedService<AccountCreatedConsumer>();
+builder.Services.AddHostedService<AccountAttributeCreatedConsumer>();
+builder.Services.AddHostedService<AtmCreatedConsumer>();
+builder.Services.AddHostedService<AtmAttributeCreatedConsumer>();
+
 builder.Services.AddSingleton<EmailSenderService>();
 
 

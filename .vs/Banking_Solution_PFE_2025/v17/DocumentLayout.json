@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\dtos\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\dtos\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\dtos\\createaccountattributebodydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\dtos\\createaccountattributebodydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\shared\\events\\accountcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\shared\\events\\accountcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42B4F76C-B8B0-4884-9B6F-60B5E430AEEF}|OpenBanking_NOTIFICATION_V1\\OpenBanking_NOTIFICATION_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_notification_v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,16 +207,8 @@
       "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_authenticator_v1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DBC3A94-9943-4025-84F9-55E44BA5F47B}|OpenBanking_AUTHENTICATOR_V1\\OpenBanking_AUTHENTICATOR_V1.csproj|solutionrelative:openbanking_authenticator_v1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\SyncDataService\\Grpc\\GrpxAccountService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -443,10 +443,6 @@
       "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\value.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|c:\\users\\msi\\desktop\\pfe\\banking_solution_pfe_2025\\openbanking_account_v1\\models\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{812AEDC7-460E-49B6-94BC-1AABB815C704}|OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.csproj|solutionrelative:openbanking_account_v1\\models\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -560,6 +556,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Reason_requested.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenBanking_CARD_V1\\Models\\Reason_requested.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenBanking_ACCOUNT_V1\\Models\\Type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Shared\\Events\\AccountCreatedEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OpenBanking_ACCOUNT_V1\\Shared\\Events\\AccountCreatedEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -569,35 +573,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateAccountResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
-              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
-              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserInfoDto.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Dtos\\UserInfoDto.cs",
+              "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Dtos\\UserInfoDto.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Dtos\\UserInfoDto.cs",
+              "RelativeToolTip": "OpenBanking_AUTHENTICATOR_V1\\Dtos\\UserInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T11:42:28.852Z"
+              "WhenOpened": "2025-08-07T10:57:27.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "account_attributesDto.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
-              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
-              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T11:42:17.997Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CreateAccountAttributeResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountAttributeResponseDto.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountAttributeResponseDto.cs",
@@ -609,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CreateAccountAttributeBodyDto.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountAttributeBodyDto.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountAttributeBodyDto.cs",
@@ -617,12 +610,11 @@
               "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountAttributeBodyDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T11:41:32.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T11:41:32.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EmailSenderService.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_NOTIFICATION_V1\\Shared\\Services\\EmailSenderService.cs",
               "RelativeDocumentMoniker": "OpenBanking_NOTIFICATION_V1\\Shared\\Services\\EmailSenderService.cs",
@@ -634,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "RabbitMqPublisher.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Shared\\Services\\RabbitMqPublisher.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Shared\\Services\\RabbitMqPublisher.cs",
@@ -646,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Program.cs",
@@ -658,7 +650,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAqwGoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:38:27.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateAccountResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T11:42:28.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
+              "RelativeToolTip": "OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:17:41.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "account_attributesDto.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
+              "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
+              "RelativeToolTip": "OpenBanking_ACCOUNT_V1\\Dtos\\account_attributesDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T11:42:17.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Controllers\\AccountsController.cs",
@@ -670,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Program.cs",
@@ -682,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Program.cs",
@@ -694,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_BRANCH_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_BRANCH_V1\\Program.cs",
@@ -706,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Program.cs",
@@ -718,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_NOTIFICATION_V1\\Program.cs",
               "RelativeDocumentMoniker": "OpenBanking_NOTIFICATION_V1\\Program.cs",
@@ -730,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AccountCreatedConsumer.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_NOTIFICATION_V1\\Shared\\Services\\AccountCreatedConsumer.cs",
               "RelativeDocumentMoniker": "OpenBanking_NOTIFICATION_V1\\Shared\\Services\\AccountCreatedConsumer.cs",
@@ -742,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 140,
               "Title": "AccountCreatedEvent.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Shared\\Events\\AccountCreatedEvent.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Shared\\Events\\AccountCreatedEvent.cs",
@@ -754,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "GrpcAccountService.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\SyncDataService\\Grpc\\GrpcAccountService.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\SyncDataService\\Grpc\\GrpcAccountService.cs",
@@ -766,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Accounts.proto",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Protos\\Accounts.proto",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Protos\\Accounts.proto",
@@ -778,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "CardsForTheCurrentUser.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Dtos\\CardsForTheCurrentUser.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Dtos\\CardsForTheCurrentUser.cs",
@@ -790,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "CreateAccountDto.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountDto.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\CreateAccountDto.cs",
@@ -802,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "AutoMapperProfile.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Helper\\AutoMapperProfile.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Helper\\AutoMapperProfile.cs",
@@ -814,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Data\\AppDbContext.cs",
@@ -826,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Pin_reset.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Pin_reset.cs",
@@ -838,7 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AccountGrpcService.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\SyncDataService\\Grpc\\AccountGrpcService.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\SyncDataService\\Grpc\\AccountGrpcService.cs",
@@ -850,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CardController.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Controllers\\CardController.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Controllers\\CardController.cs",
@@ -862,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "ICardRepository.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Repository\\ICardRepository.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Repository\\ICardRepository.cs",
@@ -874,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "CardRepository.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Repository\\CardRepository.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Repository\\CardRepository.cs",
@@ -886,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Card.cs",
@@ -898,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Repository\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Repository\\UnitOfWork.cs",
@@ -910,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\appsettings.json",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\appsettings.json",
@@ -922,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Repository\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Repository\\IUnitOfWork.cs",
@@ -934,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Replacement.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Replacement.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Replacement.cs",
@@ -946,7 +988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Card_attributes.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Card_attributes.cs",
@@ -958,7 +1000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Allows.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Allows.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Allows.cs",
@@ -970,7 +1012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Networks.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Networks.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Networks.cs",
@@ -982,7 +1024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 138,
               "Title": "Reason_requested.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\Models\\Reason_requested.cs",
@@ -994,7 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Repository\\AccountRepository.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Repository\\AccountRepository.cs",
@@ -1006,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "AutoMapperProfile.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Helpers\\AutoMapperProfile.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Helpers\\AutoMapperProfile.cs",
@@ -1018,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "Accounts.proto",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Protos\\Accounts.proto",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Protos\\Accounts.proto",
@@ -1030,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Repository\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Repository\\IAccountRepository.cs",
@@ -1042,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "GrpcAccountModelForCardOfCurrentUser.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\GrpcAccountModelForCardOfCurrentUser.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\GrpcAccountModelForCardOfCurrentUser.cs",
@@ -1054,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account.cs",
@@ -1066,7 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "ObpException.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\CustomException\\ObpException.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\CustomException\\ObpException.cs",
@@ -1078,7 +1120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Data\\AppDbContext.cs",
@@ -1090,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "AccountbyIdFull.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\AccountbyIdFull.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\AccountbyIdFull.cs",
@@ -1102,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Accounts at all BanksPrivate.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\Accounts at all BanksPrivate.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\Accounts at all BanksPrivate.cs",
@@ -1114,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "AccountbyId.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Dtos\\AccountbyId.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Dtos\\AccountbyId.cs",
@@ -1126,7 +1168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Repository\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Repository\\UnitOfWork.cs",
@@ -1138,7 +1180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "openbanking.local.pem",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\ssl\\openbanking.local.pem",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\ssl\\openbanking.local.pem",
@@ -1150,7 +1192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "openbanking.local-key.pem",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\ssl\\openbanking.local-key.pem",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\ssl\\openbanking.local-key.pem",
@@ -1197,18 +1239,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 51,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
-              "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
-              "RelativeToolTip": "OpenBanking_AUTHENTICATOR_V1\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T11:17:41.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
               "Title": "ApiKey.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Models\\ApiKey.cs",
               "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Models\\ApiKey.cs",
@@ -1217,18 +1247,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-26T11:17:50.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "OpenBanking_AUTHENTICATOR_V1\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T11:38:27.889Z"
             },
             {
               "$type": "Document",
@@ -1256,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_AUTHENTICATOR_V1\\appsettings.json",
               "RelativeDocumentMoniker": "OpenBanking_AUTHENTICATOR_V1\\appsettings.json",
@@ -1268,7 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 137,
               "Title": "account.proto",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\GrpcSystem\\AccountEndService\\Protos\\account.proto",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\GrpcSystem\\AccountEndService\\Protos\\account.proto",
@@ -1280,7 +1298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 136,
               "Title": "greet.proto",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\GrpcSystem\\AccountEndService\\Protos\\greet.proto",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\GrpcSystem\\AccountEndService\\Protos\\greet.proto",
@@ -1856,7 +1874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 139,
               "Title": "Type.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Type.cs",
@@ -1892,7 +1910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 111,
               "Title": "Container.targets",
               "DocumentMoniker": "C:\\Users\\MSI\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\build\\Container.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\build\\Container.targets",
@@ -1940,7 +1958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 110,
               "Title": "Currency.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Currency.cs",
@@ -1964,7 +1982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 112,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\appsettings.json",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\appsettings.json",
@@ -1976,7 +1994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 113,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_BRANCH_V1\\appsettings.json",
               "RelativeDocumentMoniker": "OpenBanking_BRANCH_V1\\appsettings.json",
@@ -1988,7 +2006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 114,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_BRANCH_V1\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "OpenBanking_BRANCH_V1\\Data\\AppDbContext.cs",
@@ -2000,7 +2018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 115,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\appsettings.json",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\appsettings.json",
@@ -2012,7 +2030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 119,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -2024,7 +2042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 117,
               "Title": "Scheme.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Scheme.cs",
@@ -2036,7 +2054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 116,
               "Title": "Account_routings.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account_routings.cs",
@@ -2048,7 +2066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 118,
               "Title": "OpenBanking_ACCOUNT_V1.http",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.http",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\OpenBanking_ACCOUNT_V1.http",
@@ -2060,7 +2078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 122,
               "Title": "Balance.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Balance.cs",
@@ -2072,7 +2090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 121,
               "Title": "Owners.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Owners.cs",
@@ -2084,7 +2102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 124,
               "Title": "Account_attributes.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Account_attributes.cs",
@@ -2096,7 +2114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 120,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Address.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Address.cs",
@@ -2108,7 +2126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 123,
               "Title": "Alias.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
               "RelativeDocumentMoniker": "OpenBanking_ACCOUNT_V1\\Models\\Alias.cs",
@@ -2120,7 +2138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 125,
               "Title": "Location_categories.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location_categories.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Location_categories.cs",
@@ -2132,7 +2150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 126,
               "Title": "Supported_currencies.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Supported_currencies.cs",
@@ -2144,7 +2162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 127,
               "Title": "Accessibility_features.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Accessibility_features.cs",
@@ -2156,7 +2174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 128,
               "Title": "Services.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Services.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Services.cs",
@@ -2168,7 +2186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 129,
               "Title": "Supported_languages.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Supported_languages.cs",
@@ -2180,7 +2198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 133,
               "Title": "Licence.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Licence.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Licence.cs",
@@ -2192,7 +2210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 130,
               "Title": "Location.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Location.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Location.cs",
@@ -2204,7 +2222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 131,
               "Title": "Meta.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\Meta.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\Meta.cs",
@@ -2216,7 +2234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 132,
               "Title": "OpeningHours.cs",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\Models\\OpeningHours.cs",
@@ -2228,7 +2246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 134,
               "Title": "OpenBanking_CARD_V1.csproj",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
               "RelativeDocumentMoniker": "OpenBanking_CARD_V1\\OpenBanking_CARD_V1.csproj",
@@ -2240,7 +2258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 135,
               "Title": "OpenBanking_ATM_V1.csproj",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\pfe\\Banking_Solution_PFE_2025\\OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",
               "RelativeDocumentMoniker": "OpenBanking_ATM_V1\\OpenBanking_ATM_V1.csproj",

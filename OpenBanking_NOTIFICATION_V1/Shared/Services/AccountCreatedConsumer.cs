@@ -4,6 +4,7 @@ using RabbitMQ.Client.Events;
 using System.Text;
 using Newtonsoft.Json;
 using OpenBanking_NOTIFICATION_V1.Shared.Events;
+
 namespace OpenBanking_NOTIFICATION_V1.Shared.Services
 {
     public class AccountCreatedConsumer : BackgroundService
@@ -11,58 +12,51 @@ namespace OpenBanking_NOTIFICATION_V1.Shared.Services
         private readonly IConfiguration _config;
         private readonly EmailSenderService _emailSender;
 
-        public AccountCreatedConsumer(IConfiguration config , EmailSenderService emailSender)
+        public AccountCreatedConsumer(IConfiguration config, EmailSenderService emailSender)
         {
             _config = config;
             _emailSender = emailSender;
         }
 
-       protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-{
-    int maxAttempts = 5;
-    int delayBetweenAttempts = 5000; // 5 seconds
-    int attempt = 0;
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            await ListenAsync(
+                "notification_account_queue",
+                _config["RabbitMQConnections:AccountEvents:RoutingKey"],
+                async (msg) =>
+                {
+                    var evt = JsonConvert.DeserializeObject<AccountCreatedEvent>(msg);
+                    await _emailSender.SendAccountCreatedEmail(evt.AccountId, evt.Label);
+                },
+                stoppingToken
+            );
+        }
 
-    while (attempt < maxAttempts && !stoppingToken.IsCancellationRequested)
-    {
-        try
+        private async Task ListenAsync(string queue, string routingKey, Func<string, Task> handle, CancellationToken token)
         {
             var factory = new ConnectionFactory
             {
-                HostName = _config["RabbitMQ:HostName"],
-                UserName = _config["RabbitMQ:UserName"],
-                Password = _config["RabbitMQ:Password"]
+                HostName = _config["RabbitMQConnections:AccountEvents:HostName"],
+                UserName = _config["RabbitMQConnections:AccountEvents:UserName"],
+                Password = _config["RabbitMQConnections:AccountEvents:Password"]
             };
 
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
 
-            channel.ExchangeDeclare("account_exchange", ExchangeType.Direct, durable: true);
-            channel.QueueDeclare("notification_queue", durable: true, exclusive: false, autoDelete: false);
-            channel.QueueBind("notification_queue", "account_exchange", "account.created");
+            var exchangeName = _config["RabbitMQConnections:AccountEvents:Exchange"];
+            channel.ExchangeDeclare(exchangeName, ExchangeType.Direct, durable: true);
+            channel.QueueDeclare(queue, durable: true, exclusive: false, autoDelete: false);
+            channel.QueueBind(queue, exchangeName, routingKey);
 
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += async (model, ea) =>
             {
                 var message = Encoding.UTF8.GetString(ea.Body.ToArray());
-                var accountEvent = JsonConvert.DeserializeObject<AccountCreatedEvent>(message);
-
-                await _emailSender.SendAccountCreatedEmail(accountEvent.AccountId, accountEvent.Label);
+                await handle(message);
             };
 
-            channel.BasicConsume("notification_queue", autoAck: true, consumer);
-            return; // Success
+            channel.BasicConsume(queue, autoAck: true, consumer);
         }
-        catch (Exception ex)
-        {
-            attempt++;
-            Console.WriteLine($"❌ Attempt {attempt}: Failed to connect to RabbitMQ. Retrying in {delayBetweenAttempts / 1000}s...");
-            await Task.Delay(delayBetweenAttempts, stoppingToken);
-        }
-    }
-
-    Console.WriteLine("❌ RabbitMQ connection failed after multiple attempts.");
-}
-
     }
 }

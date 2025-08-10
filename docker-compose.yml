@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
 
   account-db:
@@ -11,17 +13,19 @@ services:
       - "5432:5432"
     volumes:
       - account-db-data:/var/lib/postgresql/data
-    networks:
-      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   account.dashboard:
-    image : mcr.microsoft.com/dotnet/aspire-dashboard:latest
-    container_name : dashboard_ACCOUNT
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:latest
+    container_name: dashboard_ACCOUNT
     ports:
-    - 18888:18888
-    - 18889:18889
-    networks:
-      - app-network
-  
+      - "18888:18888"
+      - "18889:18889"
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
     container_name: elasticsearch
@@ -34,24 +38,21 @@ services:
       - "9200:9200"
     volumes:
       - esdata:/usr/share/elasticsearch/data
-    networks:
-      - app-network
+
   kibana:
     image: docker.elastic.co/kibana/kibana:8.13.0
     container_name: kibana
     environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-      - xpack.security.enabled=false
-      - xpack.monitoring.enabled=true
-      - xpack.monitoring.ui.container.elasticsearch.enabled=true
-      - xpack.fleet.enabled=false         
-      - xpack.fleet.agents.enabled=false  
+      ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
+      xpack.security.enabled: "false"
+      xpack.monitoring.enabled: "true"
+      xpack.monitoring.ui.container.elasticsearch.enabled: "true"
+      xpack.fleet.enabled: "false"
+      xpack.fleet.agents.enabled: "false"
     ports:
       - "5601:5601"
     depends_on:
       - elasticsearch
-    networks:
-      - app-network
 
   account-service:
     build:
@@ -65,9 +66,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=account-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=accountdb
     depends_on:
-      - account-db
-    networks:
-      - app-network
+      account-db:
+        condition: service_healthy
 
   branch-db:
     image: mysql:5.7
@@ -79,8 +79,11 @@ services:
       - "3306:3306"
     volumes:
       - branch-db-data:/var/lib/mysql
-    networks:
-      - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   branch-service:
     build:
@@ -92,11 +95,10 @@ services:
       - "8085:8085"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=mysql://branch-db:3306/branchdb
+      - ConnectionStrings__DefaultConnection=Server=branch-db;Port=3306;Database=branchdb;User=root;Password=mysecretpassword;
     depends_on:
-      - branch-db
-    networks:
-      - app-network
+      branch-db:
+        condition: service_healthy
 
   card-db:
     image: postgres:13
@@ -106,11 +108,14 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: carddb
     ports:
-      - "5433:5432"  
+      - "5433:5432"
     volumes:
       - card-db-data:/var/lib/postgresql/data
-    networks:
-      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   card-service:
     build:
@@ -124,17 +129,36 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=card-db;Port=5432;Username=postgres;Password=mysecretpassword;Database=carddb
     depends_on:
-      - card-db
-    networks:
-      - app-network
+      card-db:
+        condition: service_healthy
+
+
+  atm-service:
+    build:
+      context: .
+      dockerfile: OpenBanking_ATM_V1/Dockerfile
+    container_name: atm-service
+    ports:
+      - "8082:8082"
+      - "8083:8083"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - mongodb://atm-db:27017/atmdb
+    depends_on:
+      atm-db:
+        condition: service_healthy
 
   atm-db:
     image: mongo:latest
     container_name: atm-db
     ports:
       - "27017:27017"
-    networks:
-      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --eval 'db.adminCommand(\"ping\")' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
 
   mysqlAuth-db:
     image: mysql:5.7
@@ -146,9 +170,12 @@ services:
       - "3307:3306"
     volumes:
       - authdb-data:/var/lib/mysql
-    networks:
-      - app-network
-    
+      - ./init-auth-user.sql:/docker-entrypoint-initdb.d/init-auth-user.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   authenticator-service:
     build:
@@ -157,18 +184,16 @@ services:
     container_name: authenticator-service
     ports:
       - "8090:8090"
-      - "8091:8091"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=server=mysqlAuth-db;port=3306;database=authdb;user=root;password=mysecretpassword;SslMode=none;
+      - ConnectionStrings__DefaultConnection=server=authdb;port=3306;database=authdb;user=appuser;password=apppassword;SslMode=none;
     depends_on:
-      - mysqlAuth-db
+      mysqlAuth-db:
+        condition: service_healthy
     user: root
     volumes:
       - data-protection-keys:/root/.aspnet/DataProtection-Keys
-    networks:
-      - app-network
-    
+
   prometheus:
     image: prom/prometheus
     container_name: prometheus
@@ -176,8 +201,7 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     ports:
       - "9090:9090"
-    networks:
-      - app-network
+
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -185,24 +209,31 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
-    networks:
-      - app-network
     depends_on:
       - prometheus
 
-
+  redis:
+    image: redis:latest
+    container_name: redisaouth
+    ports:
+      - "6379:6379"
 
   frontend:
     build:
       context: ./OpenBanking_ANGULAR_V1
       dockerfile: Dockerfile
     ports:
-      - "8083:80"   # Expose HTTP only
+      - "8083:80"
     volumes:
       - ./uploads:/shared/openBanking/uploads
-    networks:
-      - app-network
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - default  
 
 
   notification-service:
@@ -221,11 +252,6 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
-    networks:
-      - app-network
-
-
-    
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -245,13 +271,11 @@ services:
     volumes:
       - rabbitmq-lib:/var/lib/rabbitmq/
       - rabbitmq-log:/var/log/rabbitmq
-    networks:
-      - app-network
 
 networks:
-  app-network:
+  default:
     driver: bridge
-  
+
 volumes:
   account-db-data:
   branch-db-data:
@@ -262,4 +286,3 @@ volumes:
   esdata:
   grafana-data:
   data-protection-keys:
-  

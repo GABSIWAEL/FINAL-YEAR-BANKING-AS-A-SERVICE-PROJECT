@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
-
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 namespace OpenBanking_ATM_V1.Models
 {
     public class Address
-    {
+    {   [Key]
+        public string id  { get; set; }
         [JsonProperty("line_1")]
         public string Line1 { get; set; }
         [JsonProperty("line_2")]

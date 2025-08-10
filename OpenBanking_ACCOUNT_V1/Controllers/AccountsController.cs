@@ -568,7 +568,7 @@ public async Task<IActionResult> CreateAccountAttribute(
     var attribute = await _accountRepository.CreateAccountAttribute(bankId, accountId, productCode, dto);
     var result = _mapper.Map<CreateAccountAttributeResponseDto>(attribute);
 
-    _publisher.PublishAccountCreated(new AccountAttributeCreatedEvent
+    _publisher.PublishAccountAttributeCreated(new AccountAttributeCreatedEvent
     {
         account_attribute_id = attribute.account_attribute_id,
         name = attribute.name,

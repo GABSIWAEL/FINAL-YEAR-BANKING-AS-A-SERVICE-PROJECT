@@ -1,59 +1,93 @@
-﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
-using OpenBanking_ATM_V1.CustomException;
-using OpenBanking_ATM_V1.Data;
+﻿using MongoDB.Driver;
 using OpenBanking_ATM_V1.Dtos;
+using OpenBanking_ATM_V1.Models;
+using AutoMapper;
+using OpenBanking_ATM_V1.CustomException;
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
-public class ATMAttributesRepository
+namespace OpenBanking_ATM_V1.Repository
 {
-    private readonly AppDbContext _context;
-    private readonly IMapper _mapper; // AutoMapper injected for model to DTO mapping
-
-    public ATMAttributesRepository(AppDbContext context, IMapper mapper)
+    public class AtmRepository : IAtmRepository
     {
-        _context = context;
-        _mapper = mapper;
-    }
+        private readonly IMongoCollection<Atm> _atmCollection;
+        private readonly IMapper _mapper;
 
-    public async Task<BankATM> GetBankAtm(string bankId, string atmId)
-    {
-        try
+        public AtmRepository(IMapper mapper, string connectionString, string dbName)
         {
-            var bankExists = await _context.Atms.AnyAsync(b => b.Id == bankId);
-            if (!bankExists)
-            {
-                throw ObpExceptionATM.BankNotFound();
-            }
+            _mapper = mapper;
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase(dbName);
+            _atmCollection = database.GetCollection<Atm>("atms");
+        }
 
-            var atm = await _context.Atms
-                .Include(a => a.Address)
-                .Include(a => a.Location)
-                .Include(a => a.Meta)
-                .Include(a => a.SupportedLanguages)
-                .Include(a => a.Services)
-                .Include(a => a.AccessibilityFeatures)
-                .Include(a => a.SupportedCurrencies)
-                .Include(a => a.Notes)
-                .Include(a => a.LocationCategories)
-                .FirstOrDefaultAsync(a => a.Id == atmId);
+        public async Task<Atm> CreateAtm(string bankId, CreateAtmBody createAtmBody)
+        {
+            if (string.IsNullOrWhiteSpace(bankId))
+                throw ObpExceptionATM.BankNotFound();
+
+            var atm = new Atm
+            {
+                Id = Guid.NewGuid().ToString(),
+                BankId = bankId,
+                Name = createAtmBody.Name,
+                Address = createAtmBody.Address,
+                Location = createAtmBody.Location,
+                Meta = createAtmBody.Meta,
+                Monday = createAtmBody.Monday,
+                Tuesday = createAtmBody.Tuesday,
+                Wednesday = createAtmBody.Wednesday,
+                Thursday = createAtmBody.Thursday,
+                Friday = createAtmBody.Friday,
+                Saturday = createAtmBody.Saturday,
+                Sunday = createAtmBody.Sunday,
+                IsAccessible = createAtmBody.IsAccessible,
+                LocatedAt = createAtmBody.LocatedAt,
+                MoreInfo = createAtmBody.MoreInfo,
+                HasDepositCapability = createAtmBody.HasDepositCapability,
+                MinimumWithdrawal = createAtmBody.MinimumWithdrawal,
+                BranchIdentification = createAtmBody.BranchIdentification,
+                SiteIdentification = createAtmBody.SiteIdentification,
+                SiteName = createAtmBody.SiteName,
+                CashWithdrawalNationalFee = createAtmBody.CashWithdrawalNationalFee,
+                CashWithdrawalInternationalFee = createAtmBody.CashWithdrawalInternationalFee,
+                BalanceInquiryFee = createAtmBody.BalanceInquiryFee,
+                atm_type = createAtmBody.atm_type,
+                phone = createAtmBody.phone,
+                SupportedLanguages = _mapper.Map<List<Supported_languages>>(createAtmBody.SupportedLanguages),
+                Services = _mapper.Map<List<Services>>(createAtmBody.Services),
+                AccessibilityFeatures = _mapper.Map<List<Accessibility_features>>(createAtmBody.AccessibilityFeatures),
+                SupportedCurrencies = _mapper.Map<List<Supported_currencies>>(createAtmBody.SupportedCurrencies),
+                Notes = _mapper.Map<List<Notes>>(createAtmBody.Notes),
+                LocationCategories = _mapper.Map<List<Location_categories>>(createAtmBody.LocationCategories)
+            };
+
+            await _atmCollection.InsertOneAsync(atm);
+
+            return atm;
+        }
+
+        public async Task<Atm> GetAtmById(string atmId)
+        {
+            var filter = Builders<Atm>.Filter.Eq(a => a.Id, atmId);
+            var atm = await _atmCollection.Find(filter).FirstOrDefaultAsync();
 
             if (atm == null)
-            {
                 throw ObpExceptionATM.ATMNotFound();
-            }
 
-            // Map the Atm model to BankATM DTO
-            var bankAtmDto = _mapper.Map<BankATM>(atm);
+            return atm;
+        }
 
-            return bankAtmDto; // Return the mapped DTO
-        }
-        catch (ObpExceptionATM ex)
+
+
+
+        /* Task<AtmAttributes> CretaAtmAttributes (string  bankId , string atm_id , AtmAttributesBody AtmAttributesBody )
         {
-            throw ex;
-        }
-        catch (Exception)
-        {
-            throw ObpExceptionATM.UnknownError();
-        }
+             
+        } */
+
+
+        // Add more methods like Update, Delete, List as needed
     }
 }

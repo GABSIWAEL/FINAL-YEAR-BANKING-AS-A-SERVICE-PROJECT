@@ -1,0 +1,7 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="!isLoading && user">
+  <h1>Welcome, {{ user.name }}</h1>
+  <p>Email: {{ user.email }}</p>
+  <p>Status: {{ user.isActive ? 'Active' : 'Inactive' }}</p>
+  <p>Society Type: {{ user.society_Type }}</p>
+</div>

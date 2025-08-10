@@ -122,6 +122,118 @@ Each folder contains:
 * 📨 **RabbitMQ**: Internal service messaging
 
 ---
+## 📨 RabbitMQ Integration
+
+The **Banking Solution** uses **RabbitMQ** as its messaging backbone for event-driven communication between microservices.  
+It handles asynchronous events such as **account creation**, **ATM creation**, and **attribute updates**, enabling the **Notification Service** to trigger email or system alerts.
+
+### 🔌 Configuration
+
+RabbitMQ is containerized and configured with the following credentials:
+
+| Parameter   | Value   |
+| ----------- | ------- |
+| HostName    | `rabbitmq` |
+| UserName    | `kalo`  |
+| Password    | `kalo`  |
+
+---
+
+### 📦 Exchanges & Routing Keys
+
+| Service/Event  | Exchange            | Routing Key              | Queue Name                              |
+| -------------- | ------------------- | ------------------------ | --------------------------------------- |
+| AccountCreated | `account_exchange`  | `account.created`        | `account_queue_for_notifications`      |
+| ATMCreated     | `atm_exchange`      | `atm.created`            | `atm_queue_for_notifications`          |
+
+---
+
+### 🚀 Publishing Events
+
+**Account Service** and **ATM Service** publish messages to RabbitMQ exchanges using `RabbitMqPublisher`.
+
+Example – Publishing an **Account Created** event:
+
+```csharp
+public void PublishAccountCreated(AccountCreatedEvent accountEvent)
+{
+    Publish(accountEvent, "account.created");
+}
+```
+
+---
+
+### 📥 Consuming Events
+
+**Notification Service** subscribes to the queues and processes events via background services.
+
+Example – Consuming an **Account Created** event:
+
+```csharp
+protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+{
+    await ListenAsync(
+        "notification_account_queue",
+        _config["RabbitMQConnections:AccountEvents:RoutingKey"],
+        async (msg) =>
+        {
+            var evt = JsonConvert.DeserializeObject<AccountCreatedEvent>(msg);
+            await _emailSender.SendAccountCreatedEmail(evt.AccountId, evt.Label);
+        },
+        stoppingToken
+    );
+}
+```
+
+---
+
+### 📧 Email Notifications
+
+When an event is received, **EmailSenderService** logs or sends an email using **MailKit**:
+
+```csharp
+public async Task SendAccountCreatedEmail(string accountId, string label)
+{
+    Console.WriteLine($"New Account Created: {label} (ID: {accountId})");
+    await Task.CompletedTask;
+}
+```
+
+## 📜 Example Logs
+
+```plaintext
+=====================================================
+=== [LOG] Atm Attribute Created Notification ===
+To: System
+Subject: New Atm Attribute Created
+Body:
+✅ A new atm attribute was added:
+
+ID: 7041d4c2-e09a-4847-82c4-e08306f8dd0d
+Name: bank-008
+Value: string
+=====================================================
+
+---
+
+### 🗂 Deployment
+
+RabbitMQ is deployed as a Kubernetes service (`k8s/rabbitmq/`) and exposed for internal microservice communication.
+
+```bash
+kubectl apply -f k8s/rabbitmq/
+```
+
+RabbitMQ Dashboard is available at:
+
+```
+http://localhost:15672
+Username: kalo
+Password: kalo
+```
+
+---
+
 
 ## 🖥️ Frontend (STB BANK)
 

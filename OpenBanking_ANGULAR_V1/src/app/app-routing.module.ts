@@ -7,10 +7,9 @@ import { FirstPageComponent } from './Components/ApiExplorer/first-page/first-pa
 
 const routes: Routes = [{ path: '', component: LandingPageComponent },
 { path: 'authentication', component: AuthClientComponent },
-{ path: 'client', component: ClientComponent },
-{ path: 'ApiExplorer', component: FirstPageComponent }
+{ path: 'ApiExplorer', component: FirstPageComponent },
+{ path: 'dashboard', component: ClientComponent }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

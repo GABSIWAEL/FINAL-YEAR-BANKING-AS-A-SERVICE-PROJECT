@@ -7,6 +7,8 @@ import {
   ElementRef,
   ViewChild
 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/Services/auth-service.service';
 
 @Component({
   selector: 'app-auth-client',
@@ -17,7 +19,7 @@ export class AuthClientComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('formContainer') formContainer!: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private authService: AuthServiceService, private router: Router) { }
 
   //*************** LANGUAGE *******************/
   isRussian = false;
@@ -40,9 +42,21 @@ export class AuthClientComponent implements OnInit, OnDestroy, AfterViewInit {
     localStorage.setItem('preferredLanguage', language);
   }
 
+
   ngOnInit(): void {
+    console.log("App loaded at route:", this.router.url);
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     this.setLanguage(savedLang);
+    console.log('Logged in?', this.authService.isLoggedIn());
+
+    /*  if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/dashboard']);
+    }  */
+
+
+
+
+
   }
 
   ngAfterViewInit(): void {
@@ -87,9 +101,9 @@ export class AuthClientComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void { }
 
   loginWithGoogle() {
-  window.location.href = 'http://localhost:8090/auth/login';
-}
+    this.authService.loginWithGoogle();
+  }
 }

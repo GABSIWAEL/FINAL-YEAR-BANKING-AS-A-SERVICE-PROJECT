@@ -1,9 +1,12 @@
 ﻿using System.Net;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 namespace OpenBanking_ATM_V1.Models
 {
     public class Atm
-    {
+    {   
+        [Key]
         public string Id { get; set; }
         public string BankId { get; set; }
         public string Name { get; set; }
@@ -17,7 +20,7 @@ namespace OpenBanking_ATM_V1.Models
         public OpeningHours Friday { get; set; }
         public OpeningHours Saturday { get; set; }
         public OpeningHours Sunday { get; set; }
-        public string IsAccessible { get; set; }
+        public bool IsAccessible { get; set; }
         public string LocatedAt { get; set; }
         public string MoreInfo { get; set; }
         public string HasDepositCapability { get; set; }
@@ -34,5 +37,7 @@ namespace OpenBanking_ATM_V1.Models
         public float CashWithdrawalNationalFee { get; set; }
         public float CashWithdrawalInternationalFee { get; set; }
         public float BalanceInquiryFee { get; set; }
+        public string atm_type { get; set; }
+        public string phone { get; set; }
     }
 }

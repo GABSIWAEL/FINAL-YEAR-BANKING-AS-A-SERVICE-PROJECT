@@ -1,43 +1,72 @@
-using Microsoft.EntityFrameworkCore;
-using OpenBanking_ATM_V1.Data;
-using Prometheus;
+using AutoMapper;
+using Microsoft.OpenApi.Models;
+using OpenBanking_ATM_V1.Repository;
+using OpenBanking_ATM_V1.Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Register AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
+// Register your ATM repository (singleton)
+builder.Services.AddSingleton<IAtmRepository>(sp =>
+{
+    var mapper = sp.GetRequiredService<IMapper>();
+    var mongoConn = builder.Configuration.GetConnectionString("DefaultConnection")
+                   ?? throw new InvalidOperationException("DefaultConnection is missing in configuration.");
+    var mongoDbName = "atmdb";
+    return new AtmRepository(mapper, mongoConn, mongoDbName);
+});
+builder.Services.AddSingleton<RabbitMqPublisher>();
+// Add controllers
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Add Swagger/OpenAPI generation
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "ATM API",
+        Version = "v1",
+        Description = "API for managing open banking ATMs"
+    });
+
+    // Enable annotations if you’re using [SwaggerOperation] etc.
+    c.EnableAnnotations();
+
+    // If using XML comments for documentation:
+    var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    if (File.Exists(xmlPath))
+    {
+        c.IncludeXmlComments(xmlPath);
+    }
+});
+
+
+// Configure Kestrel to listen on HTTP port 8082
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8082);
 });
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
+// Enable Swagger middleware before routing
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API ATM V1");
-    c.RoutePrefix = string.Empty; // Swagger will be at root e.g., http://localhost:8088/
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ATM API V1");
+    c.RoutePrefix = string.Empty;
 });
 
 
-app.UseHttpsRedirection();
-
+// Configure routing and authorization
+app.UseRouting();
 app.UseAuthorization();
 
+// Map controller endpoints
 app.MapControllers();
-app.UseRouting();
-app.UseHttpMetrics(); // <-- collect ASP.NET Core HTTP metrics
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapMetrics(); // <-- expose /metrics for Prometheus to scrape
-});
 app.Run();

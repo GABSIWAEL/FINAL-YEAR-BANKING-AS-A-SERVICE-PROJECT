@@ -1,4 +1,10 @@
-﻿using Newtonsoft.Json;                  // For JsonProperty
+﻿/*
+THIS PROJECT IS CREATED BY WAEL GABSI 
+WHATSAPP / +216 22152879 
+GMAIL / waelwaelgabsi@gmail.com 
+TELEGRAM / @GBWAEL 
+*/
+using Newtonsoft.Json;                  // For JsonProperty
 using OpenBanking_ACCOUNT_V1.Models;
 using System.Collections.Generic;
 namespace OpenBanking_ACCOUNT_V1.Dtos

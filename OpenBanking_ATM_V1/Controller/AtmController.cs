@@ -1,39 +1,67 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using OpenBanking_ATM_V1.CustomException;
+using OpenBanking_ATM_V1.Dtos;
+using OpenBanking_ATM_V1.Repository;
+using AutoMapper;
+using System;
+using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Annotations;
+using AutoMapper;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
+using OpenBanking_ATM_V1.Shared.Services; // ✅ required
+using OpenBanking_ATM_V1.Shared.Events; 
 
-
-namespace OpenBanking_ATM_V1.Controller
+namespace OpenBanking_ATM_V1.Controllers
 {
+    [ApiController]
+    [Route("obp/v5.0.0")]
     public class AtmController : ControllerBase
     {
-        private readonly ATMAttributesRepository _atmRepository;
-
-        public AtmController(ATMAttributesRepository atmRepository)
+        private readonly IAtmRepository _atmRepository;
+        private readonly IMapper _mapper;
+        private readonly ILogger<AtmController> _logger;
+        private readonly RabbitMqPublisher _publisher;
+        public AtmController(IAtmRepository atmRepository, IMapper mapper, ILogger<AtmController> logger , RabbitMqPublisher publisher)
         {
             _atmRepository = atmRepository;
+            _mapper = mapper;
+            _logger = logger;
+            _publisher = publisher;
         }
 
-        // GET: /obp/v5.1.0/banks/{bankId}/atms/{atmId}
-        [HttpGet]
-        public async Task<IActionResult> GetBankAtm(string bankId, string atmId)
+        [HttpPost("banks/{bankId}/atms")]
+       [ProducesResponseType( typeof(CreateAtmResponse),201)]
+        [ProducesResponseType( typeof(string),400)]
+        public async Task<IActionResult> CreateAtm(string bankId, [FromBody] CreateAtmBody createAtmBody)
         {
             try
             {
-                // Fetch ATM data using the repository method
-                var bankAtm = await _atmRepository.GetBankAtm(bankId, atmId);
+                if (string.IsNullOrWhiteSpace(bankId))
+                    throw ObpExceptionATM.BankNotFound();
 
-                // Return the ATM DTO as a successful response
-                return Ok(bankAtm);
+                var atm = await _atmRepository.CreateAtm(bankId, createAtmBody);
+                var responseDto = _mapper.Map<CreateAtmResponse>(atm);
+                //------------------------------------------this is code related to the rabbit mq publisher 
+                 _publisher.PublishAtmCreated(new AtmCreatedEvent
+                {
+                    atm_id = atm.Id,
+                    BankId = atm.BankId,
+                    Name = atm.Name
+                });
+                //------------------------------------------end 
+                return CreatedAtAction(nameof(CreateAtm), new { bankId = atm.BankId, atmId = atm.Id }, responseDto);
             }
             catch (ObpExceptionATM ex)
             {
-                // Return the specific error from the custom exception handler
-                return StatusCode(ex.StatusCode, new { message = ex.Message });
+                _logger.LogWarning(ex.ToString());
+                return BadRequest(ex.ToString());
             }
             catch (Exception ex)
             {
-                // Return a generic error if an unexpected exception occurs
-                return StatusCode(500, new { message = "An unknown error occurred", details = ex.Message });
+                _logger.LogError(ex, "Error while creating ATM");
+                return StatusCode(500, ObpExceptionATM.UnknownError().ToString());
             }
         }
     }

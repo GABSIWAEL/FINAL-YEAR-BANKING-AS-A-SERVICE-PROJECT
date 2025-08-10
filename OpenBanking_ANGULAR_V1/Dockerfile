@@ -10,6 +10,8 @@ RUN rm -rf ./*
 COPY --from=builder /app/dist/open-banking-angular-v1 .
 COPY ssl/openbanking.local.pem /etc/nginx/certs/openbanking.local.pem
 COPY ssl/openbanking.local-key.pem /etc/nginx/certs/openbanking.local-key.pem
+COPY ./src/assets/custom_50x.html /usr/share/nginx/html/custom_50x.html
+COPY ./src/assets/custom_404.html /usr/share/nginx/html/custom_404.html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
