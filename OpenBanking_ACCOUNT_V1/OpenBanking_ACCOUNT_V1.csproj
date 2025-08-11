@@ -63,5 +63,10 @@
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </None>
 </ItemGroup>
+<ItemGroup>
+  <Compile Remove="OpenBanking_ACCOUNT_V1.Tests/**/*.cs" />
+  <None Include="OpenBanking_ACCOUNT_V1.Tests/**/*.cs" />
+</ItemGroup>
+
 
 </Project>

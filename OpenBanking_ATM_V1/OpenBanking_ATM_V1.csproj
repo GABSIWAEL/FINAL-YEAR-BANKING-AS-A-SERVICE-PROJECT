@@ -28,5 +28,9 @@
     
   </ItemGroup>
   
+<ItemGroup>
+  <Compile Remove="OpenBanking_ATM_V1.Tests/**/*.cs" />
+  <None Include="OpenBanking_ATM_V1.Tests/**/*.cs" />
+</ItemGroup>
 
 </Project>
