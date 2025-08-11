@@ -12,8 +12,8 @@ using OpenBanking_ACCOUNT_V1.Data;
 namespace OpenBanking_ACCOUNT_V1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250805122816_AddAccountAttributesTable")]
-    partial class AddAccountAttributesTable
+    [Migration("20250811212751_creatednotnull")]
+    partial class creatednotnull
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,26 +35,21 @@ namespace OpenBanking_ACCOUNT_V1.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("account_type")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("branch_id")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("label")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("number")
+                    b.Property<int?>("number")
                         .HasColumnType("integer");
 
                     b.Property<string>("product_code")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("user_id")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");

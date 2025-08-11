@@ -64,5 +64,44 @@ namespace OpenBanking_ATM_V1.Controllers
                 return StatusCode(500, ObpExceptionATM.UnknownError().ToString());
             }
         }
+        [HttpPost("banks/{bankId}/atms/{atmId}/attributes")]
+        [ProducesResponseType(typeof(AtmAttributesResponse), 201)]
+        [ProducesResponseType(typeof(string), 400)]
+        public async Task<IActionResult> CreateAtmAttributes(string bankId, string atmId, [FromBody] AtmAttributesBody attributeBody)
+        {
+            try
+            {
+                var atmAttribute = await _atmRepository.CreateAtmAttributes(bankId, atmId, attributeBody);
+
+                var responseDto = _mapper.Map<AtmAttributesResponse>(atmAttribute);
+
+                // Optional: Publish event about new attribute
+                _publisher.PublishAtmAttributeCreated(new AtmAttributeCreatedEvent
+                {
+                    BankId = bankId,
+                    AtmId = atmId,
+                    AttributeId = atmAttribute.Id,
+                    Name = atmAttribute.Name,
+                    Value = atmAttribute.Value,
+                    IsActive = atmAttribute.IsActive
+                });
+
+                return CreatedAtAction(nameof(CreateAtmAttributes), new { bankId, atmId, attributeId = atmAttribute.Id }, responseDto);
+            }
+            catch (ObpExceptionATM ex)
+            {
+                _logger.LogWarning(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while creating ATM attribute");
+                return StatusCode(500, ObpExceptionATM.UnknownError().ToString());
+            }
+        }
+
+
+
+
     }
 }

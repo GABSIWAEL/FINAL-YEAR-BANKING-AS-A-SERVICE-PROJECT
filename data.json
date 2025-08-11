@@ -1,0 +1,18 @@
+{
+  "user_id": "qsfkjml",
+  "label": "zertyiu",
+  "product_code": "zertyiuo",
+  "balances": [
+    {
+      "currency": "USD",
+      "amount": 0
+    }
+  ],
+  "branch_id": "string",
+  "account_routings": [
+    {
+      "scheme": "IBAN",
+      "address": "string"
+    }
+  ]
+}

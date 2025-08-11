@@ -22,7 +22,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // 👉 REPOSITORY
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddHttpClient<KongService>();
 // 👉 DATA PROTECTION
 builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo("/root/.aspnet/DataProtection-Keys"))

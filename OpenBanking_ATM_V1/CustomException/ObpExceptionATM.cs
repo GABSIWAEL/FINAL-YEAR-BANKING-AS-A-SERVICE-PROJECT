@@ -27,6 +27,10 @@ namespace OpenBanking_ATM_V1.CustomException
         {
             return new ObpExceptionATM("Bank not found.", 404, "BankNotFound");
         }
+        public static ObpExceptionATM AtmNotFound()
+        {
+            return new ObpExceptionATM("ATM not found.", 404, "AtmNotFound");
+        }
 
         public static ObpExceptionATM InvalidJsonFormat()
         {

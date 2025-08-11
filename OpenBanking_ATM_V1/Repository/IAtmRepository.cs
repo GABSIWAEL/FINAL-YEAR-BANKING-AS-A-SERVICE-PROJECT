@@ -8,7 +8,7 @@ namespace OpenBanking_ATM_V1.Repository
     {
        
         Task<Atm> CreateAtm( string bankId, CreateAtmBody  createAtmBody);   // create atm 
-      //  Task<AtmAttributes> CretaAtmAttributes (string  bankId , string atm_id , AtmAttributesBody AtmAttributesBody ); // create atm attributes 
+    Task<AtmAttributes> CreateAtmAttributes(string bankId, string atmId, AtmAttributesBody atmAttributesBody);
 
     }
 }

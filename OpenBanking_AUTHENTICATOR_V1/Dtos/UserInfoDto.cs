@@ -12,5 +12,6 @@ namespace OpenBanking_AUTHENTICATOR_V1.Dtos
         public string Name { get; set; } = null!;
         public bool isActive { get; set; } = true;  // Default value is true if user is active by default
         public Etat Society_Type { get; set; } = Etat.USER;  // Default to USER if not specified
+        
     }
 }

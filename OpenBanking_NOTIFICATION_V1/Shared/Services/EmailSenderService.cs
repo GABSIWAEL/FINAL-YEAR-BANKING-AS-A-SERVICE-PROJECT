@@ -104,7 +104,12 @@ namespace OpenBanking_NOTIFICATION_V1.Shared.Services
             Console.WriteLine("Subject: New Atm Attribute Created");
             Console.WriteLine("Body:");
             Console.WriteLine($"✅ A new atm attribute was added:\n");
-            
+            Console.WriteLine($"ID: {evt.AttributeId}");
+            Console.WriteLine($"Bank ID: {evt.BankId}");
+            Console.WriteLine($"ATM ID: {evt.AtmId}");
+            Console.WriteLine($"Name: {evt.Name}");
+            Console.WriteLine($"Value: {evt.Value}");
+            Console.WriteLine($"Is Active: {evt.IsActive}");
             Console.WriteLine("=====================================================");
 
             await Task.CompletedTask;

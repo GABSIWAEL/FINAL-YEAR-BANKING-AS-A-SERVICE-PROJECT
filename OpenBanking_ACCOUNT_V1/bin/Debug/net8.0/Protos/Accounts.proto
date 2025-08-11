@@ -1,0 +1,113 @@
+syntax = "proto3";
+
+option csharp_namespace = "AccountService";
+
+package account;
+
+service GrpcAccount {
+  // Fetch multiple accounts by their IDs
+  rpc GetAccountsByIds(GetAccountsByIdsRequest) returns (GetAccountsByIdsResponse);
+}
+
+message GetAccountsByIdsRequest {
+  repeated string accountIds = 1;
+}
+
+message GetAccountsByIdsResponse {
+  repeated GrpcAccountModelForCardOfCurrentUser accounts = 1;
+}
+
+message GrpcAccountModelForCardOfCurrentUser {
+  string id = 1;
+  string label = 2;
+  repeated ViewsAvailable views_available = 3;
+  string bank_id = 4;
+}
+
+message GrpcAccountModel {
+  string id = 1;
+  string label = 2;
+  int32 number = 3;
+  string product_code = 4;
+  string account_type = 5;
+  string bank_id = 6;
+  repeated Owner owners = 7;
+  repeated Balance balances = 8;
+  repeated AccountRouting account_routings = 9;
+  repeated AccountAttribute account_attributes = 10;
+  repeated ViewsAvailable views_available = 11;
+  repeated Tag tags = 12;
+}
+
+message Owner {
+  string name = 1;
+  string id = 2;
+}
+
+message Balance {
+  string currency = 1;
+  double amount = 2;
+}
+
+message AccountRouting {
+  string scheme = 1;
+  string address = 2;
+}
+
+message AccountAttribute {
+  string name = 1;
+  string value = 2;
+}
+
+message Alias {
+  string value = 1;
+}
+
+message ViewsAvailable {
+  string id = 1;
+  string short_name = 2;
+  string description = 3;
+  bool is_public = 4;
+  Alias alias = 5;
+  bool hide_metadata_if_alias_used = 6;
+  bool can_add_comment = 7;
+  bool can_add_corporate_location = 8;
+  bool can_add_image = 9;
+  bool can_add_image_url = 10;
+  bool can_add_more_info = 11;
+  bool can_add_open_corporates_url = 12;
+  bool can_add_physical_location = 13;
+  bool can_add_private_alias = 14;
+  bool can_add_public_alias = 15;
+  bool can_add_tag = 16;
+  bool can_add_url = 17;
+  bool can_add_where_tag = 18;
+  bool can_delete_comment = 19;
+  bool can_delete_corporate_location = 20;
+  bool can_delete_image = 21;
+  bool can_delete_physical_location = 22;
+  bool can_delete_tag = 23;
+  bool can_delete_where_tag = 24;
+  bool can_edit_owner_comment = 25;
+  bool can_see_bank_account_balance = 26;
+  bool can_see_bank_account_bank_name = 27;
+  bool can_see_bank_account_currency = 28;
+  bool can_see_bank_account_iban = 29;
+  bool can_see_bank_account_label = 30;
+  bool can_see_bank_account_national_identifier = 31;
+  bool can_see_bank_account_number = 32;
+  bool can_see_bank_account_owners = 33;
+  bool can_see_bank_account_swift_bic = 34;
+  bool can_see_bank_account_type = 35;
+  bool can_see_comments = 36;
+  bool can_see_corporate_location = 37;
+  bool can_see_image_url = 38;
+  bool can_see_images = 39;
+  bool can_see_more_info = 40;
+  bool can_see_open_corporates_url = 41;
+  bool can_see_other_account_bank_name = 42;
+}
+
+message Tag {
+  string tag = 1;
+}

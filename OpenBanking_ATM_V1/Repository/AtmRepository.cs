@@ -13,6 +13,7 @@ namespace OpenBanking_ATM_V1.Repository
     {
         private readonly IMongoCollection<Atm> _atmCollection;
         private readonly IMapper _mapper;
+        private readonly IMongoCollection<AtmAttributes> _atmAttributesCollection;
 
         public AtmRepository(IMapper mapper, string connectionString, string dbName)
         {
@@ -20,6 +21,8 @@ namespace OpenBanking_ATM_V1.Repository
             var client = new MongoClient(connectionString);
             var database = client.GetDatabase(dbName);
             _atmCollection = database.GetCollection<Atm>("atms");
+            _atmAttributesCollection = database.GetCollection<AtmAttributes>("atmAttributes");  // <-- add this line
+
         }
 
         public async Task<Atm> CreateAtm(string bankId, CreateAtmBody createAtmBody)
@@ -82,12 +85,30 @@ namespace OpenBanking_ATM_V1.Repository
 
 
 
-        /* Task<AtmAttributes> CretaAtmAttributes (string  bankId , string atm_id , AtmAttributesBody AtmAttributesBody )
-        {
-             
-        } */
+        public async Task<AtmAttributes> CreateAtmAttributes(string bankId, string atmId, AtmAttributesBody atmAttributesBody)
+{
+    if (string.IsNullOrWhiteSpace(bankId))
+        throw ObpExceptionATM.BankNotFound();
 
+    if (string.IsNullOrWhiteSpace(atmId))
+        throw ObpExceptionATM.AtmNotFound();
 
-        // Add more methods like Update, Delete, List as needed
+    if (atmAttributesBody == null)
+        throw new ArgumentNullException(nameof(atmAttributesBody));
+
+    var atmAttribute = new AtmAttributes
+    {
+        BankId = bankId,
+        AtmId = atmId,
+        Name = atmAttributesBody.name,
+        Type = atmAttributesBody.type,
+        Value = atmAttributesBody.value,
+        IsActive = atmAttributesBody.is_active
+    };
+
+    await _atmAttributesCollection.InsertOneAsync(atmAttribute);
+
+    return atmAttribute;
+}
     }
 }

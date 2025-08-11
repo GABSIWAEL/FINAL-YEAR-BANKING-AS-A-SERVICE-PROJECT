@@ -39,5 +39,6 @@ namespace OpenBanking_ATM_V1.Models
         public float BalanceInquiryFee { get; set; }
         public string atm_type { get; set; }
         public string phone { get; set; }
+        public  List<AtmAttributes> Attributes { get; set; }
     }
 }

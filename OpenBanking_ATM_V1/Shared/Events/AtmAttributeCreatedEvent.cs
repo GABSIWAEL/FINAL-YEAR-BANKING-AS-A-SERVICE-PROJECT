@@ -2,9 +2,11 @@
 {
     public class AtmAttributeCreatedEvent
     {
-    public string account_attribute_id { get; set; }
-    public string name { get; set; }
-    public string value { get; set; }
-    public string product_instance_code { get; set; }
+    public string BankId { get; set; }
+        public string AtmId { get; set; }
+        public string AttributeId { get; set; }
+        public string Name { get; set; }
+        public int Value { get; set; }
+        public bool IsActive { get; set; }
     }
 }

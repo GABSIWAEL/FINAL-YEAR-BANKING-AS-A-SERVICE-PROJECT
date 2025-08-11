@@ -68,6 +68,9 @@ services:
     depends_on:
       account-db:
         condition: service_healthy
+    networks:
+      - default
+      - kong-net
 
   branch-db:
     image: mysql:5.7
@@ -191,6 +194,9 @@ services:
       mysqlAuth-db:
         condition: service_healthy
     user: root
+    networks:
+    - kong-net
+    - default
     volumes:
       - data-protection-keys:/root/.aspnet/DataProtection-Keys
 
@@ -272,11 +278,111 @@ services:
       - rabbitmq-lib:/var/lib/rabbitmq/
       - rabbitmq-log:/var/log/rabbitmq
 
+  kong-database:
+    image: postgres:11
+    container_name: kong-database
+    environment:
+      POSTGRES_USER: kong
+      POSTGRES_DB: kong
+      POSTGRES_PASSWORD: kongpass
+    ports:
+      - "5440:5432"
+    volumes:
+      - kong-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kong -d kong"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - kong-net
+
+  kong-migrations:
+    image: kong:3.6
+    command: kong migrations bootstrap
+    depends_on:
+      kong-database:
+        condition: service_healthy
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kongpass
+      KONG_PG_DATABASE: kong
+    networks:
+      - kong-net
+
+  kong:
+    image: kong:3.6
+    container_name: kong
+    depends_on:
+      kong-database:
+        condition: service_healthy
+      kong-migrations:
+        condition: service_completed_successfully
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kongpass
+      KONG_PG_DATABASE: kong
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
+    ports:
+      - "8000:8000"
+      - "8443:8443"
+      - "8001:8001"
+      - "8444:8444"
+    restart: always
+    networks:
+      - kong-net
+
+  konga:
+    image: pantsel/konga
+    container_name: konga
+    ports:
+      - "1337:1337"
+    environment:
+    - DB_ADAPTER=postgres
+    - DB_HOST=kong-database
+    - DB_PORT=5432
+    - DB_USER=kong
+    - DB_PASSWORD=kongpass
+    - DB_DATABASE=kong
+
+
+    depends_on:
+      kong-database:
+        condition: service_healthy
+      kong:
+        condition: service_started
+    volumes:
+      - konga-data:/app/kongadata
+    networks:
+      - kong-net
+  test-client:
+    image: curlimages/curl:8.5.0
+    container_name: test-client
+    depends_on:
+      - kong
+    networks:
+      - kong-net
+    entrypoint: ["/bin/sh", "-c", "apk add --no-cache bash && bash /scripts/consume_kong_service.sh"]
+    volumes:
+      - ./consume_kong_service.sh:/scripts/consume_kong_service.sh
+
 networks:
-  default:
+  kong-net:
     driver: bridge
 
 volumes:
+  konga-data:
+    name: konga-data
+  kong-db-data:
+    name: kong-db-data
   account-db-data:
   branch-db-data:
   card-db-data:

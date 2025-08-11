@@ -8,12 +8,12 @@ namespace OpenBanking_ACCOUNT_V1.Models
     {
         [Key]
         public string id { get; set; }
-        public string user_id { get; set; }
-        public string label { get; set; }
-        public int number { get; set; }
-        public string product_code { get; set; }
-        public string account_type { get; set; }
-        public string branch_id { get; set; }
+        public string? user_id { get; set; }
+        public string? label { get; set; }
+        public int? number { get; set; }
+        public string? product_code { get; set; }
+        public string? account_type { get; set; }
+        public string? branch_id { get; set; }
 
         [JsonProperty("bank_id")]
         public string Bank_id { get; set; }

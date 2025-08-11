@@ -12,7 +12,7 @@ using OpenBanking_ACCOUNT_V1.Data;
 namespace OpenBanking_ACCOUNT_V1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250803142422_InitialCreate")]
+    [Migration("20250811190944_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
