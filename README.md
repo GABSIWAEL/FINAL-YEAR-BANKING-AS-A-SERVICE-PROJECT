@@ -136,22 +136,32 @@ Each folder contains:
 
 ## 💣 Docker Ports Summary
 
-| Component          | Internal Port | Exposed Port |
-| ------------------ | ------------- | ------------ |
-| Account Service    | 8088, 8089    | 8088, 8089   |
-| ATM Service        | 8082, 8083    | 8082, 8083   |
-| Branch Service     | 8084, 8085    | 8084, 8085   |
-| Card Service       | 8086, 8087    | 8086, 8087   |
-| Authenticator      | 8090, 8091    | 8090, 8091   |
-| RabbitMQ Dashboard | 15672         | 15672        |
-| MongoDB            | 27017         | 27017        |
-| PostgreSQL         | 5432, 5433    | 5432, 5433   |
-| MySQL              | 3306, 3307    | 3306, 3307   |
-| Angular Frontend   | 80            | 8083         |
-| Prometheus         | 9090          | 9090         |
-| Grafana            | 3000          | 3000         |
-| Kibana             | 5601          | 5601         |
-| Elasticsearch      | 9200          | 9200         |
+| Component              | Internal Port(s) | Exposed Port(s) |
+| ---------------------- | ---------------- | --------------- |
+| Account DB (PostgreSQL 15) | 5432             | 5432            |
+| Account Dashboard      | 18888, 18889     | 18888, 18889    |
+| Elasticsearch          | 9200             | 9200            |
+| Kibana                 | 5601             | 5601            |
+| Account Service        | 8088, 8089       | 8088, 8089      |
+| Branch DB (MySQL 5.7)  | 3306             | 3306            |
+| Branch Service         | 8084, 8085       | 8084, 8085      |
+| Card DB (PostgreSQL 13)| 5432             | 5433            |
+| Card Service           | 8086, 8087       | 8086, 8087      |
+| ATM Service            | 8082, 8083       | 8082, 8083      |
+| ATM DB (MongoDB)       | 27017            | 27017           |
+| Auth DB (MySQL 5.7)    | 3306             | 3307            |
+| Authenticator Service  | 8090             | 8090            |
+| Prometheus             | 9090             | 9090            |
+| Grafana                | 3000             | 3000            |
+| Redis                  | 6379             | 6379            |
+| Frontend (Angular + NGINX)| 80           | 8083            |
+| Notification Service   | 9094, 9095       | 9094, 9095      |
+| RabbitMQ Messaging     | 5672             | 5672            |
+| RabbitMQ Dashboard     | 15672            | 15672           |
+| Kong DB (PostgreSQL 11)| 5432             | 5440            |
+| Kong Gateway           | 8000, 8443, 8001, 8444 | 8000, 8443, 8001, 8444 |
+| Konga Dashboard        | 1337             | 1337            |
+| Test Client (curl)     | —                | —               |
 
 ---
 
