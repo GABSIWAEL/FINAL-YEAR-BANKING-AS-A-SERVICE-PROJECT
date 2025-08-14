@@ -399,7 +399,55 @@ curl -i -X POST http://localhost:8001/consumers   --data username=fintech-client
 curl -i -X POST http://localhost:8001/consumers/fintech-client/key-auth   --data key=WvhG/yvZGeYKyOe7NsBprw8PKmtw8GimmF3lZiRTJcw=
 ```
 
+
+
+📦 Services & Kong Routes
+Service Name	Upstream URL	Route Path	Database / Messaging	Internal Port(s)	Exposed Port(s)
+Account Service	http://account-service:8088	/account	PostgreSQL 15	8088, 8089	8088, 8089
+ATM Service	http://atm-service:8082	/atm	MongoDB	8082, 8083	8082, 8083
+Branch Service	http://branch-service:8084	/branch	MySQL 5.7	8084, 8085	8084, 8085
+Card Service	http://card-service:8086	/card	PostgreSQL 13	8086, 8087	8086, 8087
+Authenticator Service	http://authenticator-service:8090	/auth	MySQL 5.7	8090	8090
+Notification Service	http://notification-service:8095	/notifications	RabbitMQ	9094, 9095	9094, 9095
+🔧 Automated Kong Registration Script
+#!/bin/sh
+set -e
+
+# Kong Admin API URL
+KONG_ADMIN_URL="http://kong:8001"
+
+echo "🔍 Checking Kong Admin API..."
+curl -s $KONG_ADMIN_URL/status || { echo "❌ Cannot reach Kong"; exit 1; }
+echo "✅ Kong reachable."
+
+SERVICES="
+account-service|http://account-service:8088|/account
+atm-service|http://atm-service:8082|/atm
+branch-service|http://branch-service:8084|/branch
+card-service|http://card-service:8086|/card
+authenticator-service|http://authenticator-service:8090|/auth
+notification-service|http://notification-service:8095|/notifications
+"
+
+echo "$SERVICES" | while IFS='|' read SERVICE_NAME UPSTREAM_URL ROUTE_PATH; do
+    echo "📦 Creating service: $SERVICE_NAME"
+    curl -s -X POST $KONG_ADMIN_URL/services \
+        --data name="$SERVICE_NAME" \
+        --data url="$UPSTREAM_URL"
+
+    echo "🛣 Creating route: $ROUTE_PATH"
+    curl -s -X POST $KONG_ADMIN_URL/services/"$SERVICE_NAME"/routes \
+        --data name="${SERVICE_NAME}-route" \
+        --data paths[]="$ROUTE_PATH"
+
+    echo "✅ $SERVICE_NAME registered with route $ROUTE_PATH"
+done
+
+echo "🚀 All services registered successfully!"
+
 ---
+
+
 
 # 🧪 Fintech Client (Python + HTML)
 
