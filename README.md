@@ -122,6 +122,7 @@ Each folder contains:
 * 📨 **RabbitMQ**: Internal service messaging
 
 ---
+
 ## 📨 RabbitMQ Integration
 
 The **Banking Solution** uses **RabbitMQ** as its messaging backbone for event-driven communication between microservices.  
@@ -213,6 +214,7 @@ ID: 7041d4c2-e09a-4847-82c4-e08306f8dd0d
 Name: bank-008
 Value: string
 =====================================================
+```
 
 ---
 
@@ -233,7 +235,6 @@ Password: kalo
 ```
 
 ---
-
 
 ## 🖥️ Frontend (STB BANK)
 
@@ -319,3 +320,79 @@ All contributions welcome:
 ## 📌 License
 
 MIT License. See [`LICENSE`](./LICENSE) file.
+
+---
+
+# 🔐 Kong API Gateway Setup
+
+### 1. Create Account Service in Kong
+```bash
+curl -i -X POST http://localhost:8001/services   --data name=account-service   --data url=http://account-service:8088
+```
+
+### 2. Create Route
+```bash
+curl -i -X POST http://localhost:8001/services/account-service/routes   --data 'paths[]=/account'
+```
+
+### 3. Enable Key Authentication
+```bash
+curl -i -X POST http://localhost:8001/services/account-service/plugins   --data name=key-auth
+```
+
+### 4. Create Consumer & API Key
+```bash
+curl -i -X POST http://localhost:8001/consumers   --data username=fintech-client
+
+curl -i -X POST http://localhost:8001/consumers/fintech-client/key-auth   --data key=WvhG/yvZGeYKyOe7NsBprw8PKmtw8GimmF3lZiRTJcw=
+```
+
+---
+
+# 🧪 Fintech Client (Python + HTML)
+
+### 📂 Structure
+```
+fintech-client/
+├── api/
+│   └── api_helper.py
+├── templates/
+│   └── index.html
+├── app.py
+├── requirements.txt
+└── fintech_client.log
+```
+
+### ⚙ Config
+Edit `app.py`:
+```python
+API_KEY = "your_api_key_here"
+BASE_URL = "http://localhost:8000"
+BANK_ID = "bank-008"
+```
+
+### ▶ Run
+```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
+Open browser at `http://127.0.0.1:5000`
+
+---
+
+## 📜 Logging
+- Console + `fintech_client.log`
+- Logs every request and response:
+```
+2025-08-12 22:14:40 [INFO] POST http://localhost:8000/account/...
+2025-08-12 22:14:40 [INFO] Response 201: {...}
+```
+
+---
+
+## 📌 Next Steps
+- Deploy fintech client alongside banking stack in `docker-compose`
+- Add rate-limiting & monitoring per API key
+- Integrate OAuth2 with Kong
