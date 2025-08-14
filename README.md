@@ -5,6 +5,48 @@
 **Banking Solution** is a cloud-native microservices-based financial system that simulates core banking operations such as account handling, ATM interactions, card services, and branch management. The platform is modular, observable, and scalable — deployed via **Docker** and **Kubernetes**.
 
 ---
+## 🛠 Technologies Used
+
+### **Backend & Microservices**
+- **C# / .NET 8+** – ASP.NET Core Web API powering all microservices
+- **RabbitMQ** – Event-driven messaging backbone
+- **MongoDB**, **PostgreSQL**, **MySQL** – Polyglot persistence layer
+- **Elasticsearch** – Centralized search and log indexing
+- **Kong API Gateway** – API management, routing, and security
+- **Konga** – Visual dashboard for Kong configuration
+
+### **Frontend**
+- **Angular 16+** – Modern, responsive web frontend
+- **HTML5**, **CSS3**, **JavaScript**, **TypeScript**
+- **NGINX** – Optimized delivery of Angular SPA
+- **i18n** – Multi-language internationalization support
+
+### **Infrastructure & DevOps**
+- **Docker** & **Docker Compose** – Local containerized environment
+- **Kubernetes** & **kubectl** – Scalable orchestration
+- **Prometheus**, **Grafana** – Monitoring & dashboarding
+- **Kibana**, **Elasticsearch** – Log visualization and analytics
+- **Shell scripting** & **PowerShell** – Automation and DevOps tasks
+
+### **Monitoring, Logging & Observability**
+- **Prometheus** – Time-series metrics collection
+- **Grafana** – Customizable dashboards & alerts
+- **Elasticsearch** – Full-text log indexing
+- **Kibana** – Real-time log exploration
+- **Custom App Logging** – Backend request & event logging
+
+### **API Development & Consumption**
+- **REST API** – OpenBanking-style contract
+- **Swagger / Postman** – Documentation & manual testing
+- **API Key Authentication** – Secured access via Kong
+- **Flask (Python)** – Fintech client consumption example
+- **Requests (Python)** – Lightweight HTTP calls
+
+### **Security**
+- **Token-based authentication**
+- **API Key-based access control**
+- **Google OAuth** & **Facebook OAuth** – Social authentication
+
 
 ## 🧱 Architecture Highlights
 
