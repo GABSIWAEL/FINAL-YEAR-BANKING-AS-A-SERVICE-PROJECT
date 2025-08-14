@@ -1,8 +1,8 @@
-# 💳 Banking Solution
+# 💳 Banking Solution : Bank As A Service (BAAS)
 
 ## 🧽 Overview
 
-**Banking Solution** is a cloud-native microservices-based financial system that simulates core banking operations such as account handling, ATM interactions, card services, and branch management. The platform is modular, observable, and scalable — deployed via **Docker** and **Kubernetes**.
+**Banking Solution : Bank As A Service (BAAS)** is a cloud-native microservices-based financial system that simulates core banking operations such as account handling, ATM interactions, card services, and branch management. The platform is modular, observable, and scalable — deployed via **Docker** and **Kubernetes**.
 
 ---
 ## 🛠 Technologies Used
