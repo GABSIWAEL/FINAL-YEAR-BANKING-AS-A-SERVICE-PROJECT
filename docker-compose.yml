@@ -102,6 +102,9 @@ services:
     depends_on:
       branch-db:
         condition: service_healthy
+    networks:
+      - default
+      - kong-net
 
   card-db:
     image: postgres:13
@@ -134,7 +137,9 @@ services:
     depends_on:
       card-db:
         condition: service_healthy
-
+    networks:
+      - default
+      - kong-net
 
   atm-service:
     build:
@@ -150,7 +155,9 @@ services:
     depends_on:
       atm-db:
         condition: service_healthy
-
+    networks:
+      - default
+      - kong-net
   atm-db:
     image: mongo:latest
     container_name: atm-db
@@ -258,7 +265,9 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
-
+    networks:
+      - default
+      - kong-net
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq

@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1">
+  <diagram name="Physical Architecture (Cool Icons)" id="0">
+    <mxGraphModel dx="1426" dy="1946" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vps" value="OVH VPS Server" style="shape=mxgraph.cloud.generic_cloud;fillColor=#cfe2ff;strokeColor=#084298;fontSize=16;fontColor=#084298;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-60" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="k8s" value="Kubernetes Cluster" style="shape=mxgraph.kubernetes.cluster;fillColor=#d1e7dd;strokeColor=#0f5132;fontSize=14;fontColor=#0f5132;" parent="vps" vertex="1">
+          <mxGeometry x="40" y="40" width="1120" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="angular" value="Frontend Angular" style="shape=mxgraph.logos.angular;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="100" y="60" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="account" value="Account-Service" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="100" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="branch" value="Branch-Service" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="200" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="card" value="Card-Service" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="300" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="atm" value="ATM-Service" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="400" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Authenticator" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="500" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" value="Notification-Service" style="shape=mxgraph.kubernetes.pod;fillColor=#9fc5e8;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="600" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_acc" value="PostgreSQL - Account" style="shape=mxgraph.postgresql;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="100" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_card" value="PostgreSQL - Card" style="shape=mxgraph.postgresql;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="200" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql_branch" value="MySQL - Branch" style="shape=mxgraph.mysql;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="300" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql_auth" value="MySQL - Authenticator" style="shape=mxgraph.mysql;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="400" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mongo_atm" value="MongoDB - ATM" style="shape=mxgraph.mongodb;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="500" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis Cache" style="shape=mxgraph.redis;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="600" y="280" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rabbitmq" value="RabbitMQ" style="shape=mxgraph.rabbitmq;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="100" y="380" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prometheus" value="Prometheus" style="shape=mxgraph.prometheus;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="200" y="380" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grafana" value="Grafana" style="shape=mxgraph.grafana;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="300" y="380" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="elastic" value="Elasticsearch" style="shape=mxgraph.elasticsearch_service;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="400" y="380" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kibana" value="Kibana" style="shape=mxgraph.kibana;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;" parent="k8s" vertex="1">
+          <mxGeometry x="500" y="380" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y8lUIOnaV9JqozrYW-nt-1" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="k8s">
+          <mxGeometry x="200" y="50" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="fintech" value="Fintech SaaS Client" style="shape=mxgraph.cloud.user;fillColor=#f8d7da;strokeColor=#842029;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="40" y="850" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#842029;endArrow=classic;" parent="1" source="fintech" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0f5132;endArrow=classic;" parent="1" target="account" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="70" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

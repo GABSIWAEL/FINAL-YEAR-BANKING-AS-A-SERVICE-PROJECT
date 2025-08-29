@@ -100,6 +100,62 @@ namespace OpenBanking_ATM_V1.Controllers
             }
         }
 
+        [HttpGet("banks/{bankId}/atms")]
+        [ProducesResponseType(typeof(List<CreateAtmResponse>), 200)]
+        [ProducesResponseType(typeof(string), 400)]
+        public async Task<IActionResult> GetAtmsInBank(string bankId)
+        {
+            try
+            {
+                var atms = await _atmRepository.GetAtmsInBank(bankId);
+                var responseDtos = _mapper.Map<List<CreateAtmResponse>>(atms);
+                return Ok(responseDtos);
+            }
+            catch (ObpExceptionATM ex)
+            {
+                _logger.LogWarning(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while fetching ATMs in bank");
+                return StatusCode(500, ObpExceptionATM.UnknownError().ToString());
+            }
+        }
+
+        [HttpGet("banks/{bankId}/atms/{atmId}")]
+        [ProducesResponseType(typeof(CreateAtmResponse), 200)]
+        [ProducesResponseType(typeof(string), 400)]
+        public async Task<IActionResult> GetAtmById(string bankId, string atmId)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(bankId))
+                    throw ObpExceptionATM.BankNotFound();
+
+                var atm = await _atmRepository.GetAtmById(atmId);
+
+                // Extra safety: make sure the ATM belongs to this bank
+                if (atm.BankId != bankId)
+                    throw ObpExceptionATM.ATMNotFound();
+
+                var responseDto = _mapper.Map<CreateAtmResponse>(atm);
+                return Ok(responseDto);
+            }
+            catch (ObpExceptionATM ex)
+            {
+                _logger.LogWarning(ex.ToString());
+                return BadRequest(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error while fetching ATM by ID");
+                return StatusCode(500, ObpExceptionATM.UnknownError().ToString());
+            }
+        }
+
+
+
 
 
 

@@ -110,5 +110,21 @@ namespace OpenBanking_ATM_V1.Repository
 
     return atmAttribute;
 }
+public async Task<List<Atm>> GetAtmsInBank(string bankId)
+{
+    if (string.IsNullOrWhiteSpace(bankId))
+        throw ObpExceptionATM.BankNotFound();
+
+    var filter = Builders<Atm>.Filter.Eq(a => a.BankId, bankId);
+    var atms = await _atmCollection.Find(filter).ToListAsync();
+
+    if (atms == null || atms.Count == 0)
+        throw ObpExceptionATM.ATMNotFound();
+
+    return atms;
+}
+
+
     }
+
 }

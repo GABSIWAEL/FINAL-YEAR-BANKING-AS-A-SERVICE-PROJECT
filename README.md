@@ -449,7 +449,9 @@ echo "🚀 All services registered successfully!"
 
 
 
-# 🧪 Fintech Client (Python + HTML)
+# 🧪  Fintech Client (Python + HTML)
+
+## Dedicated for the accounts management 
 
 ### 📂 Structure
 ```
@@ -496,3 +498,5 @@ Open browser at `http://127.0.0.1:5000`
 - Deploy fintech client alongside banking stack in `docker-compose`
 - Add rate-limiting & monitoring per API key
 - Integrate OAuth2 with Kong
+
+

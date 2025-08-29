@@ -6,7 +6,10 @@ namespace OpenBanking_ACCOUNT_V1.Models
         public string id { get; set; }
         public Value Value { get; set; }
         public DateTime date { get; set; }
-        public Owners user { get; set; }
+       
+            public string Accountid { get; set; }
+    public Account Account { get; set; }
+   
 
     }
 }

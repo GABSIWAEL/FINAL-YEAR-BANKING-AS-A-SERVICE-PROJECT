@@ -282,3 +282,5 @@ C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\OpenBanking_ATM_V1.genruntimeconfig.cache
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\obj\Debug\net8.0\ref\OpenBanking_ATM_V1.dll
 C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\OpenBanking_ATM_V1.Tests\obj\OpenBanking_ATM_V1.Tests.csproj.nuget.dgspec.json
+C:\Users\MSI\Desktop\pfe\Banking_Solution_PFE_2025\OpenBanking_ATM_V1\bin\Debug\net8.0\OpenBanking_ATM_V1.Tests\obj\project.assets.json

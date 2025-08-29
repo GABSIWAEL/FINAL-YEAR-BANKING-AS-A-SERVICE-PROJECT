@@ -29,12 +29,15 @@ namespace OpenBanking_AUTHENTICATOR_V1.Controllers
     }
 
         [HttpGet("login")]
-        public IActionResult Login()
-        {
-            var redirectUrl = Url.Action(nameof(GoogleCallback));
-            var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
-            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
-        }
+public IActionResult Login()
+{
+    // RedirectUri will automatically go to /signin-google
+    var properties = new AuthenticationProperties
+    {
+        RedirectUri = "/"  // or some page you want to redirect after login
+    };
+    return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+}
 
        [HttpGet("google/callback")]
 public async Task<IActionResult> GoogleCallback()

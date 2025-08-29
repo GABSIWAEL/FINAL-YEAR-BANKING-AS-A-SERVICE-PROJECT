@@ -9,6 +9,8 @@ namespace OpenBanking_ACCOUNT_V1.Models
         public string description { get; set; }
         public bool  is_public { get; set; } 
         public Alias alias { get; set; }
+        public string Accountid { get; set; }
+        public Account Account { get; set; }
 
         [JsonProperty("hide_metadata_if_alias_used")]
         public bool HideMetadataIfAliasUsed { get; set; }

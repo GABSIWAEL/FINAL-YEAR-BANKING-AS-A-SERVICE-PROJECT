@@ -1,0 +1,268 @@
+{
+  "nodes": [
+    {
+      "id": "vps",
+      "label": "OVH VPS Server",
+      "icon": "cloud",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "k8s",
+      "label": "Kubernetes Cluster",
+      "icon": "kubernetes",
+      "position": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "id": "angular",
+      "label": "Frontend Angular",
+      "icon": "angular",
+      "position": {
+        "x": -3,
+        "y": 4
+      }
+    },
+    {
+      "id": "kong",
+      "label": "Kong Gateway",
+      "icon": "gateway",
+      "position": {
+        "x": -1,
+        "y": 4
+      }
+    },
+    {
+      "id": "account",
+      "label": "Account-Service",
+      "icon": "pod",
+      "position": {
+        "x": -3,
+        "y": 6
+      }
+    },
+    {
+      "id": "branch",
+      "label": "Branch-Service",
+      "icon": "pod",
+      "position": {
+        "x": -2,
+        "y": 6
+      }
+    },
+    {
+      "id": "card",
+      "label": "Card-Service",
+      "icon": "pod",
+      "position": {
+        "x": -1,
+        "y": 6
+      }
+    },
+    {
+      "id": "atm",
+      "label": "ATM-Service",
+      "icon": "pod",
+      "position": {
+        "x": 0,
+        "y": 6
+      }
+    },
+    {
+      "id": "auth",
+      "label": "Authenticator",
+      "icon": "pod",
+      "position": {
+        "x": 1,
+        "y": 6
+      }
+    },
+    {
+      "id": "notif",
+      "label": "Notification-Service",
+      "icon": "pod",
+      "position": {
+        "x": 2,
+        "y": 6
+      }
+    },
+    {
+      "id": "pg_acc",
+      "label": "PostgreSQL - Account",
+      "icon": "postgresql",
+      "position": {
+        "x": -3,
+        "y": 8
+      }
+    },
+    {
+      "id": "pg_card",
+      "label": "PostgreSQL - Card",
+      "icon": "postgresql",
+      "position": {
+        "x": -2,
+        "y": 8
+      }
+    },
+    {
+      "id": "mysql_branch",
+      "label": "MySQL - Branch",
+      "icon": "mysql",
+      "position": {
+        "x": -1,
+        "y": 8
+      }
+    },
+    {
+      "id": "mysql_auth",
+      "label": "MySQL - Authenticator",
+      "icon": "mysql",
+      "position": {
+        "x": 0,
+        "y": 8
+      }
+    },
+    {
+      "id": "mongo_atm",
+      "label": "MongoDB - ATM",
+      "icon": "mongodb",
+      "position": {
+        "x": 1,
+        "y": 8
+      }
+    },
+    {
+      "id": "redis",
+      "label": "Redis Cache",
+      "icon": "redis",
+      "position": {
+        "x": 2,
+        "y": 8
+      }
+    },
+    {
+      "id": "rabbitmq",
+      "label": "RabbitMQ",
+      "icon": "rabbitmq",
+      "position": {
+        "x": -3,
+        "y": 10
+      }
+    },
+    {
+      "id": "prometheus",
+      "label": "Prometheus",
+      "icon": "prometheus",
+      "position": {
+        "x": -2,
+        "y": 10
+      }
+    },
+    {
+      "id": "grafana",
+      "label": "Grafana",
+      "icon": "grafana",
+      "position": {
+        "x": -1,
+        "y": 10
+      }
+    },
+    {
+      "id": "elastic",
+      "label": "Elasticsearch",
+      "icon": "elasticsearch",
+      "position": {
+        "x": 0,
+        "y": 10
+      }
+    },
+    {
+      "id": "kibana",
+      "label": "Kibana",
+      "icon": "kibana",
+      "position": {
+        "x": 1,
+        "y": 10
+      }
+    },
+    {
+      "id": "fintech",
+      "label": "Fintech SaaS Client",
+      "icon": "user",
+      "position": {
+        "x": -4,
+        "y": 12
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "fintech",
+      "target": "kong"
+    },
+    {
+      "source": "kong",
+      "target": "account"
+    },
+    {
+      "source": "kong",
+      "target": "branch"
+    },
+    {
+      "source": "kong",
+      "target": "card"
+    },
+    {
+      "source": "kong",
+      "target": "atm"
+    },
+    {
+      "source": "kong",
+      "target": "auth"
+    },
+    {
+      "source": "kong",
+      "target": "notif"
+    },
+    {
+      "source": "account",
+      "target": "pg_acc"
+    },
+    {
+      "source": "card",
+      "target": "pg_card"
+    },
+    {
+      "source": "branch",
+      "target": "mysql_branch"
+    },
+    {
+      "source": "auth",
+      "target": "mysql_auth"
+    },
+    {
+      "source": "atm",
+      "target": "mongo_atm"
+    },
+    {
+      "source": "notif",
+      "target": "rabbitmq"
+    },
+    {
+      "source": "account",
+      "target": "redis"
+    },
+    {
+      "source": "prometheus",
+      "target": "grafana"
+    },
+    {
+      "source": "elastic",
+      "target": "kibana"
+    }
+  ]
+}
